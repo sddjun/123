@@ -138,6 +138,8 @@
 	var Login = __webpack_require__(10);
 	var Register = __webpack_require__(22);
 	var Forget = __webpack_require__(27);
+	var Forgettips = __webpack_require__(32);
+	var Password = __webpack_require__(37);
 
 	// 路由map
 	module.exports = function(router){
@@ -161,6 +163,14 @@
 		    '/forget': {
 				name: 'forget',
 		        component: Forget
+		    },
+		    '/forgettips': {
+				name: 'forgettips',
+		        component: Forgettips
+		    },
+		    '/password': {
+				name: 'password',
+		        component: Password
 		    }
 		})
 	}
@@ -272,7 +282,7 @@
 
 
 	// module
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.form[_v-9d1cd44e]{\n\twidth: 90%; margin: 0 auto; padding: 20px 0; font-size: .9rem;\n}\n.form-group[_v-9d1cd44e],.form-line[_v-9d1cd44e]{\n\tpadding-bottom: 20px;\n}\n.form-group label[_v-9d1cd44e]{\n\tdisplay: block; padding-bottom: 10px;\n}\n.form-group input[type=text][_v-9d1cd44e],.form-group input[type=password][_v-9d1cd44e]{\n\twidth: 100%; box-sizing: border-box; border: 1px solid #ccc; padding: 9px 10px;\n}\n.form-btn[_v-9d1cd44e]{\n\ttext-align: center;\n\tpadding-top: 10px;\n\tborder-top: 1px solid #eee;\n}\n.form-btn input[type=submit][_v-9d1cd44e],.form-btn a[_v-9d1cd44e]{\n\twidth: 45%;\n\tbox-sizing: border-box;\n}\n.form-btn input[type=submit][_v-9d1cd44e]{\n\tbackground: #999;\n\tborder: 1px solid #999;\n}\n", ""]);
+	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.form[_v-9d1cd44e]{\n\twidth: 90%; margin: 0 auto; padding: 20px 0; font-size: .9rem;\n}\n.form-group[_v-9d1cd44e],.form-line[_v-9d1cd44e]{\n\tpadding-bottom: 20px;\n}\n.form-group label[_v-9d1cd44e]{\n\tdisplay: block; padding-bottom: 10px;\n}\n.form-group input[type=text][_v-9d1cd44e],.form-group input[type=password][_v-9d1cd44e]{\n\twidth: 100%; height: 40px;  box-sizing: border-box; border: 1px solid #ccc; padding: 9px 10px;\n}\n.form-group .input-tips[_v-9d1cd44e]{\n\tbackground: #ffe5e5;\n\tdisplay: block;\n\tmargin-top: 5px;\n\tpadding: 0 8px;\n\tline-height: 30px;\n}\n.form-btn[_v-9d1cd44e]{\n\ttext-align: center;\n\tpadding-top: 10px;\n\tborder-top: 1px solid #eee;\n}\n.form-btn input[type=submit][_v-9d1cd44e],.form-btn a[_v-9d1cd44e]{\n\twidth: 45%;\n\tbox-sizing: border-box;\n}\n.form-btn input[type=submit][_v-9d1cd44e]{\n\tbackground: #999;\n\tborder: 1px solid #999;\n}\n", ""]);
 
 	// exports
 
@@ -570,7 +580,9 @@
 				"form": {
 					"username": "",
 					"password": "",
-					"remember": false
+					"remember": false,
+					"usernametips": "",
+					"passwordtips": ""
 				}
 			};
 		},
@@ -580,12 +592,12 @@
 		methods: {
 			onSubmit: function onSubmit() {
 				this.$http.post(this.apiUrl, this.form).then(function (response) {
-					console.log('提交成功！');
-					tips('提交成功', function () {
+
+					tips('登录成功', function () {
 						location.href = '/';
 					});
 				}, function (response) {
-					console.log('网络繁忙，请稍候再试！');
+					tips('网络繁忙，请稍候再试！');
 				});
 			}
 		}
@@ -685,7 +697,7 @@
 /* 21 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<div _v-9d1cd44e=\"\">\n\t<div _v-9d1cd44e=\"\">\n\t\t<my-header :title=\"title\" _v-9d1cd44e=\"\"></my-header>\n\t</div>\n\t<div class=\"form\" _v-9d1cd44e=\"\">\n\t\t<form @submit.prevent=\"onSubmit\" _v-9d1cd44e=\"\">\n\t\t\t<div class=\"form-group\" _v-9d1cd44e=\"\">\n\t\t\t\t<label for=\"username\" _v-9d1cd44e=\"\">用户名/邮箱：</label>\n\t\t\t\t<input type=\"text\" v-model=\"form.username\" debounce=\"500\" name=\"username\" id=\"username\" value=\"\" required=\"required\" _v-9d1cd44e=\"\">\n\t\t\t</div>\n\t\t\t<div class=\"form-group\" _v-9d1cd44e=\"\">\n\t\t\t\t<label for=\"password\" _v-9d1cd44e=\"\">密码：</label>\n\t\t\t\t<input type=\"password\" v-model=\"form.password\" debounce=\"500\" name=\"password\" id=\"password\" value=\"\" required=\"required\" _v-9d1cd44e=\"\">\n\t\t\t</div>\n\t\t\t<div class=\"form-line\" _v-9d1cd44e=\"\">\n\t\t\t\t<label for=\"remember\" _v-9d1cd44e=\"\"><input type=\"checkbox\" v-model=\"form.remember\" name=\"remember\" id=\"remember\" _v-9d1cd44e=\"\"> 记住密码</label>\n\t\t\t\t<a v-link=\"path='/forget'\" class=\"fr\" _v-9d1cd44e=\"\">忘记密码？</a>\n\t\t\t</div>\n\t\t\t<div class=\"form-btn\" _v-9d1cd44e=\"\">\n\t\t\t\t<input type=\"submit\" value=\"登录\" class=\"btn btn-primary\" @keyup.enter=\"onSubmit\" _v-9d1cd44e=\"\">\n\t\t\t\t<a v-link=\"path='/register'\" class=\"btn btn-primary\" _v-9d1cd44e=\"\">注册</a>\n\t\t\t</div>\n\t\t</form>\n\t</div>\n</div>\n";
+	module.exports = "\n<div _v-9d1cd44e=\"\">\n\t<div _v-9d1cd44e=\"\">\n\t\t<my-header :title=\"title\" _v-9d1cd44e=\"\"></my-header>\n\t</div>\n\t<div class=\"form\" _v-9d1cd44e=\"\">\n\t\t<form @submit.prevent=\"onSubmit\" _v-9d1cd44e=\"\">\n\t\t\t<div class=\"form-group\" _v-9d1cd44e=\"\">\n\t\t\t\t<label for=\"username\" _v-9d1cd44e=\"\">用户名/邮箱：</label>\n\t\t\t\t<input type=\"text\" v-model=\"form.username\" debounce=\"500\" name=\"username\" id=\"username\" value=\"\" required=\"required\" _v-9d1cd44e=\"\">\n\t\t\t\t<span class=\"input-tips\" v-show=\"form.usernametips!=''\" _v-9d1cd44e=\"\"><font color=\"red\" _v-9d1cd44e=\"\">*{{form.usernametips}}</font></span>\n\t\t\t</div>\n\t\t\t<div class=\"form-group\" _v-9d1cd44e=\"\">\n\t\t\t\t<label for=\"password\" _v-9d1cd44e=\"\">密码：</label>\n\t\t\t\t<input type=\"password\" v-model=\"form.password\" debounce=\"500\" name=\"password\" id=\"password\" value=\"\" required=\"required\" _v-9d1cd44e=\"\">\n\t\t\t\t<span class=\"input-tips\" v-show=\"form.passwordtips!=''\" _v-9d1cd44e=\"\"><font color=\"red\" _v-9d1cd44e=\"\">*{{form.passwordtips}}</font></span>\n\t\t\t</div>\n\t\t\t<div class=\"form-line\" _v-9d1cd44e=\"\">\n\t\t\t\t<label for=\"remember\" _v-9d1cd44e=\"\"><input type=\"checkbox\" v-model=\"form.remember\" name=\"remember\" id=\"remember\" _v-9d1cd44e=\"\"> 记住密码</label>\n\t\t\t\t<a v-link=\"path='/forget'\" class=\"fr\" _v-9d1cd44e=\"\">忘记密码？</a>\n\t\t\t</div>\n\t\t\t<div class=\"form-btn\" _v-9d1cd44e=\"\">\n\t\t\t\t<input type=\"submit\" value=\"登录\" class=\"btn btn-primary\" @keyup.enter=\"onSubmit\" _v-9d1cd44e=\"\">\n\t\t\t\t<a v-link=\"path='/register'\" class=\"btn btn-primary\" _v-9d1cd44e=\"\">注册</a>\n\t\t\t</div>\n\t\t</form>\n\t</div>\n</div>\n";
 
 /***/ },
 /* 22 */
@@ -751,7 +763,7 @@
 
 
 	// module
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.form[_v-0f5e0863]{\n\twidth: 90%; margin: 0 auto; padding: 20px 0; font-size: .9rem;\n}\n.form-group[_v-0f5e0863],.form-line[_v-0f5e0863]{\n\tpadding-bottom: 20px;\n}\n.form-group label[_v-0f5e0863]{\n\tdisplay: block; padding-bottom: 10px;\n}\n.form-group input[type=text][_v-0f5e0863],.form-group input[type=password][_v-0f5e0863],.form-group input[type=email][_v-0f5e0863]{\n\twidth: 100%; box-sizing: border-box; border: 1px solid #ccc; padding: 9px 10px;\n}\n.form-btn[_v-0f5e0863]{\n\ttext-align: center;\n\tpadding-top: 10px;\n\tborder-top: 1px solid #eee;\n}\n.form-btn input[type=submit][_v-0f5e0863]{\n\twidth: 60%;\n\tbox-sizing: border-box;\n}\n", ""]);
+	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.form[_v-0f5e0863]{\n\twidth: 90%; margin: 0 auto; padding: 20px 0; font-size: .9rem;\n}\n.form-group[_v-0f5e0863],.form-line[_v-0f5e0863]{\n\tpadding-bottom: 20px;\n}\n.form-group label[_v-0f5e0863]{\n\tdisplay: block; padding-bottom: 10px;\n}\n.form-group input[type=text][_v-0f5e0863],.form-group input[type=password][_v-0f5e0863],.form-group input[type=email][_v-0f5e0863]{\n\twidth: 100%; height: 40px;  box-sizing: border-box; border: 1px solid #ccc; padding: 9px 10px;\n}\n.form-group .input-tips[_v-0f5e0863]{\n\tbackground: #ffe5e5;\n\tdisplay: block;\n\tmargin-top: 5px;\n\tpadding: 0 8px;\n\tline-height: 30px;\n}\n.form-btn[_v-0f5e0863]{\n\ttext-align: center;\n\tpadding-top: 10px;\n\tborder-top: 1px solid #eee;\n}\n.form-btn input[type=submit][_v-0f5e0863]{\n\twidth: 60%;\n\tbox-sizing: border-box;\n}\n", ""]);
 
 	// exports
 
@@ -771,7 +783,10 @@
 				"form": {
 					"username": "",
 					"email": "",
-					"password": ""
+					"password": "",
+					"emailtips": "",
+					"usernametips": "",
+					"passwordtips": ""
 				}
 			};
 		},
@@ -781,12 +796,12 @@
 		methods: {
 			onSubmit: function onSubmit() {
 				this.$http.post(this.apiUrl, this.form).then(function (response) {
-					console.log('提交成功！');
-					tips('提交成功', function () {
-						location.href = '/';
+
+					tips('注册成功', function () {
+						location.href = '/login';
 					});
 				}, function (response) {
-					console.log('网络繁忙，请稍候再试！');
+					tips('网络繁忙，请稍候再试！');
 				});
 			}
 		}
@@ -796,7 +811,7 @@
 /* 26 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<div _v-0f5e0863=\"\">\n\t<div _v-0f5e0863=\"\">\n\t\t<my-header :title=\"title\" _v-0f5e0863=\"\"></my-header>\n\t</div>\n\t<div class=\"form\" _v-0f5e0863=\"\">\n\t\t<form @submit.prevent=\"onSubmit\" _v-0f5e0863=\"\">\n\t\t\t<div class=\"form-group\" _v-0f5e0863=\"\">\n\t\t\t\t<label for=\"email\" _v-0f5e0863=\"\">邮箱：</label>\n\t\t\t\t<input type=\"email\" v-model=\"form.email\" debounce=\"500\" name=\"email\" id=\"email\" value=\"\" required=\"required\" _v-0f5e0863=\"\">\n\t\t\t</div>\n\t\t\t<div class=\"form-group\" _v-0f5e0863=\"\">\n\t\t\t\t<label for=\"username\" _v-0f5e0863=\"\">用户名：</label>\n\t\t\t\t<input type=\"text\" v-model=\"form.username\" debounce=\"500\" name=\"username\" id=\"username\" value=\"\" required=\"required\" _v-0f5e0863=\"\">\n\t\t\t</div>\n\t\t\t<div class=\"form-group\" _v-0f5e0863=\"\">\n\t\t\t\t<label for=\"password\" _v-0f5e0863=\"\">密码：</label>\n\t\t\t\t<input type=\"password\" v-model=\"form.password\" debounce=\"500\" name=\"password\" id=\"password\" value=\"\" required=\"required\" _v-0f5e0863=\"\">\n\t\t\t</div>\n\t\t\t<div class=\"form-btn\" _v-0f5e0863=\"\">\n\t\t\t\t<input type=\"submit\" value=\"注册\" class=\"btn btn-primary\" @keyup.enter=\"onSubmit\" _v-0f5e0863=\"\">\n\t\t\t</div>\n\t\t</form>\n\t</div>\n</div>\n";
+	module.exports = "\n<div _v-0f5e0863=\"\">\n\t<div _v-0f5e0863=\"\">\n\t\t<my-header :title=\"title\" _v-0f5e0863=\"\"></my-header>\n\t</div>\n\t<div class=\"form\" _v-0f5e0863=\"\">\n\t\t<form @submit.prevent=\"onSubmit\" _v-0f5e0863=\"\">\n\t\t\t<div class=\"form-group\" _v-0f5e0863=\"\">\n\t\t\t\t<label for=\"email\" _v-0f5e0863=\"\">邮箱：</label>\n\t\t\t\t<input type=\"email\" v-model=\"form.email\" debounce=\"500\" name=\"email\" id=\"email\" value=\"\" required=\"required\" _v-0f5e0863=\"\">\n\t\t\t\t<span class=\"input-tips\" v-show=\"form.emailtips!=''\" _v-0f5e0863=\"\"><font color=\"red\" _v-0f5e0863=\"\">*{{form.emailtips}}</font></span>\n\t\t\t</div>\n\t\t\t<div class=\"form-group\" _v-0f5e0863=\"\">\n\t\t\t\t<label for=\"username\" _v-0f5e0863=\"\">用户名：</label>\n\t\t\t\t<input type=\"text\" v-model=\"form.username\" debounce=\"500\" name=\"username\" id=\"username\" value=\"\" required=\"required\" _v-0f5e0863=\"\">\n\t\t\t\t<span class=\"input-tips\" v-show=\"form.usernametips!=''\" _v-0f5e0863=\"\"><font color=\"red\" _v-0f5e0863=\"\">*{{form.usernametips}}</font></span>\n\t\t\t</div>\n\t\t\t<div class=\"form-group\" _v-0f5e0863=\"\">\n\t\t\t\t<label for=\"password\" _v-0f5e0863=\"\">密码：</label>\n\t\t\t\t<input type=\"password\" v-model=\"form.password\" debounce=\"500\" name=\"password\" id=\"password\" value=\"\" required=\"required\" _v-0f5e0863=\"\">\n\t\t\t\t<span class=\"input-tips\" v-show=\"form.passwordtips!=''\" _v-0f5e0863=\"\"><font color=\"red\" _v-0f5e0863=\"\">*{{form.passwordtips}}</font></span>\n\t\t\t</div>\n\t\t\t<div class=\"form-btn\" _v-0f5e0863=\"\">\n\t\t\t\t<input type=\"submit\" value=\"注册\" class=\"btn btn-primary\" @keyup.enter=\"onSubmit\" _v-0f5e0863=\"\">\n\t\t\t</div>\n\t\t</form>\n\t</div>\n</div>\n";
 
 /***/ },
 /* 27 */
@@ -862,7 +877,7 @@
 
 
 	// module
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.form[_v-7771dea6]{\n\twidth: 90%; margin: 0 auto; padding: 20px 0; font-size: .9rem;\n}\n.form-group[_v-7771dea6],.form-line[_v-7771dea6]{\n\tpadding-bottom: 20px;\n}\n.form-group label[_v-7771dea6]{\n\tdisplay: block; padding-bottom: 10px;\n}\n.form-group input[type=text][_v-7771dea6],.form-group input[type=email][_v-7771dea6]{\n\twidth: 100%; box-sizing: border-box; border: 1px solid #ccc; padding: 9px 10px;\n}\n.form-btn[_v-7771dea6]{\n\ttext-align: center;\n\tpadding-top: 10px;\n\tborder-top: 1px solid #eee;\n}\n.form-btn input[type=submit][_v-7771dea6],.form-btn a[_v-7771dea6]{\n\twidth: 45%;\n\tbox-sizing: border-box;\n}\n.form-btn input[type=submit][_v-7771dea6]{\n\twidth: 60%;\n}\n", ""]);
+	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.form[_v-7771dea6]{\n\twidth: 90%; margin: 0 auto; padding: 20px 0; font-size: .9rem;\n}\n.form-group[_v-7771dea6],.form-line[_v-7771dea6]{\n\tpadding-bottom: 20px;\n}\n.form-group label[_v-7771dea6]{\n\tdisplay: block; padding-bottom: 10px;\n}\n.form-group input[type=text][_v-7771dea6],.form-group input[type=email][_v-7771dea6]{\n\twidth: 100%; height: 40px; box-sizing: border-box; border: 1px solid #ccc; padding: 9px 10px;\n}\n.form-group .input-tips[_v-7771dea6]{\n\tbackground: #ffe5e5;\n\tdisplay: block;\n\tmargin-top: 5px;\n\tpadding: 0 8px;\n\tline-height: 30px;\n}\n.input-code[_v-7771dea6]{\n\tposition: relative;\n\tpadding-right: 95px;\n}\n.input-code .code-img[_v-7771dea6]{\n\tposition: absolute;\n\twidth: 95px;\n\theight: 40px;\n\tright: 0;\n\ttop: 0;\n\tborder: 1px solid #e5e5e5;\n\tbox-sizing: border-box;\n}\n.input-code .code-img img[_v-7771dea6]{\n\twidth: 100%;\n\theight: 100%;\n}\n.form-btn[_v-7771dea6]{\n\ttext-align: center;\n\tpadding-top: 10px;\n\tborder-top: 1px solid #eee;\n}\n.form-btn input[type=submit][_v-7771dea6],.form-btn a[_v-7771dea6]{\n\twidth: 45%;\n\tbox-sizing: border-box;\n}\n.form-btn input[type=submit][_v-7771dea6]{\n\twidth: 60%;\n}\n", ""]);
 
 	// exports
 
@@ -881,7 +896,9 @@
 				"apiUrl": 'api/forget.php',
 				"form": {
 					"email": "",
-					"code": ""
+					"code": "",
+					"emailtips": "",
+					"codetips": ""
 				}
 			};
 		},
@@ -891,9 +908,9 @@
 		methods: {
 			onSubmit: function onSubmit() {
 				this.$http.post(this.apiUrl, this.form).then(function (response) {
-					console.log('提交成功！');
+
 					tips('提交成功', function () {
-						location.href = '/';
+						location.href = '/forgettips';
 					});
 				}, function (response) {
 					console.log('网络繁忙，请稍候再试！');
@@ -906,7 +923,226 @@
 /* 31 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<div _v-7771dea6=\"\">\n\t<div _v-7771dea6=\"\">\n\t\t<my-header :title=\"title\" _v-7771dea6=\"\"></my-header>\n\t</div>\n\t<div class=\"form\" _v-7771dea6=\"\">\n\t\t<form @submit.prevent=\"onSubmit\" _v-7771dea6=\"\">\n\t\t\t<div class=\"form-group\" _v-7771dea6=\"\">\n\t\t\t\t<label for=\"email\" _v-7771dea6=\"\">请输入邮箱：</label>\n\t\t\t\t<input type=\"email\" v-model=\"form.email\" debounce=\"500\" name=\"email\" id=\"email\" value=\"\" required=\"required\" _v-7771dea6=\"\">\n\t\t\t</div>\n\t\t\t<div class=\"form-group\" _v-7771dea6=\"\">\n\t\t\t\t<label for=\"code\" _v-7771dea6=\"\">验证码：</label>\n\t\t\t\t<input type=\"text\" v-model=\"form.code\" debounce=\"500\" name=\"code\" id=\"code\" value=\"\" required=\"required\" _v-7771dea6=\"\">\n\t\t\t</div>\n\t\t\t<div class=\"form-btn\" _v-7771dea6=\"\">\n\t\t\t\t<input type=\"submit\" value=\"下一步\" class=\"btn btn-primary\" @keyup.enter=\"onSubmit\" _v-7771dea6=\"\">\n\t\t\t</div>\n\t\t</form>\n\t</div>\n</div>\n";
+	module.exports = "\n<div _v-7771dea6=\"\">\n\t<div _v-7771dea6=\"\">\n\t\t<my-header :title=\"title\" _v-7771dea6=\"\"></my-header>\n\t</div>\n\t<div class=\"form\" _v-7771dea6=\"\">\n\t\t<form @submit.prevent=\"onSubmit\" _v-7771dea6=\"\">\n\t\t\t<div class=\"form-group\" _v-7771dea6=\"\">\n\t\t\t\t<label for=\"email\" _v-7771dea6=\"\">请输入邮箱：</label>\n\t\t\t\t<input type=\"email\" v-model=\"form.email\" debounce=\"500\" name=\"email\" id=\"email\" value=\"\" required=\"required\" _v-7771dea6=\"\">\n\t\t\t\t<span class=\"input-tips\" v-show=\"form.emailtips!=''\" _v-7771dea6=\"\"><font color=\"red\" _v-7771dea6=\"\">*{{form.emailtips}}</font></span>\n\t\t\t</div>\n\t\t\t<div class=\"form-group\" _v-7771dea6=\"\">\n\t\t\t\t<label for=\"code\" _v-7771dea6=\"\">请输入验证码：</label>\n\t\t\t\t<div class=\"input-code\" _v-7771dea6=\"\">\n\t\t\t\t\t<input type=\"text\" v-model=\"form.code\" debounce=\"500\" name=\"code\" id=\"code\" value=\"\" required=\"required\" _v-7771dea6=\"\">\n\t\t\t\t\t<span class=\"code-img\" _v-7771dea6=\"\"><img src=\"xxxHTMLLINKxxx0.76626168563961980.7028692718595266xxx\" _v-7771dea6=\"\"></span>\n\t\t\t\t</div>\n\t\t\t\t<span class=\"input-tips\" v-show=\"form.codetips!=''\" _v-7771dea6=\"\"><font color=\"red\" _v-7771dea6=\"\">*{{form.codetips}}</font></span>\n\t\t\t</div>\n\t\t\t<div class=\"form-btn\" _v-7771dea6=\"\">\n\t\t\t\t<input type=\"submit\" value=\"下一步\" class=\"btn btn-primary\" @keyup.enter=\"onSubmit\" _v-7771dea6=\"\">\n\t\t\t</div>\n\t\t</form>\n\t</div>\n</div>\n";
+
+/***/ },
+/* 32 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_script__, __vue_template__
+	__webpack_require__(33)
+	__vue_script__ = __webpack_require__(35)
+	if (__vue_script__ &&
+	    __vue_script__.__esModule &&
+	    Object.keys(__vue_script__).length > 1) {
+	  console.warn("[vue-loader] shopping\\tpl\\forgettips.vue: named exports in *.vue files are ignored.")}
+	__vue_template__ = __webpack_require__(36)
+	module.exports = __vue_script__ || {}
+	if (module.exports.__esModule) module.exports = module.exports.default
+	if (__vue_template__) {
+	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
+	}
+	if (false) {(function () {  module.hot.accept()
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), false)
+	  if (!hotAPI.compatible) return
+	  var id = "./forgettips.vue"
+	  if (!module.hot.data) {
+	    hotAPI.createRecord(id, module.exports)
+	  } else {
+	    hotAPI.update(id, module.exports, __vue_template__)
+	  }
+	})()}
+
+/***/ },
+/* 33 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(34);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(14)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-380c1536&scoped=true!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./forgettips.vue", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-380c1536&scoped=true!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./forgettips.vue");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 34 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(13)();
+	// imports
+
+
+	// module
+	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.forgettips[_v-380c1536]{\n\tpadding: 50px 10%;\n}\n.forgettips p[_v-380c1536]{\n\ttext-align: center;\n\tcolor: #666;\n\tpadding: 5px 0;\n\tline-height: 1.5em;\n}\n", ""]);
+
+	// exports
+
+
+/***/ },
+/* 35 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	var Header = __webpack_require__(16);
+	module.exports = {
+		data: function data() {
+			return {
+				"title": "找回密码",
+				"apiUrl": 'api/forget.php',
+				"form": {
+					"email": "",
+					"code": "",
+					"emailtips": "",
+					"codetips": ""
+				}
+			};
+		},
+		components: {
+			'myHeader': Header
+		}
+	};
+
+/***/ },
+/* 36 */
+/***/ function(module, exports) {
+
+	module.exports = "\n<div _v-380c1536=\"\">\n\t<div _v-380c1536=\"\">\n\t\t<my-header :title=\"title\" _v-380c1536=\"\"></my-header>\n\t</div>\n\t<div class=\"forgettips\" _v-380c1536=\"\">\n\t\t<p _v-380c1536=\"\">我们已将信息发生至您的邮箱，请点击邮箱中的链接地址重置密码</p>\n\t\t<p _v-380c1536=\"\"><a href=\"https://mail.qq.com\" target=\"_blank\" class=\"btn btn-primary btn-sm\" _v-380c1536=\"\">去我的邮箱</a></p>\n\t</div>\n</div>\n";
+
+/***/ },
+/* 37 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_script__, __vue_template__
+	__webpack_require__(38)
+	__vue_script__ = __webpack_require__(40)
+	if (__vue_script__ &&
+	    __vue_script__.__esModule &&
+	    Object.keys(__vue_script__).length > 1) {
+	  console.warn("[vue-loader] shopping\\tpl\\password.vue: named exports in *.vue files are ignored.")}
+	__vue_template__ = __webpack_require__(41)
+	module.exports = __vue_script__ || {}
+	if (module.exports.__esModule) module.exports = module.exports.default
+	if (__vue_template__) {
+	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
+	}
+	if (false) {(function () {  module.hot.accept()
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), false)
+	  if (!hotAPI.compatible) return
+	  var id = "./password.vue"
+	  if (!module.hot.data) {
+	    hotAPI.createRecord(id, module.exports)
+	  } else {
+	    hotAPI.update(id, module.exports, __vue_template__)
+	  }
+	})()}
+
+/***/ },
+/* 38 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(39);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(14)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-d2164f4a&scoped=true!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./password.vue", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-d2164f4a&scoped=true!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./password.vue");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 39 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(13)();
+	// imports
+
+
+	// module
+	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.form[_v-d2164f4a]{\n\twidth: 90%; margin: 0 auto; padding: 20px 0; font-size: .9rem;\n}\n.form-group[_v-d2164f4a],.form-line[_v-d2164f4a]{\n\tpadding-bottom: 20px;\n}\n.form-group label[_v-d2164f4a]{\n\tdisplay: block; padding-bottom: 10px;\n}\n.form-group input[type=text][_v-d2164f4a],.form-group input[type=password][_v-d2164f4a]{\n\twidth: 100%; height: 40px;  box-sizing: border-box; border: 1px solid #ccc; padding: 9px 10px;\n}\n.form-group .input-tips[_v-d2164f4a]{\n\tbackground: #ffe5e5;\n\tdisplay: block;\n\tmargin-top: 5px;\n\tpadding: 0 8px;\n\tline-height: 30px;\n}\n.form-btn[_v-d2164f4a]{\n\ttext-align: center;\n\tpadding-top: 10px;\n\tborder-top: 1px solid #eee;\n}\n.form-btn input[type=submit][_v-d2164f4a]{\n\twidth: 60%;\n}\n", ""]);
+
+	// exports
+
+
+/***/ },
+/* 40 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	var Header = __webpack_require__(16);
+	module.exports = {
+		data: function data() {
+			return {
+				"title": "找回密码",
+				"apiUrl": 'api/password.php',
+				"form": {
+					"password": "",
+					"repassword": "",
+					"passwordtips": "",
+					"repasswordtips": ""
+				}
+			};
+		},
+		components: {
+			'myHeader': Header
+		},
+		methods: {
+			onSubmit: function onSubmit() {
+				var _this = this.form;
+				if (_this.repassword != _this.password) {
+					_this.repasswordtips = "两次密码输入不一致";
+					return false;
+				} else {
+					_this.repasswordtips = "";
+				}
+				this.$http.post(this.apiUrl, this.form).then(function (response) {
+
+					tips('提交成功', function () {
+						location.href = '/login';
+					});
+				}, function (response) {
+					tips('网络繁忙，请稍候再试！');
+				});
+			}
+		}
+	};
+
+/***/ },
+/* 41 */
+/***/ function(module, exports) {
+
+	module.exports = "\n<div _v-d2164f4a=\"\">\n\t<div _v-d2164f4a=\"\">\n\t\t<my-header :title=\"title\" _v-d2164f4a=\"\"></my-header>\n\t</div>\n\t<div class=\"form\" _v-d2164f4a=\"\">\n\t\t<form @submit.prevent=\"onSubmit\" _v-d2164f4a=\"\">\n\t\t\t<div class=\"form-group\" _v-d2164f4a=\"\">\n\t\t\t\t<label for=\"password\" _v-d2164f4a=\"\">输入新密码：</label>\n\t\t\t\t<input type=\"password\" v-model=\"form.password\" debounce=\"500\" name=\"password\" id=\"password\" value=\"\" required=\"required\" _v-d2164f4a=\"\">\n\t\t\t\t<span class=\"input-tips\" v-show=\"form.passwordtips!=''\" _v-d2164f4a=\"\"><font color=\"red\" _v-d2164f4a=\"\">*{{form.passwordtips}}</font></span>\n\t\t\t</div>\n\t\t\t<div class=\"form-group\" _v-d2164f4a=\"\">\n\t\t\t\t<label for=\"repassword\" _v-d2164f4a=\"\">再次输入新密码：</label>\n\t\t\t\t<input type=\"password\" v-model=\"form.repassword\" debounce=\"500\" name=\"repassword\" id=\"repassword\" value=\"\" required=\"required\" _v-d2164f4a=\"\">\n\t\t\t\t<span class=\"input-tips\" v-show=\"form.repasswordtips!=''\" _v-d2164f4a=\"\"><font color=\"red\" _v-d2164f4a=\"\">*{{form.repasswordtips}}</font></span>\n\t\t\t</div>\n\t\t\t<div class=\"form-btn\" _v-d2164f4a=\"\">\n\t\t\t\t<input type=\"submit\" value=\"提交\" class=\"btn btn-primary\" @keyup.enter=\"onSubmit\" _v-d2164f4a=\"\">\n\t\t\t</div>\n\t\t</form>\n\t</div>\n</div>\n";
 
 /***/ }
 /******/ ]);
