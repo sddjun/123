@@ -105,24 +105,17 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	var __vue_styles__ = {}
 	__vue_template__ = __webpack_require__(5)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
-	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
 	if (__vue_template__) {
-	__vue_options__.template = __vue_template__
+	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
 	}
-	if (!__vue_options__.computed) __vue_options__.computed = {}
-	Object.keys(__vue_styles__).forEach(function (key) {
-	var module = __vue_styles__[key]
-	__vue_options__.computed[key] = function () { return module }
-	})
 	if (false) {(function () {  module.hot.accept()
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-4068016a/App.vue"
+	  var id = "./App.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -144,7 +137,7 @@
 	var Index = __webpack_require__(7);
 	var Login = __webpack_require__(10);
 	var Register = __webpack_require__(22);
-	var Forget = __webpack_require__(25);
+	var Forget = __webpack_require__(27);
 
 	// 路由map
 	module.exports = function(router){
@@ -178,29 +171,22 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	var __vue_styles__ = {}
 	__vue_script__ = __webpack_require__(8)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] tpl\\index.vue: named exports in *.vue files are ignored.")}
+	  console.warn("[vue-loader] shopping\\tpl\\index.vue: named exports in *.vue files are ignored.")}
 	__vue_template__ = __webpack_require__(9)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
-	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
 	if (__vue_template__) {
-	__vue_options__.template = __vue_template__
+	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
 	}
-	if (!__vue_options__.computed) __vue_options__.computed = {}
-	Object.keys(__vue_styles__).forEach(function (key) {
-	var module = __vue_styles__[key]
-	__vue_options__.computed[key] = function () { return module }
-	})
 	if (false) {(function () {  module.hot.accept()
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-75ee55a8/index.vue"
+	  var id = "./index.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -227,30 +213,23 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	var __vue_styles__ = {}
 	__webpack_require__(11)
 	__vue_script__ = __webpack_require__(15)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] tpl\\login.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(16)
+	  console.warn("[vue-loader] shopping\\tpl\\login.vue: named exports in *.vue files are ignored.")}
+	__vue_template__ = __webpack_require__(21)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
-	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
 	if (__vue_template__) {
-	__vue_options__.template = __vue_template__
+	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
 	}
-	if (!__vue_options__.computed) __vue_options__.computed = {}
-	Object.keys(__vue_styles__).forEach(function (key) {
-	var module = __vue_styles__[key]
-	__vue_options__.computed[key] = function () { return module }
-	})
 	if (false) {(function () {  module.hot.accept()
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-3f95f8bf/login.vue"
+	  var id = "./login.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -274,8 +253,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../node_modules/css-loader/index.js!./../node_modules/vue-loader/lib/style-rewriter.js?id=_v-3f95f8bf&scoped=true!./../node_modules/vue-loader/lib/selector.js?type=style&index=0!./login.vue", function() {
-				var newContent = require("!!./../node_modules/css-loader/index.js!./../node_modules/vue-loader/lib/style-rewriter.js?id=_v-3f95f8bf&scoped=true!./../node_modules/vue-loader/lib/selector.js?type=style&index=0!./login.vue");
+			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-9d1cd44e&scoped=true!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./login.vue", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-9d1cd44e&scoped=true!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./login.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -293,7 +272,7 @@
 
 
 	// module
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.form[_v-3f95f8bf]{\n\twidth: 90%; margin: 0 auto; padding: 20px 0; font-size: .9rem;\n}\n.form-group[_v-3f95f8bf],.form-line[_v-3f95f8bf]{\n\tpadding-bottom: 20px;\n}\n.form-group label[_v-3f95f8bf]{\n\tdisplay: block; padding-bottom: 10px;\n}\n.form-group input[type=text][_v-3f95f8bf],.form-group input[type=password][_v-3f95f8bf]{\n\twidth: 100%; box-sizing: border-box; border: 1px solid #ccc; padding: 9px 10px;\n}\n.form-btn[_v-3f95f8bf]{\n\ttext-align: center;\n\tpadding-top: 10px;\n\tborder-top: 1px solid #eee;\n}\n.form-btn input[type=submit][_v-3f95f8bf],.form-btn a[_v-3f95f8bf]{\n\twidth: 45%;\n\tbox-sizing: border-box;\n}\n.form-btn input[type=submit][_v-3f95f8bf]{\n\tbackground: #999;\n\tborder: 1px solid #999;\n}\n", ""]);
+	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.form[_v-9d1cd44e]{\n\twidth: 90%; margin: 0 auto; padding: 20px 0; font-size: .9rem;\n}\n.form-group[_v-9d1cd44e],.form-line[_v-9d1cd44e]{\n\tpadding-bottom: 20px;\n}\n.form-group label[_v-9d1cd44e]{\n\tdisplay: block; padding-bottom: 10px;\n}\n.form-group input[type=text][_v-9d1cd44e],.form-group input[type=password][_v-9d1cd44e]{\n\twidth: 100%; box-sizing: border-box; border: 1px solid #ccc; padding: 9px 10px;\n}\n.form-btn[_v-9d1cd44e]{\n\ttext-align: center;\n\tpadding-top: 10px;\n\tborder-top: 1px solid #eee;\n}\n.form-btn input[type=submit][_v-9d1cd44e],.form-btn a[_v-9d1cd44e]{\n\twidth: 45%;\n\tbox-sizing: border-box;\n}\n.form-btn input[type=submit][_v-9d1cd44e]{\n\tbackground: #999;\n\tborder: 1px solid #999;\n}\n", ""]);
 
 	// exports
 
@@ -582,7 +561,7 @@
 
 	"use strict";
 
-	var Header = __webpack_require__(17);
+	var Header = __webpack_require__(16);
 	module.exports = {
 		data: function data() {
 			return {
@@ -614,39 +593,26 @@
 
 /***/ },
 /* 16 */
-/***/ function(module, exports) {
-
-	module.exports = "\n<div _v-3f95f8bf=\"\">\n\t<div _v-3f95f8bf=\"\">\n\t\t<my-header :title=\"title\" _v-3f95f8bf=\"\"></my-header>\n\t</div>\n\t<div class=\"form\" _v-3f95f8bf=\"\">\n\t\t<form @submit.prevent=\"onSubmit\" _v-3f95f8bf=\"\">\n\t\t\t<div class=\"form-group\" _v-3f95f8bf=\"\">\n\t\t\t\t<label for=\"username\" _v-3f95f8bf=\"\">用户名/邮箱：</label>\n\t\t\t\t<input type=\"text\" v-model=\"form.username\" debounce=\"500\" name=\"username\" id=\"username\" value=\"\" required=\"required\" _v-3f95f8bf=\"\">\n\t\t\t</div>\n\t\t\t<div class=\"form-group\" _v-3f95f8bf=\"\">\n\t\t\t\t<label for=\"password\" _v-3f95f8bf=\"\">密码：</label>\n\t\t\t\t<input type=\"password\" v-model=\"form.password\" debounce=\"500\" name=\"password\" id=\"password\" value=\"\" required=\"required\" _v-3f95f8bf=\"\">\n\t\t\t</div>\n\t\t\t<div class=\"form-line\" _v-3f95f8bf=\"\">\n\t\t\t\t<label for=\"remember\" _v-3f95f8bf=\"\"><input type=\"checkbox\" v-model=\"form.remember\" name=\"remember\" id=\"remember\" _v-3f95f8bf=\"\"> 记住密码</label>\n\t\t\t\t<a v-link=\"path='/forget'\" class=\"fr\" _v-3f95f8bf=\"\">忘记密码？</a>\n\t\t\t</div>\n\t\t\t<div class=\"form-btn\" _v-3f95f8bf=\"\">\n\t\t\t\t<input type=\"submit\" value=\"登录\" class=\"btn btn-primary\" @keyup.enter=\"onSubmit\" _v-3f95f8bf=\"\">\n\t\t\t\t<a v-link=\"path='/register'\" class=\"btn btn-primary\" _v-3f95f8bf=\"\">注册</a>\n\t\t\t</div>\n\t\t</form>\n\t</div>\n</div>\n";
-
-/***/ },
-/* 17 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	var __vue_styles__ = {}
-	__webpack_require__(18)
-	__vue_script__ = __webpack_require__(20)
+	__webpack_require__(17)
+	__vue_script__ = __webpack_require__(19)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] tpl\\header.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(21)
+	  console.warn("[vue-loader] shopping\\tpl\\header.vue: named exports in *.vue files are ignored.")}
+	__vue_template__ = __webpack_require__(20)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
-	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
 	if (__vue_template__) {
-	__vue_options__.template = __vue_template__
+	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
 	}
-	if (!__vue_options__.computed) __vue_options__.computed = {}
-	Object.keys(__vue_styles__).forEach(function (key) {
-	var module = __vue_styles__[key]
-	__vue_options__.computed[key] = function () { return module }
-	})
 	if (false) {(function () {  module.hot.accept()
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-d85a89b2/header.vue"
+	  var id = "./header.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -655,13 +621,13 @@
 	})()}
 
 /***/ },
-/* 18 */
+/* 17 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(19);
+	var content = __webpack_require__(18);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(14)(content, {});
@@ -670,8 +636,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../node_modules/css-loader/index.js!./../node_modules/vue-loader/lib/style-rewriter.js!./../node_modules/vue-loader/lib/selector.js?type=style&index=0!./header.vue", function() {
-				var newContent = require("!!./../node_modules/css-loader/index.js!./../node_modules/vue-loader/lib/style-rewriter.js!./../node_modules/vue-loader/lib/selector.js?type=style&index=0!./header.vue");
+			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./header.vue", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./header.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -681,7 +647,7 @@
 	}
 
 /***/ },
-/* 19 */
+/* 18 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(13)();
@@ -695,7 +661,7 @@
 
 
 /***/ },
-/* 20 */
+/* 19 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -710,40 +676,39 @@
 	};
 
 /***/ },
-/* 21 */
+/* 20 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"header\">\n\t<a class=\"header-back\" href=\"javascript:;\" onclick=\"window.history.go(-1)\"><span class=\"fa fa-chevron-left\"></span> 返回</a>\n\t<p class=\"header-title\">{{title}}</p>\n\t<a class=\"header-ico-user\" href=\"#\"></a>\n</div>\n<div class=\"header-height\"></div>\n";
+
+/***/ },
+/* 21 */
+/***/ function(module, exports) {
+
+	module.exports = "\n<div _v-9d1cd44e=\"\">\n\t<div _v-9d1cd44e=\"\">\n\t\t<my-header :title=\"title\" _v-9d1cd44e=\"\"></my-header>\n\t</div>\n\t<div class=\"form\" _v-9d1cd44e=\"\">\n\t\t<form @submit.prevent=\"onSubmit\" _v-9d1cd44e=\"\">\n\t\t\t<div class=\"form-group\" _v-9d1cd44e=\"\">\n\t\t\t\t<label for=\"username\" _v-9d1cd44e=\"\">用户名/邮箱：</label>\n\t\t\t\t<input type=\"text\" v-model=\"form.username\" debounce=\"500\" name=\"username\" id=\"username\" value=\"\" required=\"required\" _v-9d1cd44e=\"\">\n\t\t\t</div>\n\t\t\t<div class=\"form-group\" _v-9d1cd44e=\"\">\n\t\t\t\t<label for=\"password\" _v-9d1cd44e=\"\">密码：</label>\n\t\t\t\t<input type=\"password\" v-model=\"form.password\" debounce=\"500\" name=\"password\" id=\"password\" value=\"\" required=\"required\" _v-9d1cd44e=\"\">\n\t\t\t</div>\n\t\t\t<div class=\"form-line\" _v-9d1cd44e=\"\">\n\t\t\t\t<label for=\"remember\" _v-9d1cd44e=\"\"><input type=\"checkbox\" v-model=\"form.remember\" name=\"remember\" id=\"remember\" _v-9d1cd44e=\"\"> 记住密码</label>\n\t\t\t\t<a v-link=\"path='/forget'\" class=\"fr\" _v-9d1cd44e=\"\">忘记密码？</a>\n\t\t\t</div>\n\t\t\t<div class=\"form-btn\" _v-9d1cd44e=\"\">\n\t\t\t\t<input type=\"submit\" value=\"登录\" class=\"btn btn-primary\" @keyup.enter=\"onSubmit\" _v-9d1cd44e=\"\">\n\t\t\t\t<a v-link=\"path='/register'\" class=\"btn btn-primary\" _v-9d1cd44e=\"\">注册</a>\n\t\t\t</div>\n\t\t</form>\n\t</div>\n</div>\n";
 
 /***/ },
 /* 22 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	var __vue_styles__ = {}
-	__webpack_require__(28)
-	__vue_script__ = __webpack_require__(23)
+	__webpack_require__(23)
+	__vue_script__ = __webpack_require__(25)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] tpl\\register.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(30)
+	  console.warn("[vue-loader] shopping\\tpl\\register.vue: named exports in *.vue files are ignored.")}
+	__vue_template__ = __webpack_require__(26)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
-	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
 	if (__vue_template__) {
-	__vue_options__.template = __vue_template__
+	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
 	}
-	if (!__vue_options__.computed) __vue_options__.computed = {}
-	Object.keys(__vue_styles__).forEach(function (key) {
-	var module = __vue_styles__[key]
-	__vue_options__.computed[key] = function () { return module }
-	})
 	if (false) {(function () {  module.hot.accept()
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-4baef3bd/register.vue"
+	  var id = "./register.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -755,9 +720,49 @@
 /* 23 */
 /***/ function(module, exports, __webpack_require__) {
 
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(24);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(14)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-0f5e0863&scoped=true!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./register.vue", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-0f5e0863&scoped=true!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./register.vue");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 24 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(13)();
+	// imports
+
+
+	// module
+	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.form[_v-0f5e0863]{\n\twidth: 90%; margin: 0 auto; padding: 20px 0; font-size: .9rem;\n}\n.form-group[_v-0f5e0863],.form-line[_v-0f5e0863]{\n\tpadding-bottom: 20px;\n}\n.form-group label[_v-0f5e0863]{\n\tdisplay: block; padding-bottom: 10px;\n}\n.form-group input[type=text][_v-0f5e0863],.form-group input[type=password][_v-0f5e0863],.form-group input[type=email][_v-0f5e0863]{\n\twidth: 100%; box-sizing: border-box; border: 1px solid #ccc; padding: 9px 10px;\n}\n.form-btn[_v-0f5e0863]{\n\ttext-align: center;\n\tpadding-top: 10px;\n\tborder-top: 1px solid #eee;\n}\n.form-btn input[type=submit][_v-0f5e0863]{\n\twidth: 60%;\n\tbox-sizing: border-box;\n}\n", ""]);
+
+	// exports
+
+
+/***/ },
+/* 25 */
+/***/ function(module, exports, __webpack_require__) {
+
 	"use strict";
 
-	var Header = __webpack_require__(17);
+	var Header = __webpack_require__(16);
 	module.exports = {
 		data: function data() {
 			return {
@@ -788,34 +793,32 @@
 	};
 
 /***/ },
-/* 24 */,
-/* 25 */
+/* 26 */
+/***/ function(module, exports) {
+
+	module.exports = "\n<div _v-0f5e0863=\"\">\n\t<div _v-0f5e0863=\"\">\n\t\t<my-header :title=\"title\" _v-0f5e0863=\"\"></my-header>\n\t</div>\n\t<div class=\"form\" _v-0f5e0863=\"\">\n\t\t<form @submit.prevent=\"onSubmit\" _v-0f5e0863=\"\">\n\t\t\t<div class=\"form-group\" _v-0f5e0863=\"\">\n\t\t\t\t<label for=\"email\" _v-0f5e0863=\"\">邮箱：</label>\n\t\t\t\t<input type=\"email\" v-model=\"form.email\" debounce=\"500\" name=\"email\" id=\"email\" value=\"\" required=\"required\" _v-0f5e0863=\"\">\n\t\t\t</div>\n\t\t\t<div class=\"form-group\" _v-0f5e0863=\"\">\n\t\t\t\t<label for=\"username\" _v-0f5e0863=\"\">用户名：</label>\n\t\t\t\t<input type=\"text\" v-model=\"form.username\" debounce=\"500\" name=\"username\" id=\"username\" value=\"\" required=\"required\" _v-0f5e0863=\"\">\n\t\t\t</div>\n\t\t\t<div class=\"form-group\" _v-0f5e0863=\"\">\n\t\t\t\t<label for=\"password\" _v-0f5e0863=\"\">密码：</label>\n\t\t\t\t<input type=\"password\" v-model=\"form.password\" debounce=\"500\" name=\"password\" id=\"password\" value=\"\" required=\"required\" _v-0f5e0863=\"\">\n\t\t\t</div>\n\t\t\t<div class=\"form-btn\" _v-0f5e0863=\"\">\n\t\t\t\t<input type=\"submit\" value=\"注册\" class=\"btn btn-primary\" @keyup.enter=\"onSubmit\" _v-0f5e0863=\"\">\n\t\t\t</div>\n\t\t</form>\n\t</div>\n</div>\n";
+
+/***/ },
+/* 27 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	var __vue_styles__ = {}
-	__vue_script__ = __webpack_require__(26)
+	__vue_script__ = __webpack_require__(28)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] tpl\\forget.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(27)
+	  console.warn("[vue-loader] shopping\\tpl\\forget.vue: named exports in *.vue files are ignored.")}
+	__vue_template__ = __webpack_require__(29)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
-	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
 	if (__vue_template__) {
-	__vue_options__.template = __vue_template__
+	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
 	}
-	if (!__vue_options__.computed) __vue_options__.computed = {}
-	Object.keys(__vue_styles__).forEach(function (key) {
-	var module = __vue_styles__[key]
-	__vue_options__.computed[key] = function () { return module }
-	})
 	if (false) {(function () {  module.hot.accept()
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-0aa1eaf2/forget.vue"
+	  var id = "./forget.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -824,7 +827,7 @@
 	})()}
 
 /***/ },
-/* 26 */
+/* 28 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -832,56 +835,10 @@
 	module.exports = {};
 
 /***/ },
-/* 27 */
+/* 29 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div>这是忘记密码</div>\n";
-
-/***/ },
-/* 28 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-
-	// load the styles
-	var content = __webpack_require__(29);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(14)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!./../node_modules/css-loader/index.js!./../node_modules/vue-loader/lib/style-rewriter.js?id=_v-4baef3bd&scoped=true!./../node_modules/vue-loader/lib/selector.js?type=style&index=0!./register.vue", function() {
-				var newContent = require("!!./../node_modules/css-loader/index.js!./../node_modules/vue-loader/lib/style-rewriter.js?id=_v-4baef3bd&scoped=true!./../node_modules/vue-loader/lib/selector.js?type=style&index=0!./register.vue");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
-
-/***/ },
-/* 29 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(13)();
-	// imports
-
-
-	// module
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.form[_v-4baef3bd]{\n\twidth: 90%; margin: 0 auto; padding: 20px 0; font-size: .9rem;\n}\n.form-group[_v-4baef3bd],.form-line[_v-4baef3bd]{\n\tpadding-bottom: 20px;\n}\n.form-group label[_v-4baef3bd]{\n\tdisplay: block; padding-bottom: 10px;\n}\n.form-group input[type=text][_v-4baef3bd],.form-group input[type=password][_v-4baef3bd],.form-group input[type=email][_v-4baef3bd]{\n\twidth: 100%; box-sizing: border-box; border: 1px solid #ccc; padding: 9px 10px;\n}\n.form-btn[_v-4baef3bd]{\n\ttext-align: center;\n\tpadding-top: 10px;\n\tborder-top: 1px solid #eee;\n}\n.form-btn input[type=submit][_v-4baef3bd]{\n\twidth: 60%;\n\tbox-sizing: border-box;\n}\n", ""]);
-
-	// exports
-
-
-/***/ },
-/* 30 */
-/***/ function(module, exports) {
-
-	module.exports = "\n<div _v-4baef3bd=\"\">\n\t<div _v-4baef3bd=\"\">\n\t\t<my-header :title=\"title\" _v-4baef3bd=\"\"></my-header>\n\t</div>\n\t<div class=\"form\" _v-4baef3bd=\"\">\n\t\t<form @submit.prevent=\"onSubmit\" _v-4baef3bd=\"\">\n\t\t\t<div class=\"form-group\" _v-4baef3bd=\"\">\n\t\t\t\t<label for=\"email\" _v-4baef3bd=\"\">邮箱：</label>\n\t\t\t\t<input type=\"email\" v-model=\"form.email\" debounce=\"500\" name=\"email\" id=\"email\" value=\"\" required=\"required\" _v-4baef3bd=\"\">\n\t\t\t</div>\n\t\t\t<div class=\"form-group\" _v-4baef3bd=\"\">\n\t\t\t\t<label for=\"username\" _v-4baef3bd=\"\">用户名：</label>\n\t\t\t\t<input type=\"text\" v-model=\"form.username\" debounce=\"500\" name=\"username\" id=\"username\" value=\"\" required=\"required\" _v-4baef3bd=\"\">\n\t\t\t</div>\n\t\t\t<div class=\"form-group\" _v-4baef3bd=\"\">\n\t\t\t\t<label for=\"password\" _v-4baef3bd=\"\">密码：</label>\n\t\t\t\t<input type=\"password\" v-model=\"form.password\" debounce=\"500\" name=\"password\" id=\"password\" value=\"\" required=\"required\" _v-4baef3bd=\"\">\n\t\t\t</div>\n\t\t\t<div class=\"form-btn\" _v-4baef3bd=\"\">\n\t\t\t\t<input type=\"submit\" value=\"注册\" class=\"btn btn-primary\" @keyup.enter=\"onSubmit\" _v-4baef3bd=\"\">\n\t\t\t</div>\n\t\t</form>\n\t</div>\n</div>\n";
 
 /***/ }
 /******/ ]);
