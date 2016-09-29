@@ -803,12 +803,13 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__vue_script__ = __webpack_require__(28)
+	__webpack_require__(28)
+	__vue_script__ = __webpack_require__(30)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] shopping\\tpl\\forget.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(29)
+	__vue_template__ = __webpack_require__(31)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -828,17 +829,84 @@
 
 /***/ },
 /* 28 */
-/***/ function(module, exports) {
+/***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
+	// style-loader: Adds some css to the DOM by adding a <style> tag
 
-	module.exports = {};
+	// load the styles
+	var content = __webpack_require__(29);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(14)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-7771dea6&scoped=true!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./forget.vue", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-7771dea6&scoped=true!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./forget.vue");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
 
 /***/ },
 /* 29 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(13)();
+	// imports
+
+
+	// module
+	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.form[_v-7771dea6]{\n\twidth: 90%; margin: 0 auto; padding: 20px 0; font-size: .9rem;\n}\n.form-group[_v-7771dea6],.form-line[_v-7771dea6]{\n\tpadding-bottom: 20px;\n}\n.form-group label[_v-7771dea6]{\n\tdisplay: block; padding-bottom: 10px;\n}\n.form-group input[type=text][_v-7771dea6],.form-group input[type=email][_v-7771dea6]{\n\twidth: 100%; box-sizing: border-box; border: 1px solid #ccc; padding: 9px 10px;\n}\n.form-btn[_v-7771dea6]{\n\ttext-align: center;\n\tpadding-top: 10px;\n\tborder-top: 1px solid #eee;\n}\n.form-btn input[type=submit][_v-7771dea6],.form-btn a[_v-7771dea6]{\n\twidth: 45%;\n\tbox-sizing: border-box;\n}\n.form-btn input[type=submit][_v-7771dea6]{\n\twidth: 60%;\n}\n", ""]);
+
+	// exports
+
+
+/***/ },
+/* 30 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	var Header = __webpack_require__(16);
+	module.exports = {
+		data: function data() {
+			return {
+				"title": "忘记密码",
+				"apiUrl": 'api/forget.php',
+				"form": {
+					"email": "",
+					"code": ""
+				}
+			};
+		},
+		components: {
+			'myHeader': Header
+		},
+		methods: {
+			onSubmit: function onSubmit() {
+				this.$http.post(this.apiUrl, this.form).then(function (response) {
+					console.log('提交成功！');
+					tips('提交成功', function () {
+						location.href = '/';
+					});
+				}, function (response) {
+					console.log('网络繁忙，请稍候再试！');
+				});
+			}
+		}
+	};
+
+/***/ },
+/* 31 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<div>这是忘记密码</div>\n";
+	module.exports = "\n<div _v-7771dea6=\"\">\n\t<div _v-7771dea6=\"\">\n\t\t<my-header :title=\"title\" _v-7771dea6=\"\"></my-header>\n\t</div>\n\t<div class=\"form\" _v-7771dea6=\"\">\n\t\t<form @submit.prevent=\"onSubmit\" _v-7771dea6=\"\">\n\t\t\t<div class=\"form-group\" _v-7771dea6=\"\">\n\t\t\t\t<label for=\"email\" _v-7771dea6=\"\">请输入邮箱：</label>\n\t\t\t\t<input type=\"email\" v-model=\"form.email\" debounce=\"500\" name=\"email\" id=\"email\" value=\"\" required=\"required\" _v-7771dea6=\"\">\n\t\t\t</div>\n\t\t\t<div class=\"form-group\" _v-7771dea6=\"\">\n\t\t\t\t<label for=\"code\" _v-7771dea6=\"\">验证码：</label>\n\t\t\t\t<input type=\"text\" v-model=\"form.code\" debounce=\"500\" name=\"code\" id=\"code\" value=\"\" required=\"required\" _v-7771dea6=\"\">\n\t\t\t</div>\n\t\t\t<div class=\"form-btn\" _v-7771dea6=\"\">\n\t\t\t\t<input type=\"submit\" value=\"下一步\" class=\"btn btn-primary\" @keyup.enter=\"onSubmit\" _v-7771dea6=\"\">\n\t\t\t</div>\n\t\t</form>\n\t</div>\n</div>\n";
 
 /***/ }
 /******/ ]);
