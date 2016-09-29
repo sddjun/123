@@ -4,6 +4,8 @@ var List = require("../tpl/list.vue");
 var Login = require("../tpl/login.vue");
 var Register = require("../tpl/register.vue");
 var Forget = require("../tpl/forget.vue");
+var Forgettips = require("../tpl/forgettips.vue");
+var Password = require("../tpl/password.vue");
 
 // 路由map
 module.exports = function(router){
@@ -31,6 +33,14 @@ module.exports = function(router){
 	    '/forget': {
 			name: 'forget',
 	        component: Forget
+	    },
+	    '/forgettips': {
+			name: 'forgettips',
+	        component: Forgettips
+	    },
+	    '/password': {
+			name: 'password',
+	        component: Password
 	    }
 	})
 }

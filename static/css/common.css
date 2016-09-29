@@ -733,6 +733,50 @@ a:focus {
     -moz-border-radius: 8px;
     border-radius: 8px;
 }
+/*提示框*/
+.tips{
+	position: fixed; width: 100%; height: 100%; z-index: 999; left: 0; top: 0; text-align: center; padding-top: 35%; box-sizing: border-box;
+}
+.tips span{
+	display: inline-block; margin: 0 auto; background: rgba(0,0,0,.5); color: #fff; border-radius: 2px; padding: 5px 15px;
+}
+
+/*提示框带按钮*/
+.pop-mask{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	background: rgba(0,0,0,.5);
+}
+.pop-wrap{
+	position: absolute;
+	width: 80%;
+	left: 10%;
+	top: 30%;
+	background: #fff;	
+}
+.pop-text{
+	text-align: center;
+	padding: 4em 10px;
+}
+.pop-btn{
+	border-top: 1px solid #eee;
+	zoom: 1;
+}
+.pop-btn:after{
+	content: '';
+	display: block;
+	clear: both;
+}
+.pop-btn a{
+	width: 50%;
+	text-align: center;
+	padding: 10px 0;
+	display: block;
+	float: left;
+}
 
 /*字体图标*/
 @font-face {
