@@ -135,11 +135,13 @@
 
 	// 模版组件
 	var Index = __webpack_require__(7);
+	var List = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"../tpl/list.vue\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
 	var Login = __webpack_require__(10);
 	var Register = __webpack_require__(22);
 	var Forget = __webpack_require__(27);
 	var Forgettips = __webpack_require__(32);
 	var Password = __webpack_require__(37);
+	var Cart = __webpack_require__(42);
 
 	// 路由map
 	module.exports = function(router){
@@ -151,6 +153,10 @@
 		    '/index': {
 				name: 'index',
 		        component: Index
+		    },
+		    '/list': {
+				name: 'list',
+		        component: List
 		    },
 		    '/login': {
 				name: 'login',
@@ -171,6 +177,10 @@
 		    '/password': {
 				name: 'password',
 		        component: Password
+		    },
+		    '/cart': {
+				name: 'cart',
+		        component: Cart
 		    }
 		})
 	}
@@ -923,7 +933,7 @@
 /* 31 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<div _v-7771dea6=\"\">\n\t<div _v-7771dea6=\"\">\n\t\t<my-header :title=\"title\" _v-7771dea6=\"\"></my-header>\n\t</div>\n\t<div class=\"form\" _v-7771dea6=\"\">\n\t\t<form @submit.prevent=\"onSubmit\" _v-7771dea6=\"\">\n\t\t\t<div class=\"form-group\" _v-7771dea6=\"\">\n\t\t\t\t<label for=\"email\" _v-7771dea6=\"\">请输入邮箱：</label>\n\t\t\t\t<input type=\"email\" v-model=\"form.email\" debounce=\"500\" name=\"email\" id=\"email\" value=\"\" required=\"required\" _v-7771dea6=\"\">\n\t\t\t\t<span class=\"input-tips\" v-show=\"form.emailtips!=''\" _v-7771dea6=\"\"><font color=\"red\" _v-7771dea6=\"\">*{{form.emailtips}}</font></span>\n\t\t\t</div>\n\t\t\t<div class=\"form-group\" _v-7771dea6=\"\">\n\t\t\t\t<label for=\"code\" _v-7771dea6=\"\">请输入验证码：</label>\n\t\t\t\t<div class=\"input-code\" _v-7771dea6=\"\">\n\t\t\t\t\t<input type=\"text\" v-model=\"form.code\" debounce=\"500\" name=\"code\" id=\"code\" value=\"\" required=\"required\" _v-7771dea6=\"\">\n\t\t\t\t\t<span class=\"code-img\" _v-7771dea6=\"\"><img src=\"xxxHTMLLINKxxx0.76626168563961980.7028692718595266xxx\" _v-7771dea6=\"\"></span>\n\t\t\t\t</div>\n\t\t\t\t<span class=\"input-tips\" v-show=\"form.codetips!=''\" _v-7771dea6=\"\"><font color=\"red\" _v-7771dea6=\"\">*{{form.codetips}}</font></span>\n\t\t\t</div>\n\t\t\t<div class=\"form-btn\" _v-7771dea6=\"\">\n\t\t\t\t<input type=\"submit\" value=\"下一步\" class=\"btn btn-primary\" @keyup.enter=\"onSubmit\" _v-7771dea6=\"\">\n\t\t\t</div>\n\t\t</form>\n\t</div>\n</div>\n";
+	module.exports = "\n<div _v-7771dea6=\"\">\n\t<div _v-7771dea6=\"\">\n\t\t<my-header :title=\"title\" _v-7771dea6=\"\"></my-header>\n\t</div>\n\t<div class=\"form\" _v-7771dea6=\"\">\n\t\t<form @submit.prevent=\"onSubmit\" _v-7771dea6=\"\">\n\t\t\t<div class=\"form-group\" _v-7771dea6=\"\">\n\t\t\t\t<label for=\"email\" _v-7771dea6=\"\">请输入邮箱：</label>\n\t\t\t\t<input type=\"email\" v-model=\"form.email\" debounce=\"500\" name=\"email\" id=\"email\" value=\"\" required=\"required\" _v-7771dea6=\"\">\n\t\t\t\t<span class=\"input-tips\" v-show=\"form.emailtips!=''\" _v-7771dea6=\"\"><font color=\"red\" _v-7771dea6=\"\">*{{form.emailtips}}</font></span>\n\t\t\t</div>\n\t\t\t<div class=\"form-group\" _v-7771dea6=\"\">\n\t\t\t\t<label for=\"code\" _v-7771dea6=\"\">请输入验证码：</label>\n\t\t\t\t<div class=\"input-code\" _v-7771dea6=\"\">\n\t\t\t\t\t<input type=\"text\" v-model=\"form.code\" debounce=\"500\" name=\"code\" id=\"code\" value=\"\" required=\"required\" _v-7771dea6=\"\">\n\t\t\t\t\t<span class=\"code-img\" _v-7771dea6=\"\"><img src=\"xxxHTMLLINKxxx0.60203809640370310.9165376971941441xxx\" _v-7771dea6=\"\"></span>\n\t\t\t\t</div>\n\t\t\t\t<span class=\"input-tips\" v-show=\"form.codetips!=''\" _v-7771dea6=\"\"><font color=\"red\" _v-7771dea6=\"\">*{{form.codetips}}</font></span>\n\t\t\t</div>\n\t\t\t<div class=\"form-btn\" _v-7771dea6=\"\">\n\t\t\t\t<input type=\"submit\" value=\"下一步\" class=\"btn btn-primary\" @keyup.enter=\"onSubmit\" _v-7771dea6=\"\">\n\t\t\t</div>\n\t\t</form>\n\t</div>\n</div>\n";
 
 /***/ },
 /* 32 */
@@ -1143,6 +1153,146 @@
 /***/ function(module, exports) {
 
 	module.exports = "\n<div _v-d2164f4a=\"\">\n\t<div _v-d2164f4a=\"\">\n\t\t<my-header :title=\"title\" _v-d2164f4a=\"\"></my-header>\n\t</div>\n\t<div class=\"form\" _v-d2164f4a=\"\">\n\t\t<form @submit.prevent=\"onSubmit\" _v-d2164f4a=\"\">\n\t\t\t<div class=\"form-group\" _v-d2164f4a=\"\">\n\t\t\t\t<label for=\"password\" _v-d2164f4a=\"\">输入新密码：</label>\n\t\t\t\t<input type=\"password\" v-model=\"form.password\" debounce=\"500\" name=\"password\" id=\"password\" value=\"\" required=\"required\" _v-d2164f4a=\"\">\n\t\t\t\t<span class=\"input-tips\" v-show=\"form.passwordtips!=''\" _v-d2164f4a=\"\"><font color=\"red\" _v-d2164f4a=\"\">*{{form.passwordtips}}</font></span>\n\t\t\t</div>\n\t\t\t<div class=\"form-group\" _v-d2164f4a=\"\">\n\t\t\t\t<label for=\"repassword\" _v-d2164f4a=\"\">再次输入新密码：</label>\n\t\t\t\t<input type=\"password\" v-model=\"form.repassword\" debounce=\"500\" name=\"repassword\" id=\"repassword\" value=\"\" required=\"required\" _v-d2164f4a=\"\">\n\t\t\t\t<span class=\"input-tips\" v-show=\"form.repasswordtips!=''\" _v-d2164f4a=\"\"><font color=\"red\" _v-d2164f4a=\"\">*{{form.repasswordtips}}</font></span>\n\t\t\t</div>\n\t\t\t<div class=\"form-btn\" _v-d2164f4a=\"\">\n\t\t\t\t<input type=\"submit\" value=\"提交\" class=\"btn btn-primary\" @keyup.enter=\"onSubmit\" _v-d2164f4a=\"\">\n\t\t\t</div>\n\t\t</form>\n\t</div>\n</div>\n";
+
+/***/ },
+/* 42 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_script__, __vue_template__
+	__webpack_require__(43)
+	__vue_script__ = __webpack_require__(45)
+	if (__vue_script__ &&
+	    __vue_script__.__esModule &&
+	    Object.keys(__vue_script__).length > 1) {
+	  console.warn("[vue-loader] shopping\\tpl\\cart.vue: named exports in *.vue files are ignored.")}
+	__vue_template__ = __webpack_require__(46)
+	module.exports = __vue_script__ || {}
+	if (module.exports.__esModule) module.exports = module.exports.default
+	if (__vue_template__) {
+	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
+	}
+	if (false) {(function () {  module.hot.accept()
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), false)
+	  if (!hotAPI.compatible) return
+	  var id = "./cart.vue"
+	  if (!module.hot.data) {
+	    hotAPI.createRecord(id, module.exports)
+	  } else {
+	    hotAPI.update(id, module.exports, __vue_template__)
+	  }
+	})()}
+
+/***/ },
+/* 43 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(44);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(14)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./cart.vue", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./cart.vue");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 44 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(13)();
+	// imports
+
+
+	// module
+	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\r\n.cart_lists{\r\n\tpadding: 0 2%;\r\n}\r\n.cart_lists li{\r\n\tpadding: 8px 0;\r\n    border-bottom: 1px solid #eee;\r\n    color: #333;\r\n    display: -webkit-box;\r\n    display: -ms-flexbox;\r\n    display: flex;\r\n}\r\n.cart_hd{\r\n\tmargin-right: .8em;\r\n    width: 60px;\r\n    height: 60px;\r\n    line-height: 60px;\r\n    text-align: center;\r\n}\r\n.cart_bd{\r\n\t-webkit-box-flex: 1;\r\n    -ms-flex: 1;\r\n    flex: 1;\r\n    min-width: 0;\r\n}\r\n.cart_desc{\r\n\tcolor: #999;\r\n}\r\n.cart_price{\r\n\tpadding: 5px 0;\r\n\tcolor: #999;\r\n}\r\n.cart_price span{\r\n\tpadding-right: 1rem;\r\n}\r\n.cart_price b{\r\n\tfont-weight: normal;\r\n}\r\n.cart_num{\r\n\tfont-size: 0;\r\n}\r\n.cart_num a{\r\n\twidth: 25px;\r\n\theight: 25px;\r\n\tline-height: 25px;\r\n\ttext-align: center;\r\n\tfont-size: .8rem;\r\n\tbackground: #E5E5E5;\r\n\tborder: 1px solid #bdbdbd;\r\n\tdisplay: inline-block;\r\n\tcolor: #000;\r\n}\r\n.cart_num input{\r\n\twidth: 30px;\r\n\theight: 25px;\r\n\tfont-size: .8rem;\r\n\ttext-align: center;\r\n\tborder: none;\r\n\tborder-top: 1px solid #bdbdbd;\r\n\tborder-bottom: 1px solid #bdbdbd;\r\n\tbackground: #fff;\r\n}\r\n.cart_del{\r\n\tfloat: right;\r\n}\r\n.cart_del a{\r\n\tborder: 1px solid #bdbdbd;\r\n\tbackground: #fff;\r\n\tborder-radius: 5px;\r\n\tpadding: 5px 12px;\r\n\tcolor: #000;\r\n\tdisplay: inline-block;\r\n}\r\n.cart_total{\r\n\theight: 54px;\r\n}\r\n.cart_total b{\r\n\tfont-weight: normal;\r\n}\r\n.cart_total_p{\r\n\tposition: fixed;\r\n\twidth: 90%;\r\n\theight: 34px;\r\n\tbackground: #fff;\r\n\tborder-top: 1px solid #ddd;\r\n\tbottom: 0;\r\n\tleft: 0;\r\n\tpadding: 10px 5%;\r\n}\r\n.cart_total_p span{\r\n\tpadding-right: 1rem;\r\n\tline-height: 34px;\r\n}\r\n.cart_total_btn:hover,.cart_total_btn:focus{\r\n\tcolor: #fff;\r\n}\r\n.cart-empty{\r\n\ttext-align: center;\r\n\tpadding: 5rem 5%;\r\n}\r\n", ""]);
+
+	// exports
+
+
+/***/ },
+/* 45 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	var Header = __webpack_require__(16);
+	module.exports = {
+		components: {
+			'myHeader': Header
+		},
+		data: function data() {
+			return {
+				"title": "购物车",
+				"apiUrl": "api/forget.php",
+				"buyurl": "",
+				"data": []
+			};
+		},
+		ready: function ready() {
+			this.$http.get(this.apiUrl, {}).then(function (response) {
+				var objs = JSON.parse(response.data);
+				this.$set('data', objs);
+			}, function (response) {
+				console.log('获取失败！');
+			});
+		},
+		computed: {
+			totalNum: function totalNum() {
+				var num = 0;
+				for (var i = 0; i < this.data.length; i++) {
+					num += this.data[i]["num"] * 1;
+				}
+				return num;
+			},
+			totalPrice: function totalPrice() {
+				var price = 0;
+				for (var i = 0; i < this.data.length; i++) {
+					price += this.data[i]["price"] * this.data[i]["num"];
+				}
+				if (price > 0) {
+					this.buyurl = "/";
+				}
+				return price;
+			}
+		},
+		methods: {
+			minus: function minus(a) {
+				this.data[a]["num"]--;
+				if (this.data[a]["num"] <= 0) {
+					this.data[a]["num"] = 1;
+				}
+			},
+			add: function add(a) {
+				this.data[a]["num"]++;
+			},
+			del: function del(a) {
+				var aData = this.data;
+				prompt('确认删除该商品？', function () {
+					aData.splice(a, 1);
+				});
+			}
+		}
+	};
+
+/***/ },
+/* 46 */
+/***/ function(module, exports) {
+
+	module.exports = "\n<div>\n\t<div>\n\t\t<my-header :title = \"title\"></my-header>\n\t</div>\n\t<div>\n\t\t<div class=\"cart_lists\" id=\"cart\">\n\t\t\t<ul v-if=\"data.length>0\">\n\t\t\t\t<li v-for=\"v in data\">\n\t\t\t\t\t<div class=\"cart_hd\">\n\t\t                <img class=\"cart_appmsg_thumb\" :src=\"v.img\">\n\t\t            </div>\n\t\t            <div class=\"cart_bd\">\n\t\t                <h4 class=\"cart_title\">{{v.title}}</h4>\n\t\t                <p class=\"cart_desc\">{{v.sub_title}}</p>\n\t\t                <p class=\"cart_price\">\n\t\t                \t<span>价格：￥<b>{{v.price}}</b>×<b>{{v.num}}</b></span>\n\t\t                \t<span>合计：<font color=\"red\">￥<b>{{v.price*v.num}}</b></font></span>\n\t\t                </p>\n\t\t                <p class=\"cart_handle\">\n\t\t                \t<span class=\"cart_num\">\n\t\t                \t\t<a @click=\"minus($index)\">-</a>\n\t\t                \t\t<input type=\"text\" value=\"{{v.num}}\" />\n\t\t                \t\t<a @click=\"add($index)\">+</a>\n\t\t                \t</span>\n\t\t                \t<span class=\"cart_del\">\n\t\t                \t\t<a @click=\"del($index)\">删除</a>\n\t\t                \t</span>\n\t\t                </p>\n\t\t            </div>\n\t\t\t\t</li>\n\t\t\t</ul>\n\t\t\t<div v-else class=\"cart-empty\">还没有任何商品，<a class=\"btn btn-default btn-sm\" v-link=\"{ path:'/' }\">去购买</a></div>\n\t\t</div>\n\t\t<div class=\"cart_total\">\n\t\t\t<div class=\"cart_total_p\">\n\t\t\t\t<span>共<b>{{totalNum}}</b>件商品</span>\n\t\t\t\t<span>合计：<font color=\"red\">{{totalPrice}}</font>元</span>\n\t\t\t\t<a v-link=\" {path: buyurl} \" :class=\"{'btn-disabled':totalPrice<=0,'btn-primary':totalPrice>0}\" class=\"btn btn-sm fr\">立即购买</a>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</div>\n";
 
 /***/ }
 /******/ ]);
