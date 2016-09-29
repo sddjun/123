@@ -1,10 +1,12 @@
 // 模版组件
 var Index = require("../tpl/index.vue");
+var List = require("../tpl/list.vue");
 var Login = require("../tpl/login.vue");
 var Register = require("../tpl/register.vue");
 var Forget = require("../tpl/forget.vue");
 var Forgettips = require("../tpl/forgettips.vue");
 var Password = require("../tpl/password.vue");
+var Cart = require("../tpl/cart.vue");
 
 // 路由map
 module.exports = function(router){
@@ -16,6 +18,10 @@ module.exports = function(router){
 	    '/index': {
 			name: 'index',
 	        component: Index
+	    },
+	    '/list': {
+			name: 'list',
+	        component: List
 	    },
 	    '/login': {
 			name: 'login',
@@ -36,6 +42,10 @@ module.exports = function(router){
 	    '/password': {
 			name: 'password',
 	        component: Password
+	    },
+	    '/cart': {
+			name: 'cart',
+	        component: Cart
 	    }
 	})
 }
