@@ -2,7 +2,6 @@
 	<div class="header">
 		<a class="header-back" href="javascript:;" onclick="window.history.go(-1)"><span class="fa fa-chevron-left"></span> 返回</a>
 		<p class="header-title">{{title}}</p>
-		<a class="header-ico-user" href="#"></a>
 	</div>
 	<div class="header-height"></div>
 </template>
@@ -16,7 +15,7 @@
 		}
 	}
 </script>
-<style type="text/css">
+<style scoped>
 .header{
 	position: fixed;
 	width: 90%;
