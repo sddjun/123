@@ -5,7 +5,7 @@
 		</div>
 		<section class="shoplist">
 			<article class="shopitem" v-for="item in items">
-				<header class="thumb"><a href="javascript:;"><img src="{{item.thumb}}" data-src="{{item.thumb}}" alt="" /></a></header>
+				<header class="thumb"><a href="javascript:;"><img :src="item.thumb" alt="" /></a></header>
 				<section class="content"><h4><a href="javascript:;">{{item.title}}</a></h4></section>
 				<footer class="operation"><a href="javascript:;"><i class="fa"></i></a></footer>
 			</article>

@@ -64,9 +64,6 @@
 				$("#search_show").css("display","none");
 				$("#search_input").val('');
 			}
-		},
-		ready:function(){
-			
 		}
 	}
 </script>

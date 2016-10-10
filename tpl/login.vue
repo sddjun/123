@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<div>
-			<my-header :title = "title"></my-header>
+			<my-header :title="title"></my-header>
 		</div>
 		<div class="form">
 			<form @submit.prevent="onSubmit">

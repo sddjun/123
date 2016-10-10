@@ -6,7 +6,7 @@
 		<div>
 			<div class="cart_lists" id="cart">
 				<ul v-if="data.length>0">
-					<li v-for="v in data">
+					<li v-for="(v , index) in data">
 						<div class="cart_hd">
 			                <img class="cart_appmsg_thumb" :src="v.img">
 			            </div>
@@ -15,28 +15,28 @@
 			                <p class="cart_desc">{{v.sub_title}}</p>
 			                <p class="cart_price">
 			                	<span>价格：￥<b>{{v.price}}</b>×<b>{{v.num}}</b></span>
-			                	<span>合计：<font color="red">￥<b>{{v.price*v.num}}</b></font></span>
+			                	<span>合计：￥<b>{{v.price*v.num}}</b></span>
 			                </p>
 			                <p class="cart_handle">
 			                	<span class="cart_num">
-			                		<a @click="minus($index)">-</a>
-			                		<input type="text" value="{{v.num}}" />
-			                		<a @click="add($index)">+</a>
+			                		<a @click="minus(index)">-</a>
+			                		<input type="text" :value="v.num" />
+			                		<a @click="add(index)">+</a>
 			                	</span>
 			                	<span class="cart_del">
-			                		<a @click="del($index)">删除</a>
+			                		<a @click="del(index)">删除</a>
 			                	</span>
 			                </p>
 			            </div>
 					</li>
 				</ul>
-				<div v-else class="cart-empty">还没有任何商品，<a class="btn btn-default btn-sm" v-link="{ path:'/' }">去购买</a></div>
+				<div v-else class="cart-empty">还没有任何商品，<router-link to="/" class="btn btn-default btn-sm">去购买</router-link></div>
 			</div>
 			<div class="cart_total">
 				<div class="cart_total_p">
 					<span>共<b>{{totalNum}}</b>件商品</span>
-					<span>合计：<font color="red">{{totalPrice}}</font>元</span>
-					<a v-link=" {path: buyurl} " :class="{'btn-disabled':totalPrice<=0,'btn-primary':totalPrice>0}" class="btn btn-sm fr">立即购买</a>
+					<span>合计：{{totalPrice}}元</span>
+					<router-link to="/buyurl" :class="{'btn-disabled':totalPrice<=0,'btn-primary':totalPrice>0}" class="btn btn-sm fr">立即购买</router-link>
 				</div>
 			</div>
 		</div>
@@ -51,17 +51,19 @@
 		data: function(){
 	        return {
 	        	"title":"购物车",
-	        	"apiUrl":"api/forget.php",
+	        	"apiUrl":"api/cart.php",
 	        	"buyurl":"",
 	        	"data":[]
 	        };
 		},
-		ready: function(){
-			this.$http.get(this.apiUrl,{},).then(function(response){
-				var objs = JSON.parse(response.data);
-				this.$set('data',objs);
-			},function(response){
-				console.log('获取失败！');
+		mounted: function(){
+			this.$nextTick(function () {
+				this.$http.get(this.apiUrl,{},).then(function(response){
+					var objs = JSON.parse(response.data);
+					this.data = objs;
+				},function(response){
+					console.log('获取失败！');
+				})
 			})
 		},
 		computed: {
@@ -129,10 +131,12 @@
 }
 .cart_desc{
 	color: #999;
+	font-size: .8rem;
 }
 .cart_price{
 	padding: 5px 0;
 	color: #999;
+	font-size: .8rem;
 }
 .cart_price span{
 	padding-right: 1rem;
@@ -168,6 +172,7 @@
 	float: right;
 }
 .cart_del a{
+	font-size: .8rem;
 	border: 1px solid #bdbdbd;
 	background: #fff;
 	border-radius: 5px;
@@ -192,7 +197,7 @@
 	padding: 10px 5%;
 }
 .cart_total_p span{
-	padding-right: 1rem;
+	padding-right: .8rem;
 	line-height: 34px;
 }
 .cart_total_btn:hover,.cart_total_btn:focus{

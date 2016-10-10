@@ -1,18 +1,15 @@
 <template>
-	<div class="header">
-		<a class="header-back" href="javascript:;" onclick="window.history.go(-1)"><span class="fa fa-chevron-left"></span> 返回</a>
-		<p class="header-title">{{title}}</p>
+	<div class="header-height">
+		<div class="header">
+			<a class="header-back" href="javascript:;" onclick="window.history.go(-1)"><span class="fa fa-chevron-left"></span> 返回</a>
+			<p class="header-title">{{title}}</p>
+		</div>
 	</div>
-	<div class="header-height"></div>
 </template>
+
 <script type="text/javascript">
 	module.exports = {
-		props:['title'],
-		data: function(){
-			return{
-				"title":""
-			}
-		}
+		props:['title']
 	}
 </script>
 <style>
