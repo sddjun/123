@@ -17,11 +17,11 @@
 				</div>
 				<div class="form-line">
 					<label for="remember"><input type="checkbox" v-model="form.remember" name="remember" id="remember" /> 记住密码</label>
-					<a v-link="path='/forget'" class="fr">忘记密码？</a>
+					<router-link to="/forget" class="fr">忘记密码？</router-link>
 				</div>
 				<div class="form-btn">
 					<input type="submit" value="登录" class="btn btn-primary" @keyup.enter="onSubmit" />
-					<a v-link="path='/register'" class="btn btn-primary" >注册</a>
+					<router-link to="/register" class="btn btn-primary" >注册</router-link>
 				</div>
 			</form>
 		</div>

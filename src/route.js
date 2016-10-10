@@ -9,48 +9,20 @@ var Forgettips = require("../tpl/forgettips.vue");
 var Password = require("../tpl/password.vue");
 var Cart = require("../tpl/cart.vue");
 
-// 路由map
-module.exports = function(router){
-	router.map({
-		'/': {
-			name: 'index',
-	        component: Index
-	   },
-	    '/index': {
-			name: 'index',
-	        component: Index
-	    },
-	    '/search': {
-			name: 'search',
-	        component: Search
-	    },
-	    '/list': {
-			name: 'list',
-	        component: List
-	    },
-	    '/login': {
-			name: 'login',
-	        component: Login
-	    },
-	    '/register': {
-			name: 'register',
-	        component: Register
-	    },
-	    '/forget': {
-			name: 'forget',
-	        component: Forget
-	    },
-	    '/forgettips': {
-			name: 'forgettips',
-	        component: Forgettips
-	    },
-	    '/password': {
-			name: 'password',
-	        component: Password
-	    },
-	    '/cart': {
-			name: 'cart',
-	        component: Cart
-	    }
-	})
+// 路由routes
+module.exports = {
+	path : '*',
+	redirect : '/index',
+  routes: [
+    { path: '/', component: Index },
+    { path: '/index', component: Index },
+    { path: '/search', component: Search },
+    { path: '/list', component: List },
+    { path: '/login', component: Login },
+    { path: '/register', component: Register },
+    { path: '/forget', component: Forget },
+    { path: '/forgettips', component: Forgettips },
+    { path: '/password', component: Password },
+    { path: '/cart', component: Cart }
+  ]
 }

@@ -1,23 +1,35 @@
 <template>
-	<div>
+	<div class="body-main bg-grey">
 		<div class="i-header-h">
 			<div class="i-header">
-				<a class="i-header-login" v-link="{path:'/login'}"><span><b class="fa fa-user"></b></span></a>
-				<div class="i-header-search"><a class="i-header-search-input" v-link="{path:'/search'}" >搜索感兴趣的东西</a></div>
+				<router-link to="/login" class="i-header-login"><span><b class="fa fa-user"></b></span></router-link>
+				<div class="i-header-search"><router-link to="/search" class="i-header-search-input">搜索感兴趣的东西</router-link></div>
 			</div>
 		</div>
 		<div class="swiper-container">
 	        <div class="swiper-wrapper">
-	            <div class="swiper-slide" v-for="v in banner"><a v-link="{ path:v.url }"><img :src="v.img" alt="" /></a></div>
+	            <div class="swiper-slide" v-for="v in banner"><a><img :src="v.img" alt="" /></a></div>
 	        </div>
 	        <div class="swiper-pagination"></div>
 		</div>
-		
+		<div class="i-nav">
+			<router-link to="/list" class="i-nav-link"><b class="fa fa-automobile" style="color: #10A286;"></b><span>良品购</span></router-link>
+			<router-link to="/shop" class="i-nav-link"><b class="fa fa-automobile" style="color: #2BACC9;"></b><span>商城</span></router-link>
+			<router-link to="/cart" class="i-nav-link"><b class="fa fa-cart-plus" style="color: #DF7514;"></b><span>购物车</span></router-link>
+			<router-link to="/user" class="i-nav-link"><b class="fa fa-automobile" style="color: #857456;"></b><span>我的</span></router-link>
+		</div>
+		<div class="i-share">
+			<ul>
+				<li class="i-share-list">
+					<div class="i-share-img"><img src="/shopping/static/images/12.jpg"/></div>
+					<p class="i-share-text">小轩窗正梳妆</p>
+				</li>
+			</ul>
+		</div>
 	</div>
-	
 </template>
 <script>
-	var Swiper = require("../static/js/swiper.min.js.js");
+	var Swiper = require("../static/js/swiper.min.js");
 	module.exports = {
 		data:function(){
 			return {
@@ -27,10 +39,8 @@
 				]
 			}
 		},
-		ready: function(){
-//			this.$http.get('api/banner.php',{}).then(function(response){
-//				var objs = JSON.parse(response.data);
-//				this.$set('banner',objs);
+		mounted: function(){
+			this.$nextTick(function () {
 				setTimeout(function(){
 					var swiper = new Swiper('.swiper-container', {
 				    	autoplay : 3000,
@@ -39,6 +49,18 @@
 				        paginationClickable: true
 				    });
 				},0);
+			})
+//			this.$http.get('api/banner.php',{}).then(function(response){
+//				var objs = JSON.parse(response.data);
+//				this.$set('banner',objs);
+//				setTimeout(function(){
+//					var swiper = new Swiper('.swiper-container', {
+//				    	autoplay : 3000,
+//				    	loop : true,
+//				        pagination: '.swiper-pagination',
+//				        paginationClickable: true
+//				    });
+//				},0);
 //			},function(response){
 //				console.log('获取失败！');
 //			})
@@ -46,6 +68,23 @@
 	}
 </script>
 <style>
+/*分享*/
+.i-share{
+	background: #fff;
+}
+.i-share-list{
+	
+}
+.i-share-img{
+	
+}
+.i-share-img img{
+	width: 100%;
+}
+.i-share-text{
+	padding: 5px;
+}
+
 /*头部*/
 .i-header{
 	position: fixed;
@@ -192,4 +231,10 @@ button.swiper-pagination-bullet {
 .swiper-pagination-white .swiper-pagination-bullet-active {	background: #fff;}
 .swiper-pagination-black .swiper-pagination-bullet-active { background: #000;}
 .swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet {	margin: 0 3px;}
+
+/*导航*/
+.i-nav{ border-bottom: 1px solid #ddd; font-size: 0; background: #fff; margin-bottom: 5px;}
+.i-nav-link{ width: 25%; display: inline-block; font-size: .8rem; padding: 1em 5px; box-sizing: border-box; color: #999;}
+.i-nav-link b,.i-nav-link span{ display: block; text-align: center;}
+.i-nav-link b{ font-size: 1.4em; padding-bottom: 8px;}
 </style>

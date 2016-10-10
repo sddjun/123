@@ -15,7 +15,7 @@
 		}
 	}
 </script>
-<style scoped>
+<style>
 .header{
 	position: fixed;
 	width: 90%;
