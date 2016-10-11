@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<div>
-			<my-header :title="title"></my-header>
+			<my-header v-once :title="title"></my-header>
 		</div>
 		<div class="form">
 			<form @submit.prevent="onSubmit">
@@ -27,7 +27,7 @@
 		</div>
 	</div>
 </template>
-<script type="text/javascript">
+<script>
 	var Header = require("./header.vue");
 	module.exports = {
 		data:function(){

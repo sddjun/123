@@ -8,6 +8,7 @@ var Forget = require("../tpl/forget.vue");
 var Forgettips = require("../tpl/forgettips.vue");
 var Password = require("../tpl/password.vue");
 var Cart = require("../tpl/cart.vue");
+var User = require("../tpl/user.vue");
 
 // 路由routes
 module.exports = {
@@ -23,6 +24,7 @@ module.exports = {
     { path: '/forget', component: Forget },
     { path: '/forgettips', component: Forgettips },
     { path: '/password', component: Password },
-    { path: '/cart', component: Cart }
+    { path: '/cart', component: Cart },
+    { path: '/user', component: User }
   ]
 }
