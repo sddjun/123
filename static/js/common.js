@@ -1,11 +1,16 @@
 //提示框
-function tips(txt,Callback){
+function tips(t){
+	var txt = t.txt;
+	var Callback = t.Callback;
+	var timer = null;
 	$("body").append('<div class="tips"><span>'+ txt +'</span></div>');
-	setInterval(function(){
+	timer = setTimeout(function(){
+		clearTimeout(timer);
 		$(".tips").remove();
 		Callback && Callback();
 	},800)
 }
+
 //提示带按钮
 function prompt(txt,Callback){
 	$("body").append('<div class="pop-mask"><div class="pop-wrap"><div class="pop-text">'+ txt +'</div><div class="pop-btn"><a href="javascript:;" class="sure">确认</a><a href="javascript:;" class="cancel">取消</a></div></div></div>');

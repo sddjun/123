@@ -5,7 +5,7 @@
 		</div>
 		<div class="user-top">
 			<div class="user-wrap">
-				<div class="user-headerimg"><img src="/shopping/static/images/22.jpg"/></div>
+				<div class="user-headerimg"><img src="/static/images/22.jpg"/></div>
 				<p class="user-username">我</p>
 			</div>
 		</div>

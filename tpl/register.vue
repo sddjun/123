@@ -52,11 +52,14 @@
 				this.$http.post(this.apiUrl,this.form).then(function(response){
 					//注册验证
 					
-					tips('注册成功',function(){
-						location.href = '/login';
+					tips({
+						txt:'注册成功',
+						Callback:function(){
+							location.href = '/login';
+						}
 					});
 				},function(response){
-					tips('网络繁忙，请稍候再试！');
+					tips({txt:'网络繁忙，请稍候再试！'});
 				})
 			}
 		}

@@ -5,9 +5,9 @@
 		</div>
 		<section class="shoplist">
 			<article class="shopitem" v-for="item in items">
-				<header class="thumb"><a href="javascript:;"><img :src="item.thumb" alt="" /></a></header>
-				<section class="content"><h4><a href="javascript:;">{{item.title}}</a></h4></section>
-				<footer class="operation"><a href="javascript:;"><i class="fa"></i></a></footer>
+				<header class="thumb"><router-link :to="{path:'goods',query:{gid:item.id}}"><img :src="item.thumb" alt="" /></router-link></header>
+				<section class="content"><h4><router-link :to="{path:'goods',query:{gid:item.id}}">{{item.title}}</router-link></h4></section>
+				<footer class="operation"><router-link :to="{path:'goods',query:{gid:item.id}}"><i class="fa"></i></router-link></footer>
 			</article>
 		</section>
 	</div>
@@ -19,17 +19,14 @@
 			return {
 				"title":"商品列表",
 				"items":[
-					{"title":"春秋季复古英伦风粗跟单鞋女中跟尖头女鞋OL学院风小皮鞋黑通勤鞋","thumb":"static/images/3.jpeg",},
-					{"title":"秋冬英伦大头粗跟厚底松糕鞋日系原宿学生女鞋小皮鞋大码系带单鞋","thumb":"static/images/2.jpeg"},
-					{"title":"布洛克女鞋平底单鞋复古小皮鞋学院风女英伦风小白鞋女牛津鞋","thumb":"static/images/1.jpeg"}
+					{"id":2,"title":"春秋季复古英伦风粗跟单鞋女中跟尖头女鞋OL学院风小皮鞋黑通勤鞋","thumb":"static/images/3.jpeg"},
+					{"id":3,"title":"秋冬英伦大头粗跟厚底松糕鞋日系原宿学生女鞋小皮鞋大码系带单鞋","thumb":"static/images/2.jpeg"},
+					{"id":5,"title":"布洛克女鞋平底单鞋复古小皮鞋学院风女英伦风小白鞋女牛津鞋","thumb":"static/images/1.jpeg"}
 				]
 			}
 		},
 		components:{
 			'myHeader': Header
-		},
-		methods:{
-			
 		}
 	}
 </script>

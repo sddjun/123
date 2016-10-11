@@ -53,11 +53,14 @@
 					//验证信息
 					
 					
-					tips('提交成功',function(){
-						location.href = '/login';
+					tips({
+						txt:'提交成功',
+						Callback:function(){
+							location.href = '/login';
+						}
 					});
 				},function(response){
-					tips('网络繁忙，请稍候再试！');
+					tips({txt:'网络繁忙，请稍候再试！'});
 				})
 			}
 		}

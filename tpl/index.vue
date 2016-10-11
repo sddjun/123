@@ -21,7 +21,7 @@
 		<div class="i-share">
 			<ul>
 				<li class="i-share-list">
-					<div class="i-share-img"><img src="/shopping/static/images/12.jpg"/></div>
+					<div class="i-share-img"><img src="/static/images/12.jpg"/></div>
 					<p class="i-share-text">小轩窗正梳妆</p>
 				</li>
 			</ul>
@@ -34,8 +34,8 @@
 		data:function(){
 			return {
 				"banner":[
-					{"img":"/shopping/static/images/11.jpg","url":"/"},
-					{"img":"/shopping/static/images/12.jpg","url":"/"},
+					{"img":"/static/images/11.jpg","url":"/"},
+					{"img":"/static/images/12.jpg","url":"/"},
 				]
 			}
 		},

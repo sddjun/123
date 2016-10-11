@@ -57,14 +57,14 @@
 	        };
 		},
 		mounted: function(){
-			this.$nextTick(function () {
-				this.$http.get(this.apiUrl,{},).then(function(response){
+//			this.$nextTick(function () {
+				this.$http.get(this.apiUrl,{}).then(function(response){
 					var objs = JSON.parse(response.data);
 					this.data = objs;
 				},function(response){
-					console.log('获取失败！');
+					tips({txt:"获取失败,请稍候再试！"})
 				})
-			})
+//			})
 		},
 		computed: {
 			totalNum:function(){

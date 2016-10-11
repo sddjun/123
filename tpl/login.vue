@@ -52,11 +52,14 @@
 					//验证信息
 					
 					
-					tips('登录成功',function(){
-						location.href = '/';
+					tips({
+						txt:'登录成功',
+						Callback:function(){
+							location.href = '/';
+						}
 					});
 				},function(response){
-					tips('网络繁忙，请稍候再试！');
+					tips({txt:'网络繁忙，请稍候再试！'});
 				})
 			}
 		}
