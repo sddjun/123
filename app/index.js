@@ -9332,14 +9332,14 @@
 	var Index = __webpack_require__(5);
 	var Search = __webpack_require__(13);
 	var List = __webpack_require__(18);
-	var Goods = __webpack_require__(63);
-	var Login = __webpack_require__(28);
-	var Register = __webpack_require__(33);
-	var Forget = __webpack_require__(38);
-	var Forgettips = __webpack_require__(43);
-	var Password = __webpack_require__(48);
-	var Cart = __webpack_require__(53);
-	var User = __webpack_require__(58);
+	var Goods = __webpack_require__(28);
+	var Login = __webpack_require__(33);
+	var Register = __webpack_require__(38);
+	var Forget = __webpack_require__(43);
+	var Forgettips = __webpack_require__(48);
+	var Password = __webpack_require__(53);
+	var Cart = __webpack_require__(58);
+	var User = __webpack_require__(63);
 
 	// 路由routes
 	module.exports = {
@@ -10068,7 +10068,7 @@
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] shopping\\tpl\\login.vue: named exports in *.vue files are ignored.")}
+	  console.warn("[vue-loader] shopping\\tpl\\goods.vue: named exports in *.vue files are ignored.")}
 	__vue_template__ = __webpack_require__(32)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
@@ -10079,7 +10079,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "./login.vue"
+	  var id = "./goods.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -10103,8 +10103,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-9d1cd44e&scoped=true!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./login.vue", function() {
-				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-9d1cd44e&scoped=true!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./login.vue");
+			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./goods.vue", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./goods.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -10122,816 +10122,13 @@
 
 
 	// module
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.form[_v-9d1cd44e]{\n\twidth: 90%; margin: 0 auto; padding: 20px 0; font-size: .9rem;\n}\n.form-group[_v-9d1cd44e],.form-line[_v-9d1cd44e]{\n\tpadding-bottom: 20px;\n}\n.form-group label[_v-9d1cd44e]{\n\tdisplay: block; padding-bottom: 10px;\n}\n.form-group input[type=text][_v-9d1cd44e],.form-group input[type=password][_v-9d1cd44e]{\n\twidth: 100%; height: 40px;  box-sizing: border-box; border: 1px solid #ccc; padding: 9px 10px;\n}\n.form-group .input-tips[_v-9d1cd44e]{\n\tbackground: #ffe5e5;\n\tdisplay: block;\n\tmargin-top: 5px;\n\tpadding: 0 8px;\n\tline-height: 30px;\n}\n.form-btn[_v-9d1cd44e]{\n\ttext-align: center;\n\tpadding-top: 10px;\n\tborder-top: 1px solid #eee;\n}\n.form-btn input[type=submit][_v-9d1cd44e],.form-btn a[_v-9d1cd44e]{\n\twidth: 45%;\n\tbox-sizing: border-box;\n}\n.form-btn input[type=submit][_v-9d1cd44e]{\n\tbackground: #999;\n\tborder: 1px solid #999;\n}\n", ""]);
-
-	// exports
-
-
-/***/ },
-/* 31 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-
-	var Header = __webpack_require__(22);
-	module.exports = {
-		data: function data() {
-			return {
-				"title": "登录",
-				"apiUrl": 'api/login.php',
-				"form": {
-					"username": "",
-					"password": "",
-					"remember": false,
-					"usernametips": "",
-					"passwordtips": ""
-				}
-			};
-		},
-		components: {
-			'myHeader': Header
-		},
-		methods: {
-			onSubmit: function onSubmit() {
-				this.$http.post(this.apiUrl, this.form).then(function (response) {
-
-					tips({
-						txt: '登录成功',
-						Callback: function Callback() {
-							location.href = '/';
-						}
-					});
-				}, function (response) {
-					tips({ txt: '网络繁忙，请稍候再试！' });
-				});
-			}
-		}
-	};
-
-/***/ },
-/* 32 */
-/***/ function(module, exports) {
-
-	module.exports = "\n<div _v-9d1cd44e=\"\">\n\t<div _v-9d1cd44e=\"\">\n\t\t<my-header v-once=\"\" :title=\"title\" _v-9d1cd44e=\"\"></my-header>\n\t</div>\n\t<div class=\"form\" _v-9d1cd44e=\"\">\n\t\t<form @submit.prevent=\"onSubmit\" _v-9d1cd44e=\"\">\n\t\t\t<div class=\"form-group\" _v-9d1cd44e=\"\">\n\t\t\t\t<label for=\"username\" _v-9d1cd44e=\"\">用户名/邮箱：</label>\n\t\t\t\t<input type=\"text\" v-model=\"form.username\" debounce=\"500\" name=\"username\" id=\"username\" value=\"\" required=\"required\" _v-9d1cd44e=\"\">\n\t\t\t\t<span class=\"input-tips\" v-show=\"form.usernametips!=''\" _v-9d1cd44e=\"\"><font color=\"red\" _v-9d1cd44e=\"\">*{{form.usernametips}}</font></span>\n\t\t\t</div>\n\t\t\t<div class=\"form-group\" _v-9d1cd44e=\"\">\n\t\t\t\t<label for=\"password\" _v-9d1cd44e=\"\">密码：</label>\n\t\t\t\t<input type=\"password\" v-model=\"form.password\" debounce=\"500\" name=\"password\" id=\"password\" value=\"\" required=\"required\" _v-9d1cd44e=\"\">\n\t\t\t\t<span class=\"input-tips\" v-show=\"form.passwordtips!=''\" _v-9d1cd44e=\"\"><font color=\"red\" _v-9d1cd44e=\"\">*{{form.passwordtips}}</font></span>\n\t\t\t</div>\n\t\t\t<div class=\"form-line\" _v-9d1cd44e=\"\">\n\t\t\t\t<label for=\"remember\" _v-9d1cd44e=\"\"><input type=\"checkbox\" v-model=\"form.remember\" name=\"remember\" id=\"remember\" _v-9d1cd44e=\"\"> 记住密码</label>\n\t\t\t\t<router-link to=\"/forget\" class=\"fr\" _v-9d1cd44e=\"\">忘记密码？</router-link>\n\t\t\t</div>\n\t\t\t<div class=\"form-btn\" _v-9d1cd44e=\"\">\n\t\t\t\t<input type=\"submit\" value=\"登录\" class=\"btn btn-primary\" @keyup.enter=\"onSubmit\" _v-9d1cd44e=\"\">\n\t\t\t\t<router-link to=\"/register\" class=\"btn btn-primary\" _v-9d1cd44e=\"\">注册</router-link>\n\t\t\t</div>\n\t\t</form>\n\t</div>\n</div>\n";
-
-/***/ },
-/* 33 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var __vue_script__, __vue_template__
-	__webpack_require__(34)
-	__vue_script__ = __webpack_require__(36)
-	if (__vue_script__ &&
-	    __vue_script__.__esModule &&
-	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] shopping\\tpl\\register.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(37)
-	module.exports = __vue_script__ || {}
-	if (module.exports.__esModule) module.exports = module.exports.default
-	if (__vue_template__) {
-	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
-	}
-	if (false) {(function () {  module.hot.accept()
-	  var hotAPI = require("vue-hot-reload-api")
-	  hotAPI.install(require("vue"), false)
-	  if (!hotAPI.compatible) return
-	  var id = "./register.vue"
-	  if (!module.hot.data) {
-	    hotAPI.createRecord(id, module.exports)
-	  } else {
-	    hotAPI.update(id, module.exports, __vue_template__)
-	  }
-	})()}
-
-/***/ },
-/* 34 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-
-	// load the styles
-	var content = __webpack_require__(35);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(9)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-0f5e0863&scoped=true!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./register.vue", function() {
-				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-0f5e0863&scoped=true!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./register.vue");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
-
-/***/ },
-/* 35 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(8)();
-	// imports
-
-
-	// module
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.form[_v-0f5e0863]{\n\twidth: 90%; margin: 0 auto; padding: 20px 0; font-size: .9rem;\n}\n.form-group[_v-0f5e0863],.form-line[_v-0f5e0863]{\n\tpadding-bottom: 20px;\n}\n.form-group label[_v-0f5e0863]{\n\tdisplay: block; padding-bottom: 10px;\n}\n.form-group input[type=text][_v-0f5e0863],.form-group input[type=password][_v-0f5e0863],.form-group input[type=email][_v-0f5e0863]{\n\twidth: 100%; height: 40px;  box-sizing: border-box; border: 1px solid #ccc; padding: 9px 10px;\n}\n.form-group .input-tips[_v-0f5e0863]{\n\tbackground: #ffe5e5;\n\tdisplay: block;\n\tmargin-top: 5px;\n\tpadding: 0 8px;\n\tline-height: 30px;\n}\n.form-btn[_v-0f5e0863]{\n\ttext-align: center;\n\tpadding-top: 10px;\n\tborder-top: 1px solid #eee;\n}\n.form-btn input[type=submit][_v-0f5e0863]{\n\twidth: 60%;\n\tbox-sizing: border-box;\n}\n", ""]);
-
-	// exports
-
-
-/***/ },
-/* 36 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-
-	var Header = __webpack_require__(22);
-	module.exports = {
-		data: function data() {
-			return {
-				"title": "注册",
-				"apiUrl": 'api/register.php',
-				"form": {
-					"username": "",
-					"email": "",
-					"password": "",
-					"emailtips": "",
-					"usernametips": "",
-					"passwordtips": ""
-				}
-			};
-		},
-		components: {
-			'myHeader': Header
-		},
-		methods: {
-			onSubmit: function onSubmit() {
-				this.$http.post(this.apiUrl, this.form).then(function (response) {
-
-					tips({
-						txt: '注册成功',
-						Callback: function Callback() {
-							location.href = '/login';
-						}
-					});
-				}, function (response) {
-					tips({ txt: '网络繁忙，请稍候再试！' });
-				});
-			}
-		}
-	};
-
-/***/ },
-/* 37 */
-/***/ function(module, exports) {
-
-	module.exports = "\n<div _v-0f5e0863=\"\">\n\t<div _v-0f5e0863=\"\">\n\t\t<my-header :title=\"title\" _v-0f5e0863=\"\"></my-header>\n\t</div>\n\t<div class=\"form\" _v-0f5e0863=\"\">\n\t\t<form @submit.prevent=\"onSubmit\" _v-0f5e0863=\"\">\n\t\t\t<div class=\"form-group\" _v-0f5e0863=\"\">\n\t\t\t\t<label for=\"email\" _v-0f5e0863=\"\">邮箱：</label>\n\t\t\t\t<input type=\"email\" v-model=\"form.email\" debounce=\"500\" name=\"email\" id=\"email\" value=\"\" required=\"required\" _v-0f5e0863=\"\">\n\t\t\t\t<span class=\"input-tips\" v-show=\"form.emailtips!=''\" _v-0f5e0863=\"\"><font color=\"red\" _v-0f5e0863=\"\">*{{form.emailtips}}</font></span>\n\t\t\t</div>\n\t\t\t<div class=\"form-group\" _v-0f5e0863=\"\">\n\t\t\t\t<label for=\"username\" _v-0f5e0863=\"\">用户名：</label>\n\t\t\t\t<input type=\"text\" v-model=\"form.username\" debounce=\"500\" name=\"username\" id=\"username\" value=\"\" required=\"required\" _v-0f5e0863=\"\">\n\t\t\t\t<span class=\"input-tips\" v-show=\"form.usernametips!=''\" _v-0f5e0863=\"\"><font color=\"red\" _v-0f5e0863=\"\">*{{form.usernametips}}</font></span>\n\t\t\t</div>\n\t\t\t<div class=\"form-group\" _v-0f5e0863=\"\">\n\t\t\t\t<label for=\"password\" _v-0f5e0863=\"\">密码：</label>\n\t\t\t\t<input type=\"password\" v-model=\"form.password\" debounce=\"500\" name=\"password\" id=\"password\" value=\"\" required=\"required\" _v-0f5e0863=\"\">\n\t\t\t\t<span class=\"input-tips\" v-show=\"form.passwordtips!=''\" _v-0f5e0863=\"\"><font color=\"red\" _v-0f5e0863=\"\">*{{form.passwordtips}}</font></span>\n\t\t\t</div>\n\t\t\t<div class=\"form-btn\" _v-0f5e0863=\"\">\n\t\t\t\t<input type=\"submit\" value=\"注册\" class=\"btn btn-primary\" @keyup.enter=\"onSubmit\" _v-0f5e0863=\"\">\n\t\t\t</div>\n\t\t</form>\n\t</div>\n</div>\n";
-
-/***/ },
-/* 38 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var __vue_script__, __vue_template__
-	__webpack_require__(39)
-	__vue_script__ = __webpack_require__(41)
-	if (__vue_script__ &&
-	    __vue_script__.__esModule &&
-	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] shopping\\tpl\\forget.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(42)
-	module.exports = __vue_script__ || {}
-	if (module.exports.__esModule) module.exports = module.exports.default
-	if (__vue_template__) {
-	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
-	}
-	if (false) {(function () {  module.hot.accept()
-	  var hotAPI = require("vue-hot-reload-api")
-	  hotAPI.install(require("vue"), false)
-	  if (!hotAPI.compatible) return
-	  var id = "./forget.vue"
-	  if (!module.hot.data) {
-	    hotAPI.createRecord(id, module.exports)
-	  } else {
-	    hotAPI.update(id, module.exports, __vue_template__)
-	  }
-	})()}
-
-/***/ },
-/* 39 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-
-	// load the styles
-	var content = __webpack_require__(40);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(9)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-7771dea6&scoped=true!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./forget.vue", function() {
-				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-7771dea6&scoped=true!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./forget.vue");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
-
-/***/ },
-/* 40 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(8)();
-	// imports
-
-
-	// module
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.form[_v-7771dea6]{\n\twidth: 90%; margin: 0 auto; padding: 20px 0; font-size: .9rem;\n}\n.form-group[_v-7771dea6],.form-line[_v-7771dea6]{\n\tpadding-bottom: 20px;\n}\n.form-group label[_v-7771dea6]{\n\tdisplay: block; padding-bottom: 10px;\n}\n.form-group input[type=text][_v-7771dea6],.form-group input[type=email][_v-7771dea6]{\n\twidth: 100%; height: 40px; box-sizing: border-box; border: 1px solid #ccc; padding: 9px 10px;\n}\n.form-group .input-tips[_v-7771dea6]{\n\tbackground: #ffe5e5;\n\tdisplay: block;\n\tmargin-top: 5px;\n\tpadding: 0 8px;\n\tline-height: 30px;\n}\n.input-code[_v-7771dea6]{\n\tposition: relative;\n\tpadding-right: 95px;\n}\n.input-code .code-img[_v-7771dea6]{\n\tposition: absolute;\n\twidth: 95px;\n\theight: 40px;\n\tright: 0;\n\ttop: 0;\n\tborder: 1px solid #e5e5e5;\n\tbox-sizing: border-box;\n}\n.input-code .code-img img[_v-7771dea6]{\n\twidth: 100%;\n\theight: 100%;\n}\n.form-btn[_v-7771dea6]{\n\ttext-align: center;\n\tpadding-top: 10px;\n\tborder-top: 1px solid #eee;\n}\n.form-btn input[type=submit][_v-7771dea6],.form-btn a[_v-7771dea6]{\n\twidth: 45%;\n\tbox-sizing: border-box;\n}\n.form-btn input[type=submit][_v-7771dea6]{\n\twidth: 60%;\n}\n", ""]);
-
-	// exports
-
-
-/***/ },
-/* 41 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-
-	var Header = __webpack_require__(22);
-	module.exports = {
-		data: function data() {
-			return {
-				"title": "忘记密码",
-				"apiUrl": 'api/forget.php',
-				"form": {
-					"email": "",
-					"code": "",
-					"emailtips": "",
-					"codetips": ""
-				}
-			};
-		},
-		components: {
-			'myHeader': Header
-		},
-		methods: {
-			onSubmit: function onSubmit() {
-				this.$http.post(this.apiUrl, this.form).then(function (response) {
-
-					tips({
-						txt: '提交成功',
-						Callback: function Callback() {
-							location.href = '/forgettips';
-						}
-					});
-				}, function (response) {
-					tips({ txt: '网络繁忙，请稍候再试！' });
-				});
-			}
-		}
-	};
-
-/***/ },
-/* 42 */
-/***/ function(module, exports) {
-
-	module.exports = "\n<div _v-7771dea6=\"\">\n\t<div _v-7771dea6=\"\">\n\t\t<my-header :title=\"title\" _v-7771dea6=\"\"></my-header>\n\t</div>\n\t<div class=\"form\" _v-7771dea6=\"\">\n\t\t<form @submit.prevent=\"onSubmit\" _v-7771dea6=\"\">\n\t\t\t<div class=\"form-group\" _v-7771dea6=\"\">\n\t\t\t\t<label for=\"email\" _v-7771dea6=\"\">请输入邮箱：</label>\n\t\t\t\t<input type=\"email\" v-model=\"form.email\" debounce=\"500\" name=\"email\" id=\"email\" value=\"\" required=\"required\" _v-7771dea6=\"\">\n\t\t\t\t<span class=\"input-tips\" v-show=\"form.emailtips!=''\" _v-7771dea6=\"\"><font color=\"red\" _v-7771dea6=\"\">*{{form.emailtips}}</font></span>\n\t\t\t</div>\n\t\t\t<div class=\"form-group\" _v-7771dea6=\"\">\n\t\t\t\t<label for=\"code\" _v-7771dea6=\"\">请输入验证码：</label>\n\t\t\t\t<div class=\"input-code\" _v-7771dea6=\"\">\n\t\t\t\t\t<input type=\"text\" v-model=\"form.code\" debounce=\"500\" name=\"code\" id=\"code\" value=\"\" required=\"required\" _v-7771dea6=\"\">\n\t\t\t\t\t<span class=\"code-img\" _v-7771dea6=\"\"><img src=\"xxxHTMLLINKxxx0.45216948748566210.7030248909723014xxx\" _v-7771dea6=\"\"></span>\n\t\t\t\t</div>\n\t\t\t\t<span class=\"input-tips\" v-show=\"form.codetips!=''\" _v-7771dea6=\"\"><font color=\"red\" _v-7771dea6=\"\">*{{form.codetips}}</font></span>\n\t\t\t</div>\n\t\t\t<div class=\"form-btn\" _v-7771dea6=\"\">\n\t\t\t\t<input type=\"submit\" value=\"下一步\" class=\"btn btn-primary\" @keyup.enter=\"onSubmit\" _v-7771dea6=\"\">\n\t\t\t</div>\n\t\t</form>\n\t</div>\n</div>\n";
-
-/***/ },
-/* 43 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var __vue_script__, __vue_template__
-	__webpack_require__(44)
-	__vue_script__ = __webpack_require__(46)
-	if (__vue_script__ &&
-	    __vue_script__.__esModule &&
-	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] shopping\\tpl\\forgettips.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(47)
-	module.exports = __vue_script__ || {}
-	if (module.exports.__esModule) module.exports = module.exports.default
-	if (__vue_template__) {
-	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
-	}
-	if (false) {(function () {  module.hot.accept()
-	  var hotAPI = require("vue-hot-reload-api")
-	  hotAPI.install(require("vue"), false)
-	  if (!hotAPI.compatible) return
-	  var id = "./forgettips.vue"
-	  if (!module.hot.data) {
-	    hotAPI.createRecord(id, module.exports)
-	  } else {
-	    hotAPI.update(id, module.exports, __vue_template__)
-	  }
-	})()}
-
-/***/ },
-/* 44 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-
-	// load the styles
-	var content = __webpack_require__(45);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(9)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-380c1536&scoped=true!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./forgettips.vue", function() {
-				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-380c1536&scoped=true!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./forgettips.vue");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
-
-/***/ },
-/* 45 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(8)();
-	// imports
-
-
-	// module
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.forgettips[_v-380c1536]{\n\tpadding: 50px 10%;\n}\n.forgettips p[_v-380c1536]{\n\ttext-align: center;\n\tcolor: #666;\n\tpadding: 5px 0;\n\tline-height: 1.5em;\n}\n", ""]);
-
-	// exports
-
-
-/***/ },
-/* 46 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-
-	var Header = __webpack_require__(22);
-	module.exports = {
-		data: function data() {
-			return {
-				"title": "找回密码",
-				"apiUrl": 'api/forget.php',
-				"form": {
-					"email": "",
-					"code": "",
-					"emailtips": "",
-					"codetips": ""
-				}
-			};
-		},
-		components: {
-			'myHeader': Header
-		}
-	};
-
-/***/ },
-/* 47 */
-/***/ function(module, exports) {
-
-	module.exports = "\n<div _v-380c1536=\"\">\n\t<div _v-380c1536=\"\">\n\t\t<my-header :title=\"title\" _v-380c1536=\"\"></my-header>\n\t</div>\n\t<div class=\"forgettips\" _v-380c1536=\"\">\n\t\t<p _v-380c1536=\"\">我们已将信息发生至您的邮箱，请点击邮箱中的链接地址重置密码</p>\n\t\t<p _v-380c1536=\"\"><a href=\"https://mail.qq.com\" target=\"_blank\" class=\"btn btn-primary btn-sm\" _v-380c1536=\"\">去我的邮箱</a></p>\n\t</div>\n</div>\n";
-
-/***/ },
-/* 48 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var __vue_script__, __vue_template__
-	__webpack_require__(49)
-	__vue_script__ = __webpack_require__(51)
-	if (__vue_script__ &&
-	    __vue_script__.__esModule &&
-	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] shopping\\tpl\\password.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(52)
-	module.exports = __vue_script__ || {}
-	if (module.exports.__esModule) module.exports = module.exports.default
-	if (__vue_template__) {
-	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
-	}
-	if (false) {(function () {  module.hot.accept()
-	  var hotAPI = require("vue-hot-reload-api")
-	  hotAPI.install(require("vue"), false)
-	  if (!hotAPI.compatible) return
-	  var id = "./password.vue"
-	  if (!module.hot.data) {
-	    hotAPI.createRecord(id, module.exports)
-	  } else {
-	    hotAPI.update(id, module.exports, __vue_template__)
-	  }
-	})()}
-
-/***/ },
-/* 49 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-
-	// load the styles
-	var content = __webpack_require__(50);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(9)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-d2164f4a&scoped=true!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./password.vue", function() {
-				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-d2164f4a&scoped=true!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./password.vue");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
-
-/***/ },
-/* 50 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(8)();
-	// imports
-
-
-	// module
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.form[_v-d2164f4a]{\n\twidth: 90%; margin: 0 auto; padding: 20px 0; font-size: .9rem;\n}\n.form-group[_v-d2164f4a],.form-line[_v-d2164f4a]{\n\tpadding-bottom: 20px;\n}\n.form-group label[_v-d2164f4a]{\n\tdisplay: block; padding-bottom: 10px;\n}\n.form-group input[type=text][_v-d2164f4a],.form-group input[type=password][_v-d2164f4a]{\n\twidth: 100%; height: 40px;  box-sizing: border-box; border: 1px solid #ccc; padding: 9px 10px;\n}\n.form-group .input-tips[_v-d2164f4a]{\n\tbackground: #ffe5e5;\n\tdisplay: block;\n\tmargin-top: 5px;\n\tpadding: 0 8px;\n\tline-height: 30px;\n}\n.form-btn[_v-d2164f4a]{\n\ttext-align: center;\n\tpadding-top: 10px;\n\tborder-top: 1px solid #eee;\n}\n.form-btn input[type=submit][_v-d2164f4a]{\n\twidth: 60%;\n}\n", ""]);
-
-	// exports
-
-
-/***/ },
-/* 51 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-
-	var Header = __webpack_require__(22);
-	module.exports = {
-		data: function data() {
-			return {
-				"title": "找回密码",
-				"apiUrl": 'api/password.php',
-				"form": {
-					"password": "",
-					"repassword": "",
-					"passwordtips": "",
-					"repasswordtips": ""
-				}
-			};
-		},
-		components: {
-			'myHeader': Header
-		},
-		methods: {
-			onSubmit: function onSubmit() {
-				var _this = this.form;
-				if (_this.repassword != _this.password) {
-					_this.repasswordtips = "两次密码输入不一致";
-					return false;
-				} else {
-					_this.repasswordtips = "";
-				}
-				this.$http.post(this.apiUrl, this.form).then(function (response) {
-
-					tips({
-						txt: '提交成功',
-						Callback: function Callback() {
-							location.href = '/login';
-						}
-					});
-				}, function (response) {
-					tips({ txt: '网络繁忙，请稍候再试！' });
-				});
-			}
-		}
-	};
-
-/***/ },
-/* 52 */
-/***/ function(module, exports) {
-
-	module.exports = "\n<div _v-d2164f4a=\"\">\n\t<div _v-d2164f4a=\"\">\n\t\t<my-header :title=\"title\" _v-d2164f4a=\"\"></my-header>\n\t</div>\n\t<div class=\"form\" _v-d2164f4a=\"\">\n\t\t<form @submit.prevent=\"onSubmit\" _v-d2164f4a=\"\">\n\t\t\t<div class=\"form-group\" _v-d2164f4a=\"\">\n\t\t\t\t<label for=\"password\" _v-d2164f4a=\"\">输入新密码：</label>\n\t\t\t\t<input type=\"password\" v-model=\"form.password\" debounce=\"500\" name=\"password\" id=\"password\" value=\"\" required=\"required\" _v-d2164f4a=\"\">\n\t\t\t\t<span class=\"input-tips\" v-show=\"form.passwordtips!=''\" _v-d2164f4a=\"\"><font color=\"red\" _v-d2164f4a=\"\">*{{form.passwordtips}}</font></span>\n\t\t\t</div>\n\t\t\t<div class=\"form-group\" _v-d2164f4a=\"\">\n\t\t\t\t<label for=\"repassword\" _v-d2164f4a=\"\">再次输入新密码：</label>\n\t\t\t\t<input type=\"password\" v-model=\"form.repassword\" debounce=\"500\" name=\"repassword\" id=\"repassword\" value=\"\" required=\"required\" _v-d2164f4a=\"\">\n\t\t\t\t<span class=\"input-tips\" v-show=\"form.repasswordtips!=''\" _v-d2164f4a=\"\"><font color=\"red\" _v-d2164f4a=\"\">*{{form.repasswordtips}}</font></span>\n\t\t\t</div>\n\t\t\t<div class=\"form-btn\" _v-d2164f4a=\"\">\n\t\t\t\t<input type=\"submit\" value=\"提交\" class=\"btn btn-primary\" @keyup.enter=\"onSubmit\" _v-d2164f4a=\"\">\n\t\t\t</div>\n\t\t</form>\n\t</div>\n</div>\n";
-
-/***/ },
-/* 53 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var __vue_script__, __vue_template__
-	__webpack_require__(54)
-	__vue_script__ = __webpack_require__(56)
-	if (__vue_script__ &&
-	    __vue_script__.__esModule &&
-	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] shopping\\tpl\\cart.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(57)
-	module.exports = __vue_script__ || {}
-	if (module.exports.__esModule) module.exports = module.exports.default
-	if (__vue_template__) {
-	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
-	}
-	if (false) {(function () {  module.hot.accept()
-	  var hotAPI = require("vue-hot-reload-api")
-	  hotAPI.install(require("vue"), false)
-	  if (!hotAPI.compatible) return
-	  var id = "./cart.vue"
-	  if (!module.hot.data) {
-	    hotAPI.createRecord(id, module.exports)
-	  } else {
-	    hotAPI.update(id, module.exports, __vue_template__)
-	  }
-	})()}
-
-/***/ },
-/* 54 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-
-	// load the styles
-	var content = __webpack_require__(55);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(9)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./cart.vue", function() {
-				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./cart.vue");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
-
-/***/ },
-/* 55 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(8)();
-	// imports
-
-
-	// module
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\r\n.cart_lists{\r\n\tpadding: 0 2%;\r\n}\r\n.cart_lists li{\r\n\tpadding: 8px 0;\r\n    border-bottom: 1px solid #eee;\r\n    color: #333;\r\n    display: -webkit-box;\r\n    display: -ms-flexbox;\r\n    display: flex;\r\n}\r\n.cart_hd{\r\n\tmargin-right: .8em;\r\n    width: 60px;\r\n    height: 60px;\r\n    line-height: 60px;\r\n    text-align: center;\r\n}\r\n.cart_bd{\r\n\t-webkit-box-flex: 1;\r\n    -ms-flex: 1;\r\n    flex: 1;\r\n    min-width: 0;\r\n}\r\n.cart_desc{\r\n\tcolor: #999;\r\n\tfont-size: .8rem;\r\n}\r\n.cart_price{\r\n\tpadding: 5px 0;\r\n\tcolor: #999;\r\n\tfont-size: .8rem;\r\n}\r\n.cart_price span{\r\n\tpadding-right: 1rem;\r\n}\r\n.cart_price b{\r\n\tfont-weight: normal;\r\n}\r\n.cart_num{\r\n\tfont-size: 0;\r\n}\r\n.cart_num a{\r\n\twidth: 25px;\r\n\theight: 25px;\r\n\tline-height: 25px;\r\n\ttext-align: center;\r\n\tfont-size: .8rem;\r\n\tbackground: #E5E5E5;\r\n\tborder: 1px solid #bdbdbd;\r\n\tdisplay: inline-block;\r\n\tcolor: #000;\r\n}\r\n.cart_num input{\r\n\twidth: 30px;\r\n\theight: 25px;\r\n\tfont-size: .8rem;\r\n\ttext-align: center;\r\n\tborder: none;\r\n\tborder-top: 1px solid #bdbdbd;\r\n\tborder-bottom: 1px solid #bdbdbd;\r\n\tbackground: #fff;\r\n}\r\n.cart_del{\r\n\tfloat: right;\r\n}\r\n.cart_del a{\r\n\tfont-size: .8rem;\r\n\tborder: 1px solid #bdbdbd;\r\n\tbackground: #fff;\r\n\tborder-radius: 5px;\r\n\tpadding: 5px 12px;\r\n\tcolor: #000;\r\n\tdisplay: inline-block;\r\n}\r\n.cart_total{\r\n\theight: 54px;\r\n}\r\n.cart_total b{\r\n\tfont-weight: normal;\r\n}\r\n.cart_total_p{\r\n\tposition: fixed;\r\n\twidth: 90%;\r\n\theight: 34px;\r\n\tbackground: #fff;\r\n\tborder-top: 1px solid #ddd;\r\n\tbottom: 0;\r\n\tleft: 0;\r\n\tpadding: 10px 5%;\r\n}\r\n.cart_total_p span{\r\n\tpadding-right: .8rem;\r\n\tline-height: 34px;\r\n}\r\n.cart_total_btn:hover,.cart_total_btn:focus{\r\n\tcolor: #fff;\r\n}\r\n.cart-empty{\r\n\ttext-align: center;\r\n\tpadding: 5rem 5%;\r\n}\r\n", ""]);
-
-	// exports
-
-
-/***/ },
-/* 56 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-
-	var Header = __webpack_require__(22);
-	module.exports = {
-		components: {
-			'myHeader': Header
-		},
-		data: function data() {
-			return {
-				"title": "购物车",
-				"apiUrl": "api/cart.php",
-				"buyurl": "",
-				"data": []
-			};
-		},
-		mounted: function mounted() {
-			this.$http.get(this.apiUrl, {}).then(function (response) {
-				var objs = JSON.parse(response.data);
-				this.data = objs;
-			}, function (response) {
-				tips({ txt: "获取失败,请稍候再试！" });
-			});
-		},
-		computed: {
-			totalNum: function totalNum() {
-				var num = 0;
-				for (var i = 0; i < this.data.length; i++) {
-					num += this.data[i]["num"] * 1;
-				}
-				return num;
-			},
-			totalPrice: function totalPrice() {
-				var price = 0;
-				for (var i = 0; i < this.data.length; i++) {
-					price += this.data[i]["price"] * this.data[i]["num"];
-				}
-				if (price > 0) {
-					this.buyurl = "/";
-				}
-				return price;
-			}
-		},
-		methods: {
-			minus: function minus(a) {
-				this.data[a]["num"]--;
-				if (this.data[a]["num"] <= 0) {
-					this.data[a]["num"] = 1;
-				}
-			},
-			add: function add(a) {
-				this.data[a]["num"]++;
-			},
-			del: function del(a) {
-				var aData = this.data;
-				prompt('确认删除该商品？', function () {
-					aData.splice(a, 1);
-				});
-			}
-		}
-	};
-
-/***/ },
-/* 57 */
-/***/ function(module, exports) {
-
-	module.exports = "\n<div>\n\t<div>\n\t\t<my-header :title = \"title\"></my-header>\n\t</div>\n\t<div>\n\t\t<div class=\"cart_lists\" id=\"cart\">\n\t\t\t<ul v-if=\"data.length>0\">\n\t\t\t\t<li v-for=\"(v , index) in data\">\n\t\t\t\t\t<div class=\"cart_hd\">\n\t\t                <img class=\"cart_appmsg_thumb\" :src=\"v.img\">\n\t\t            </div>\n\t\t            <div class=\"cart_bd\">\n\t\t                <h4 class=\"cart_title\">{{v.title}}</h4>\n\t\t                <p class=\"cart_desc\">{{v.sub_title}}</p>\n\t\t                <p class=\"cart_price\">\n\t\t                \t<span>价格：￥<b>{{v.price}}</b>×<b>{{v.num}}</b></span>\n\t\t                \t<span>合计：￥<b>{{v.price*v.num}}</b></span>\n\t\t                </p>\n\t\t                <p class=\"cart_handle\">\n\t\t                \t<span class=\"cart_num\">\n\t\t                \t\t<a @click=\"minus(index)\">-</a>\n\t\t                \t\t<input type=\"text\" :value=\"v.num\" />\n\t\t                \t\t<a @click=\"add(index)\">+</a>\n\t\t                \t</span>\n\t\t                \t<span class=\"cart_del\">\n\t\t                \t\t<a @click=\"del(index)\">删除</a>\n\t\t                \t</span>\n\t\t                </p>\n\t\t            </div>\n\t\t\t\t</li>\n\t\t\t</ul>\n\t\t\t<div v-else class=\"cart-empty\">还没有任何商品，<router-link to=\"/\" class=\"btn btn-default btn-sm\">去购买</router-link></div>\n\t\t</div>\n\t\t<div class=\"cart_total\">\n\t\t\t<div class=\"cart_total_p\">\n\t\t\t\t<span>共<b>{{totalNum}}</b>件商品</span>\n\t\t\t\t<span>合计：{{totalPrice}}元</span>\n\t\t\t\t<router-link to=\"/buyurl\" :class=\"{'btn-disabled':totalPrice<=0,'btn-primary':totalPrice>0}\" class=\"btn btn-sm fr\">立即购买</router-link>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</div>\n";
-
-/***/ },
-/* 58 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var __vue_script__, __vue_template__
-	__webpack_require__(59)
-	__vue_script__ = __webpack_require__(61)
-	if (__vue_script__ &&
-	    __vue_script__.__esModule &&
-	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] shopping\\tpl\\user.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(62)
-	module.exports = __vue_script__ || {}
-	if (module.exports.__esModule) module.exports = module.exports.default
-	if (__vue_template__) {
-	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
-	}
-	if (false) {(function () {  module.hot.accept()
-	  var hotAPI = require("vue-hot-reload-api")
-	  hotAPI.install(require("vue"), false)
-	  if (!hotAPI.compatible) return
-	  var id = "./user.vue"
-	  if (!module.hot.data) {
-	    hotAPI.createRecord(id, module.exports)
-	  } else {
-	    hotAPI.update(id, module.exports, __vue_template__)
-	  }
-	})()}
-
-/***/ },
-/* 59 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-
-	// load the styles
-	var content = __webpack_require__(60);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(9)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./user.vue", function() {
-				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./user.vue");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
-
-/***/ },
-/* 60 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(8)();
-	// imports
-
-
-	// module
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.user-top{\r\n\tbackground: #4ec2dd;\r\n}\r\n.user-wrap{\r\n\tpadding: 20px 0;\r\n}\r\n.user-headerimg{\r\n\twidth: 100px;\r\n\theight: 100px;\r\n\tmargin: 0 auto;\r\n\tborder: 2px solid #fff;\r\n\tborder-radius: 50%;\r\n\toverflow: hidden;\r\n}\r\n.user-headerimg img{\r\n\tborder-radius: 50%;\r\n}\r\n.user-username{\r\n\ttext-align: center;\r\n\tcolor: #fff;\r\n\tpadding-top: 10px;\r\n}\r\n.single-lists{\r\n\tbackground: #fff;\r\n}\r\n.single-lists li{\r\n\tborder-bottom: 1px solid #eee;\r\n\t\r\n}\r\n.single-lists a{\r\n\tdisplay: block;\r\n\tcolor: #333;\r\n\tpadding: 14px 5%;\r\n\tline-height: 20px;\r\n}\r\n.single-lists .fa-chevron-right{\r\n\tfloat: right;\r\n\tcolor: #ccc;\r\n}\r\n.single-lists .fa-chevron-right:before{\r\n\tline-height: 20px;\r\n}\r\n.single-lists .ico{\r\n\tfont-size: 1.3em;\r\n\twidth: 1.2em;\r\n\ttext-align: center;\r\n}\r\n.single-lists-name{\r\n\tpadding-left: 8px;\r\n\tfont-size: .8em;\r\n}\n", ""]);
-
-	// exports
-
-
-/***/ },
-/* 61 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-
-	var Header = __webpack_require__(22);
-	module.exports = {
-		data: function data() {
-			return {
-				"title": "个人中心"
-			};
-		},
-		components: {
-			'myHeader': Header
-		}
-	};
-
-/***/ },
-/* 62 */
-/***/ function(module, exports) {
-
-	module.exports = "\n<div>\n\t<div>\n\t\t<my-header :title=\"title\"></my-header>\n\t</div>\n\t<div class=\"user-top\">\n\t\t<div class=\"user-wrap\">\n\t\t\t<div class=\"user-headerimg\"><img src=\"/static/images/22.jpg\"/></div>\n\t\t\t<p class=\"user-username\">我</p>\n\t\t</div>\n\t</div>\n\t<div class=\"single-lists\">\n\t\t<ul>\n\t\t\t<li><router-link to=\"/info\"><b style=\"color: #4783ce;\" class=\"ico fa fa-user\"></b><span class=\"single-lists-name\">个人资料</span><i class=\"fa fa-chevron-right\"></i></a></li>\n\t\t\t<li><router-link to=\"/cart\"><b style=\"color: #31c9a3;\" class=\"ico fa fa-shopping-cart\"></b><span class=\"single-lists-name\">购物车</span><i class=\"fa fa-chevron-right\"></i></a></li>\n\t\t\t<li><router-link to=\"/order\"><b style=\"color: #eb4e70;\" class=\"ico fa fa-file-text\"></b><span class=\"single-lists-name\">我的订单</span><i class=\"fa fa-chevron-right\"></i></a></li>\n\t\t</ul>\n\t</div>\n</div>\n";
-
-/***/ },
-/* 63 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var __vue_script__, __vue_template__
-	__webpack_require__(64)
-	__vue_script__ = __webpack_require__(66)
-	if (__vue_script__ &&
-	    __vue_script__.__esModule &&
-	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] shopping\\tpl\\goods.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(67)
-	module.exports = __vue_script__ || {}
-	if (module.exports.__esModule) module.exports = module.exports.default
-	if (__vue_template__) {
-	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
-	}
-	if (false) {(function () {  module.hot.accept()
-	  var hotAPI = require("vue-hot-reload-api")
-	  hotAPI.install(require("vue"), false)
-	  if (!hotAPI.compatible) return
-	  var id = "./goods.vue"
-	  if (!module.hot.data) {
-	    hotAPI.createRecord(id, module.exports)
-	  } else {
-	    hotAPI.update(id, module.exports, __vue_template__)
-	  }
-	})()}
-
-/***/ },
-/* 64 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-
-	// load the styles
-	var content = __webpack_require__(65);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(9)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./goods.vue", function() {
-				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./goods.vue");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
-
-/***/ },
-/* 65 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(8)();
-	// imports
-
-
-	// module
 	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\r\n.goods-img,.goods-img img{\r\n\twidth: 100%;\r\n}\r\n.goods-info{\r\n\tbackground: #fff;\r\n\tborder-bottom: 1px solid #eee;\r\n\tpadding: 5px 4%;\r\n\tmargin-bottom: 8px;\r\n}\r\n.goods-info-title{\r\n\tline-height: 1.5em;\r\n\tfont-size: 1.1rem;\r\n\tmargin-bottom: 8px;\r\n}\r\n.goods-info-desc{\r\n\tcolor: #999;\r\n\tfont-size: .8rem;\r\n\tmargin-bottom: 8px;\r\n}\r\n.goods-price{\r\n\tfont-size: .8rem;\r\n\tmargin-bottom: 10px;\r\n}\r\n.goods-price-now{\r\n\tmargin-right: 10px;\r\n}\r\n.goods-price-now b{\r\n\tfont-size: 1.2em;\r\n\tcolor: orangered;\r\n}\r\n.goods-price-original{\r\n\ttext-decoration: line-through;\r\n}\r\n.goods-buy{\r\n\tborder-top: 1px solid #eee;\r\n\tpadding-top: 10px;\r\n}\r\n.goods-detail{\r\n\tbackground: #fff;\r\n\tpadding: 5px 4%;\r\n}\r\n.goods-detail-t{\r\n\tborder-bottom: 1px solid #eee;\r\n\tpadding: 0 5px 5px;\r\n}\r\n.goods-detail-t span{\r\n\tborder-left: 3px solid #2BACC9;\r\n\tpadding-left: 8px;\r\n}\r\n.goods-detail-con{\r\n\tpadding: 5px 0;\r\n}\r\n.fixed{\r\n\tposition: fixed;\r\n\twidth: 100%; height: 100%;\r\n\tbackground: rgba(0,0,0,.5);\r\n\tleft: 0;\r\n\ttop: 0;\r\n}\r\n.goods-pop{\r\n\tposition: absolute;\r\n\tbackground: #fff;\r\n\twidth: 100%;\r\n\tleft: 0;\r\n\tbottom: 0;\r\n\tpadding: 50px 5% 10px;\r\n\tbox-sizing: border-box;\r\n}\r\n.goods-pop-img{\r\n\tposition: absolute;\r\n\twidth: 60px;\r\n\theight: 60px;\r\n\tpadding: 5px;\r\n\tleft: 5%;\r\n\ttop: -30px;\r\n\tbackground: #fff;\r\n}\r\n.goods-pop-img img{\r\n\twidth: 100%;\r\n\theight: 100%;\r\n}\r\n.goods-pop-chioce{\r\n\tfont-size: .8rem;\r\n}\r\n.goods-pop-chioce dt{\r\n\tfloat: left;\r\n\twidth: 3em;\r\n\ttext-align: right;\r\n}\r\n.goods-pop-chioce dd{\r\n\tmargin-left:3em;\r\n\tmargin-bottom: 10px;\r\n}\r\n.size{}\r\n.size span{\r\n\tborder: 1px solid #ccc;\r\n\tpadding: 5px 12px;\r\n\tdisplay: inline-block;\r\n\tmargin-bottom: 5px;\r\n\tmargin-right: 5px;\r\n}\r\n.size span.active{\r\n\tborder: 1px solid #42b8d3;\r\n\tcolor: #42b8d3;\r\n}\r\n.chioce-num{ font-size: 0;}\r\n.chioce-num input[type=button]{\r\n\twidth: 2em;\r\n\theight: 2em;\r\n\tfont-size: .8rem;\r\n\tborder: 1px solid #ccc;\r\n\tbackground: #e5e5e5;\r\n}\r\n.chioce-num input[type=text]{\r\n\twidth: 3em;\r\n\theight: 2em;\r\n\tfont-size: .8rem;\r\n\tborder: none;\r\n\tborder-top: 1px solid #ccc;\r\n\tborder-bottom: 1px solid #ccc;\r\n\tbackground: #fff;\r\n\ttext-align: center;\r\n\tbox-sizing: border-box;\r\n}\r\n\r\n", ""]);
 
 	// exports
 
 
 /***/ },
-/* 66 */
+/* 31 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -11007,10 +10204,813 @@
 	};
 
 /***/ },
-/* 67 */
+/* 32 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"body-main bg-grey\">\n\t<div>\n\t\t<my-header :title = \"title\"></my-header>\n\t</div>\n\t<div class=\"goods-img\"><img :src=\"data.thumb\" alt=\"\" /></div>\n\t<div class=\"goods-info\">\n\t\t<h2 class=\"goods-info-title\">{{data.title}}</h2>\n\t\t<p class=\"goods-info-desc\">{{data.sub_title}}</p>\n\t\t<div class=\"goods-price\">\n\t\t\t<span class=\"goods-price-now\">优惠价：<b>{{data.price}}</b></span>\n\t\t\t<span class=\"goods-price-original\">原价：{{data.originalprice}}</span>\n\t\t</div>\n\t\t<div class=\"goods-buy\"><a @click=\"buy\" class=\"btn btn-block btn-primary\">立即购买</a></div>\n\t</div>\n\t<div class=\"goods-detail\">\n\t\t<div class=\"goods-detail-t\"><span>商品介绍</span></div>\n\t\t<div class=\"goods-detail-con\">{{data.content}}</div>\n\t</div>\n\t<div class=\"fixed\" :class=\"{hide:!pop,show:pop}\">\n\t\t<div class=\"goods-pop\">\n\t\t\t<div class=\"goods-pop-img\"><img :src=\"data.thumb\"/></div>\n\t\t\t<a href=\"javascript:;\" class=\"close\" @click=\"buy\" style=\" position: absolute; right: 8px; top: 8px;\"></a>\n\t\t\t<dl class=\"goods-pop-chioce\" v-for=\"(v, i) in size\">\n\t\t\t\t<dt>{{v.name}}：</dt>\n\t\t\t\t<dd class=\"size\">\n\t\t\t\t\t<span v-for=\"(s, j) in v.value\" @click=\"chiocesize(i,j)\" :class=\"{active:s==sub.size[i].size}\">{{s}}</span>\n\t\t\t\t</dd>\n\t\t\t</dl>\n\t\t\t<dl class=\"goods-pop-chioce\">\n\t\t\t\t<dt>数量：</dt>\n\t\t\t\t<dd class=\"chioce-num\">\n\t\t\t\t\t<input type=\"button\" @click=\"minus\" value=\"-\" />\n\t\t\t\t\t<input type=\"text\" :value=\"sub.num\" />\n\t\t\t\t\t<input type=\"button\" @click=\"add\" value=\"+\" />\n\t\t\t\t</dd>\n\t\t\t</dl>\n\t\t\t<div class=\"goods-buy\"><a @click=\"submit\"  class=\"btn btn-block btn-primary\">立即购买</a></div>\n\t\t</div>\n\t</div>\n</div>\n";
+
+/***/ },
+/* 33 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_script__, __vue_template__
+	__webpack_require__(34)
+	__vue_script__ = __webpack_require__(36)
+	if (__vue_script__ &&
+	    __vue_script__.__esModule &&
+	    Object.keys(__vue_script__).length > 1) {
+	  console.warn("[vue-loader] shopping\\tpl\\login.vue: named exports in *.vue files are ignored.")}
+	__vue_template__ = __webpack_require__(37)
+	module.exports = __vue_script__ || {}
+	if (module.exports.__esModule) module.exports = module.exports.default
+	if (__vue_template__) {
+	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
+	}
+	if (false) {(function () {  module.hot.accept()
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), false)
+	  if (!hotAPI.compatible) return
+	  var id = "./login.vue"
+	  if (!module.hot.data) {
+	    hotAPI.createRecord(id, module.exports)
+	  } else {
+	    hotAPI.update(id, module.exports, __vue_template__)
+	  }
+	})()}
+
+/***/ },
+/* 34 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(35);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(9)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-9d1cd44e&scoped=true!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./login.vue", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-9d1cd44e&scoped=true!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./login.vue");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 35 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(8)();
+	// imports
+
+
+	// module
+	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.form[_v-9d1cd44e]{\n\twidth: 90%; margin: 0 auto; padding: 20px 0; font-size: .9rem;\n}\n.form-group[_v-9d1cd44e],.form-line[_v-9d1cd44e]{\n\tpadding-bottom: 20px;\n}\n.form-group label[_v-9d1cd44e]{\n\tdisplay: block; padding-bottom: 10px;\n}\n.form-group input[type=text][_v-9d1cd44e],.form-group input[type=password][_v-9d1cd44e]{\n\twidth: 100%; height: 40px;  box-sizing: border-box; border: 1px solid #ccc; padding: 9px 10px;\n}\n.form-group .input-tips[_v-9d1cd44e]{\n\tbackground: #ffe5e5;\n\tdisplay: block;\n\tmargin-top: 5px;\n\tpadding: 0 8px;\n\tline-height: 30px;\n}\n.form-btn[_v-9d1cd44e]{\n\ttext-align: center;\n\tpadding-top: 10px;\n\tborder-top: 1px solid #eee;\n}\n.form-btn input[type=submit][_v-9d1cd44e],.form-btn a[_v-9d1cd44e]{\n\twidth: 45%;\n\tbox-sizing: border-box;\n}\n.form-btn input[type=submit][_v-9d1cd44e]{\n\tbackground: #999;\n\tborder: 1px solid #999;\n}\n", ""]);
+
+	// exports
+
+
+/***/ },
+/* 36 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	var Header = __webpack_require__(22);
+	module.exports = {
+		data: function data() {
+			return {
+				"title": "登录",
+				"apiUrl": 'api/login.php',
+				"form": {
+					"username": "",
+					"password": "",
+					"remember": false,
+					"usernametips": "",
+					"passwordtips": ""
+				}
+			};
+		},
+		components: {
+			'myHeader': Header
+		},
+		methods: {
+			onSubmit: function onSubmit() {
+				this.$http.post(this.apiUrl, this.form).then(function (response) {
+
+					tips({
+						txt: '登录成功',
+						Callback: function Callback() {
+							location.href = '/';
+						}
+					});
+				}, function (response) {
+					tips({ txt: '网络繁忙，请稍候再试！' });
+				});
+			}
+		}
+	};
+
+/***/ },
+/* 37 */
+/***/ function(module, exports) {
+
+	module.exports = "\n<div _v-9d1cd44e=\"\">\n\t<div _v-9d1cd44e=\"\">\n\t\t<my-header v-once=\"\" :title=\"title\" _v-9d1cd44e=\"\"></my-header>\n\t</div>\n\t<div class=\"form\" _v-9d1cd44e=\"\">\n\t\t<form @submit.prevent=\"onSubmit\" _v-9d1cd44e=\"\">\n\t\t\t<div class=\"form-group\" _v-9d1cd44e=\"\">\n\t\t\t\t<label for=\"username\" _v-9d1cd44e=\"\">用户名/邮箱：</label>\n\t\t\t\t<input type=\"text\" v-model=\"form.username\" debounce=\"500\" name=\"username\" id=\"username\" value=\"\" required=\"required\" _v-9d1cd44e=\"\">\n\t\t\t\t<span class=\"input-tips\" v-show=\"form.usernametips!=''\" _v-9d1cd44e=\"\"><font color=\"red\" _v-9d1cd44e=\"\">*{{form.usernametips}}</font></span>\n\t\t\t</div>\n\t\t\t<div class=\"form-group\" _v-9d1cd44e=\"\">\n\t\t\t\t<label for=\"password\" _v-9d1cd44e=\"\">密码：</label>\n\t\t\t\t<input type=\"password\" v-model=\"form.password\" debounce=\"500\" name=\"password\" id=\"password\" value=\"\" required=\"required\" _v-9d1cd44e=\"\">\n\t\t\t\t<span class=\"input-tips\" v-show=\"form.passwordtips!=''\" _v-9d1cd44e=\"\"><font color=\"red\" _v-9d1cd44e=\"\">*{{form.passwordtips}}</font></span>\n\t\t\t</div>\n\t\t\t<div class=\"form-line\" _v-9d1cd44e=\"\">\n\t\t\t\t<label for=\"remember\" _v-9d1cd44e=\"\"><input type=\"checkbox\" v-model=\"form.remember\" name=\"remember\" id=\"remember\" _v-9d1cd44e=\"\"> 记住密码</label>\n\t\t\t\t<router-link to=\"/forget\" class=\"fr\" _v-9d1cd44e=\"\">忘记密码？</router-link>\n\t\t\t</div>\n\t\t\t<div class=\"form-btn\" _v-9d1cd44e=\"\">\n\t\t\t\t<input type=\"submit\" value=\"登录\" class=\"btn btn-primary\" @keyup.enter=\"onSubmit\" _v-9d1cd44e=\"\">\n\t\t\t\t<router-link to=\"/register\" class=\"btn btn-primary\" _v-9d1cd44e=\"\">注册</router-link>\n\t\t\t</div>\n\t\t</form>\n\t</div>\n</div>\n";
+
+/***/ },
+/* 38 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_script__, __vue_template__
+	__webpack_require__(39)
+	__vue_script__ = __webpack_require__(41)
+	if (__vue_script__ &&
+	    __vue_script__.__esModule &&
+	    Object.keys(__vue_script__).length > 1) {
+	  console.warn("[vue-loader] shopping\\tpl\\register.vue: named exports in *.vue files are ignored.")}
+	__vue_template__ = __webpack_require__(42)
+	module.exports = __vue_script__ || {}
+	if (module.exports.__esModule) module.exports = module.exports.default
+	if (__vue_template__) {
+	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
+	}
+	if (false) {(function () {  module.hot.accept()
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), false)
+	  if (!hotAPI.compatible) return
+	  var id = "./register.vue"
+	  if (!module.hot.data) {
+	    hotAPI.createRecord(id, module.exports)
+	  } else {
+	    hotAPI.update(id, module.exports, __vue_template__)
+	  }
+	})()}
+
+/***/ },
+/* 39 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(40);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(9)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-0f5e0863&scoped=true!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./register.vue", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-0f5e0863&scoped=true!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./register.vue");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 40 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(8)();
+	// imports
+
+
+	// module
+	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.form[_v-0f5e0863]{\n\twidth: 90%; margin: 0 auto; padding: 20px 0; font-size: .9rem;\n}\n.form-group[_v-0f5e0863],.form-line[_v-0f5e0863]{\n\tpadding-bottom: 20px;\n}\n.form-group label[_v-0f5e0863]{\n\tdisplay: block; padding-bottom: 10px;\n}\n.form-group input[type=text][_v-0f5e0863],.form-group input[type=password][_v-0f5e0863],.form-group input[type=email][_v-0f5e0863]{\n\twidth: 100%; height: 40px;  box-sizing: border-box; border: 1px solid #ccc; padding: 9px 10px;\n}\n.form-group .input-tips[_v-0f5e0863]{\n\tbackground: #ffe5e5;\n\tdisplay: block;\n\tmargin-top: 5px;\n\tpadding: 0 8px;\n\tline-height: 30px;\n}\n.form-btn[_v-0f5e0863]{\n\ttext-align: center;\n\tpadding-top: 10px;\n\tborder-top: 1px solid #eee;\n}\n.form-btn input[type=submit][_v-0f5e0863]{\n\twidth: 60%;\n\tbox-sizing: border-box;\n}\n", ""]);
+
+	// exports
+
+
+/***/ },
+/* 41 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	var Header = __webpack_require__(22);
+	module.exports = {
+		data: function data() {
+			return {
+				"title": "注册",
+				"apiUrl": 'api/register.php',
+				"form": {
+					"username": "",
+					"email": "",
+					"password": "",
+					"emailtips": "",
+					"usernametips": "",
+					"passwordtips": ""
+				}
+			};
+		},
+		components: {
+			'myHeader': Header
+		},
+		methods: {
+			onSubmit: function onSubmit() {
+				this.$http.post(this.apiUrl, this.form).then(function (response) {
+
+					tips({
+						txt: '注册成功',
+						Callback: function Callback() {
+							location.href = '/login';
+						}
+					});
+				}, function (response) {
+					tips({ txt: '网络繁忙，请稍候再试！' });
+				});
+			}
+		}
+	};
+
+/***/ },
+/* 42 */
+/***/ function(module, exports) {
+
+	module.exports = "\n<div _v-0f5e0863=\"\">\n\t<div _v-0f5e0863=\"\">\n\t\t<my-header :title=\"title\" _v-0f5e0863=\"\"></my-header>\n\t</div>\n\t<div class=\"form\" _v-0f5e0863=\"\">\n\t\t<form @submit.prevent=\"onSubmit\" _v-0f5e0863=\"\">\n\t\t\t<div class=\"form-group\" _v-0f5e0863=\"\">\n\t\t\t\t<label for=\"email\" _v-0f5e0863=\"\">邮箱：</label>\n\t\t\t\t<input type=\"email\" v-model=\"form.email\" debounce=\"500\" name=\"email\" id=\"email\" value=\"\" required=\"required\" _v-0f5e0863=\"\">\n\t\t\t\t<span class=\"input-tips\" v-show=\"form.emailtips!=''\" _v-0f5e0863=\"\"><font color=\"red\" _v-0f5e0863=\"\">*{{form.emailtips}}</font></span>\n\t\t\t</div>\n\t\t\t<div class=\"form-group\" _v-0f5e0863=\"\">\n\t\t\t\t<label for=\"username\" _v-0f5e0863=\"\">用户名：</label>\n\t\t\t\t<input type=\"text\" v-model=\"form.username\" debounce=\"500\" name=\"username\" id=\"username\" value=\"\" required=\"required\" _v-0f5e0863=\"\">\n\t\t\t\t<span class=\"input-tips\" v-show=\"form.usernametips!=''\" _v-0f5e0863=\"\"><font color=\"red\" _v-0f5e0863=\"\">*{{form.usernametips}}</font></span>\n\t\t\t</div>\n\t\t\t<div class=\"form-group\" _v-0f5e0863=\"\">\n\t\t\t\t<label for=\"password\" _v-0f5e0863=\"\">密码：</label>\n\t\t\t\t<input type=\"password\" v-model=\"form.password\" debounce=\"500\" name=\"password\" id=\"password\" value=\"\" required=\"required\" _v-0f5e0863=\"\">\n\t\t\t\t<span class=\"input-tips\" v-show=\"form.passwordtips!=''\" _v-0f5e0863=\"\"><font color=\"red\" _v-0f5e0863=\"\">*{{form.passwordtips}}</font></span>\n\t\t\t</div>\n\t\t\t<div class=\"form-btn\" _v-0f5e0863=\"\">\n\t\t\t\t<input type=\"submit\" value=\"注册\" class=\"btn btn-primary\" @keyup.enter=\"onSubmit\" _v-0f5e0863=\"\">\n\t\t\t</div>\n\t\t</form>\n\t</div>\n</div>\n";
+
+/***/ },
+/* 43 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_script__, __vue_template__
+	__webpack_require__(44)
+	__vue_script__ = __webpack_require__(46)
+	if (__vue_script__ &&
+	    __vue_script__.__esModule &&
+	    Object.keys(__vue_script__).length > 1) {
+	  console.warn("[vue-loader] shopping\\tpl\\forget.vue: named exports in *.vue files are ignored.")}
+	__vue_template__ = __webpack_require__(47)
+	module.exports = __vue_script__ || {}
+	if (module.exports.__esModule) module.exports = module.exports.default
+	if (__vue_template__) {
+	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
+	}
+	if (false) {(function () {  module.hot.accept()
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), false)
+	  if (!hotAPI.compatible) return
+	  var id = "./forget.vue"
+	  if (!module.hot.data) {
+	    hotAPI.createRecord(id, module.exports)
+	  } else {
+	    hotAPI.update(id, module.exports, __vue_template__)
+	  }
+	})()}
+
+/***/ },
+/* 44 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(45);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(9)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-7771dea6&scoped=true!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./forget.vue", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-7771dea6&scoped=true!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./forget.vue");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 45 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(8)();
+	// imports
+
+
+	// module
+	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.form[_v-7771dea6]{\n\twidth: 90%; margin: 0 auto; padding: 20px 0; font-size: .9rem;\n}\n.form-group[_v-7771dea6],.form-line[_v-7771dea6]{\n\tpadding-bottom: 20px;\n}\n.form-group label[_v-7771dea6]{\n\tdisplay: block; padding-bottom: 10px;\n}\n.form-group input[type=text][_v-7771dea6],.form-group input[type=email][_v-7771dea6]{\n\twidth: 100%; height: 40px; box-sizing: border-box; border: 1px solid #ccc; padding: 9px 10px;\n}\n.form-group .input-tips[_v-7771dea6]{\n\tbackground: #ffe5e5;\n\tdisplay: block;\n\tmargin-top: 5px;\n\tpadding: 0 8px;\n\tline-height: 30px;\n}\n.input-code[_v-7771dea6]{\n\tposition: relative;\n\tpadding-right: 95px;\n}\n.input-code .code-img[_v-7771dea6]{\n\tposition: absolute;\n\twidth: 95px;\n\theight: 40px;\n\tright: 0;\n\ttop: 0;\n\tborder: 1px solid #e5e5e5;\n\tbox-sizing: border-box;\n}\n.input-code .code-img img[_v-7771dea6]{\n\twidth: 100%;\n\theight: 100%;\n}\n.form-btn[_v-7771dea6]{\n\ttext-align: center;\n\tpadding-top: 10px;\n\tborder-top: 1px solid #eee;\n}\n.form-btn input[type=submit][_v-7771dea6],.form-btn a[_v-7771dea6]{\n\twidth: 45%;\n\tbox-sizing: border-box;\n}\n.form-btn input[type=submit][_v-7771dea6]{\n\twidth: 60%;\n}\n", ""]);
+
+	// exports
+
+
+/***/ },
+/* 46 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	var Header = __webpack_require__(22);
+	module.exports = {
+		data: function data() {
+			return {
+				"title": "忘记密码",
+				"apiUrl": 'api/forget.php',
+				"form": {
+					"email": "",
+					"code": "",
+					"emailtips": "",
+					"codetips": ""
+				}
+			};
+		},
+		components: {
+			'myHeader': Header
+		},
+		methods: {
+			onSubmit: function onSubmit() {
+				this.$http.post(this.apiUrl, this.form).then(function (response) {
+
+					tips({
+						txt: '提交成功',
+						Callback: function Callback() {
+							location.href = '/forgettips';
+						}
+					});
+				}, function (response) {
+					tips({ txt: '网络繁忙，请稍候再试！' });
+				});
+			}
+		}
+	};
+
+/***/ },
+/* 47 */
+/***/ function(module, exports) {
+
+	module.exports = "\n<div _v-7771dea6=\"\">\n\t<div _v-7771dea6=\"\">\n\t\t<my-header :title=\"title\" _v-7771dea6=\"\"></my-header>\n\t</div>\n\t<div class=\"form\" _v-7771dea6=\"\">\n\t\t<form @submit.prevent=\"onSubmit\" _v-7771dea6=\"\">\n\t\t\t<div class=\"form-group\" _v-7771dea6=\"\">\n\t\t\t\t<label for=\"email\" _v-7771dea6=\"\">请输入邮箱：</label>\n\t\t\t\t<input type=\"email\" v-model=\"form.email\" debounce=\"500\" name=\"email\" id=\"email\" value=\"\" required=\"required\" _v-7771dea6=\"\">\n\t\t\t\t<span class=\"input-tips\" v-show=\"form.emailtips!=''\" _v-7771dea6=\"\"><font color=\"red\" _v-7771dea6=\"\">*{{form.emailtips}}</font></span>\n\t\t\t</div>\n\t\t\t<div class=\"form-group\" _v-7771dea6=\"\">\n\t\t\t\t<label for=\"code\" _v-7771dea6=\"\">请输入验证码：</label>\n\t\t\t\t<div class=\"input-code\" _v-7771dea6=\"\">\n\t\t\t\t\t<input type=\"text\" v-model=\"form.code\" debounce=\"500\" name=\"code\" id=\"code\" value=\"\" required=\"required\" _v-7771dea6=\"\">\n\t\t\t\t\t<span class=\"code-img\" _v-7771dea6=\"\"><img src=\"xxxHTMLLINKxxx0.56742563704028730.7011191190686077xxx\" _v-7771dea6=\"\"></span>\n\t\t\t\t</div>\n\t\t\t\t<span class=\"input-tips\" v-show=\"form.codetips!=''\" _v-7771dea6=\"\"><font color=\"red\" _v-7771dea6=\"\">*{{form.codetips}}</font></span>\n\t\t\t</div>\n\t\t\t<div class=\"form-btn\" _v-7771dea6=\"\">\n\t\t\t\t<input type=\"submit\" value=\"下一步\" class=\"btn btn-primary\" @keyup.enter=\"onSubmit\" _v-7771dea6=\"\">\n\t\t\t</div>\n\t\t</form>\n\t</div>\n</div>\n";
+
+/***/ },
+/* 48 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_script__, __vue_template__
+	__webpack_require__(49)
+	__vue_script__ = __webpack_require__(51)
+	if (__vue_script__ &&
+	    __vue_script__.__esModule &&
+	    Object.keys(__vue_script__).length > 1) {
+	  console.warn("[vue-loader] shopping\\tpl\\forgettips.vue: named exports in *.vue files are ignored.")}
+	__vue_template__ = __webpack_require__(52)
+	module.exports = __vue_script__ || {}
+	if (module.exports.__esModule) module.exports = module.exports.default
+	if (__vue_template__) {
+	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
+	}
+	if (false) {(function () {  module.hot.accept()
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), false)
+	  if (!hotAPI.compatible) return
+	  var id = "./forgettips.vue"
+	  if (!module.hot.data) {
+	    hotAPI.createRecord(id, module.exports)
+	  } else {
+	    hotAPI.update(id, module.exports, __vue_template__)
+	  }
+	})()}
+
+/***/ },
+/* 49 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(50);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(9)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-380c1536&scoped=true!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./forgettips.vue", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-380c1536&scoped=true!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./forgettips.vue");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 50 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(8)();
+	// imports
+
+
+	// module
+	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.forgettips[_v-380c1536]{\n\tpadding: 50px 10%;\n}\n.forgettips p[_v-380c1536]{\n\ttext-align: center;\n\tcolor: #666;\n\tpadding: 5px 0;\n\tline-height: 1.5em;\n}\n", ""]);
+
+	// exports
+
+
+/***/ },
+/* 51 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	var Header = __webpack_require__(22);
+	module.exports = {
+		data: function data() {
+			return {
+				"title": "找回密码",
+				"apiUrl": 'api/forget.php',
+				"form": {
+					"email": "",
+					"code": "",
+					"emailtips": "",
+					"codetips": ""
+				}
+			};
+		},
+		components: {
+			'myHeader': Header
+		}
+	};
+
+/***/ },
+/* 52 */
+/***/ function(module, exports) {
+
+	module.exports = "\n<div _v-380c1536=\"\">\n\t<div _v-380c1536=\"\">\n\t\t<my-header :title=\"title\" _v-380c1536=\"\"></my-header>\n\t</div>\n\t<div class=\"forgettips\" _v-380c1536=\"\">\n\t\t<p _v-380c1536=\"\">我们已将信息发生至您的邮箱，请点击邮箱中的链接地址重置密码</p>\n\t\t<p _v-380c1536=\"\"><a href=\"https://mail.qq.com\" target=\"_blank\" class=\"btn btn-primary btn-sm\" _v-380c1536=\"\">去我的邮箱</a></p>\n\t</div>\n</div>\n";
+
+/***/ },
+/* 53 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_script__, __vue_template__
+	__webpack_require__(54)
+	__vue_script__ = __webpack_require__(56)
+	if (__vue_script__ &&
+	    __vue_script__.__esModule &&
+	    Object.keys(__vue_script__).length > 1) {
+	  console.warn("[vue-loader] shopping\\tpl\\password.vue: named exports in *.vue files are ignored.")}
+	__vue_template__ = __webpack_require__(57)
+	module.exports = __vue_script__ || {}
+	if (module.exports.__esModule) module.exports = module.exports.default
+	if (__vue_template__) {
+	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
+	}
+	if (false) {(function () {  module.hot.accept()
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), false)
+	  if (!hotAPI.compatible) return
+	  var id = "./password.vue"
+	  if (!module.hot.data) {
+	    hotAPI.createRecord(id, module.exports)
+	  } else {
+	    hotAPI.update(id, module.exports, __vue_template__)
+	  }
+	})()}
+
+/***/ },
+/* 54 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(55);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(9)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-d2164f4a&scoped=true!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./password.vue", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-d2164f4a&scoped=true!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./password.vue");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 55 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(8)();
+	// imports
+
+
+	// module
+	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.form[_v-d2164f4a]{\n\twidth: 90%; margin: 0 auto; padding: 20px 0; font-size: .9rem;\n}\n.form-group[_v-d2164f4a],.form-line[_v-d2164f4a]{\n\tpadding-bottom: 20px;\n}\n.form-group label[_v-d2164f4a]{\n\tdisplay: block; padding-bottom: 10px;\n}\n.form-group input[type=text][_v-d2164f4a],.form-group input[type=password][_v-d2164f4a]{\n\twidth: 100%; height: 40px;  box-sizing: border-box; border: 1px solid #ccc; padding: 9px 10px;\n}\n.form-group .input-tips[_v-d2164f4a]{\n\tbackground: #ffe5e5;\n\tdisplay: block;\n\tmargin-top: 5px;\n\tpadding: 0 8px;\n\tline-height: 30px;\n}\n.form-btn[_v-d2164f4a]{\n\ttext-align: center;\n\tpadding-top: 10px;\n\tborder-top: 1px solid #eee;\n}\n.form-btn input[type=submit][_v-d2164f4a]{\n\twidth: 60%;\n}\n", ""]);
+
+	// exports
+
+
+/***/ },
+/* 56 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	var Header = __webpack_require__(22);
+	module.exports = {
+		data: function data() {
+			return {
+				"title": "找回密码",
+				"apiUrl": 'api/password.php',
+				"form": {
+					"password": "",
+					"repassword": "",
+					"passwordtips": "",
+					"repasswordtips": ""
+				}
+			};
+		},
+		components: {
+			'myHeader': Header
+		},
+		methods: {
+			onSubmit: function onSubmit() {
+				var _this = this.form;
+				if (_this.repassword != _this.password) {
+					_this.repasswordtips = "两次密码输入不一致";
+					return false;
+				} else {
+					_this.repasswordtips = "";
+				}
+				this.$http.post(this.apiUrl, this.form).then(function (response) {
+
+					tips({
+						txt: '提交成功',
+						Callback: function Callback() {
+							location.href = '/login';
+						}
+					});
+				}, function (response) {
+					tips({ txt: '网络繁忙，请稍候再试！' });
+				});
+			}
+		}
+	};
+
+/***/ },
+/* 57 */
+/***/ function(module, exports) {
+
+	module.exports = "\n<div _v-d2164f4a=\"\">\n\t<div _v-d2164f4a=\"\">\n\t\t<my-header :title=\"title\" _v-d2164f4a=\"\"></my-header>\n\t</div>\n\t<div class=\"form\" _v-d2164f4a=\"\">\n\t\t<form @submit.prevent=\"onSubmit\" _v-d2164f4a=\"\">\n\t\t\t<div class=\"form-group\" _v-d2164f4a=\"\">\n\t\t\t\t<label for=\"password\" _v-d2164f4a=\"\">输入新密码：</label>\n\t\t\t\t<input type=\"password\" v-model=\"form.password\" debounce=\"500\" name=\"password\" id=\"password\" value=\"\" required=\"required\" _v-d2164f4a=\"\">\n\t\t\t\t<span class=\"input-tips\" v-show=\"form.passwordtips!=''\" _v-d2164f4a=\"\"><font color=\"red\" _v-d2164f4a=\"\">*{{form.passwordtips}}</font></span>\n\t\t\t</div>\n\t\t\t<div class=\"form-group\" _v-d2164f4a=\"\">\n\t\t\t\t<label for=\"repassword\" _v-d2164f4a=\"\">再次输入新密码：</label>\n\t\t\t\t<input type=\"password\" v-model=\"form.repassword\" debounce=\"500\" name=\"repassword\" id=\"repassword\" value=\"\" required=\"required\" _v-d2164f4a=\"\">\n\t\t\t\t<span class=\"input-tips\" v-show=\"form.repasswordtips!=''\" _v-d2164f4a=\"\"><font color=\"red\" _v-d2164f4a=\"\">*{{form.repasswordtips}}</font></span>\n\t\t\t</div>\n\t\t\t<div class=\"form-btn\" _v-d2164f4a=\"\">\n\t\t\t\t<input type=\"submit\" value=\"提交\" class=\"btn btn-primary\" @keyup.enter=\"onSubmit\" _v-d2164f4a=\"\">\n\t\t\t</div>\n\t\t</form>\n\t</div>\n</div>\n";
+
+/***/ },
+/* 58 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_script__, __vue_template__
+	__webpack_require__(59)
+	__vue_script__ = __webpack_require__(61)
+	if (__vue_script__ &&
+	    __vue_script__.__esModule &&
+	    Object.keys(__vue_script__).length > 1) {
+	  console.warn("[vue-loader] shopping\\tpl\\cart.vue: named exports in *.vue files are ignored.")}
+	__vue_template__ = __webpack_require__(62)
+	module.exports = __vue_script__ || {}
+	if (module.exports.__esModule) module.exports = module.exports.default
+	if (__vue_template__) {
+	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
+	}
+	if (false) {(function () {  module.hot.accept()
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), false)
+	  if (!hotAPI.compatible) return
+	  var id = "./cart.vue"
+	  if (!module.hot.data) {
+	    hotAPI.createRecord(id, module.exports)
+	  } else {
+	    hotAPI.update(id, module.exports, __vue_template__)
+	  }
+	})()}
+
+/***/ },
+/* 59 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(60);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(9)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./cart.vue", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./cart.vue");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 60 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(8)();
+	// imports
+
+
+	// module
+	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\r\n.cart_lists{\r\n\tpadding: 0 2%;\r\n}\r\n.cart_lists li{\r\n\tpadding: 8px 0;\r\n    border-bottom: 1px solid #eee;\r\n    color: #333;\r\n    display: -webkit-box;\r\n    display: -ms-flexbox;\r\n    display: flex;\r\n}\r\n.cart_hd{\r\n\tmargin-right: .8em;\r\n    width: 60px;\r\n    height: 60px;\r\n    line-height: 60px;\r\n    text-align: center;\r\n}\r\n.cart_bd{\r\n\t-webkit-box-flex: 1;\r\n    -ms-flex: 1;\r\n    flex: 1;\r\n    min-width: 0;\r\n}\r\n.cart_desc{\r\n\tcolor: #999;\r\n\tfont-size: .8rem;\r\n}\r\n.cart_price{\r\n\tpadding: 5px 0;\r\n\tcolor: #999;\r\n\tfont-size: .8rem;\r\n}\r\n.cart_price span{\r\n\tpadding-right: 1rem;\r\n}\r\n.cart_price b{\r\n\tfont-weight: normal;\r\n}\r\n.cart_num{\r\n\tfont-size: 0;\r\n}\r\n.cart_num a{\r\n\twidth: 25px;\r\n\theight: 25px;\r\n\tline-height: 25px;\r\n\ttext-align: center;\r\n\tfont-size: .8rem;\r\n\tbackground: #E5E5E5;\r\n\tborder: 1px solid #bdbdbd;\r\n\tdisplay: inline-block;\r\n\tcolor: #000;\r\n}\r\n.cart_num input{\r\n\twidth: 30px;\r\n\theight: 25px;\r\n\tfont-size: .8rem;\r\n\ttext-align: center;\r\n\tborder: none;\r\n\tborder-top: 1px solid #bdbdbd;\r\n\tborder-bottom: 1px solid #bdbdbd;\r\n\tbackground: #fff;\r\n}\r\n.cart_del{\r\n\tfloat: right;\r\n}\r\n.cart_del a{\r\n\tfont-size: .8rem;\r\n\tborder: 1px solid #bdbdbd;\r\n\tbackground: #fff;\r\n\tborder-radius: 5px;\r\n\tpadding: 5px 12px;\r\n\tcolor: #000;\r\n\tdisplay: inline-block;\r\n}\r\n.cart_total{\r\n\theight: 54px;\r\n}\r\n.cart_total b{\r\n\tfont-weight: normal;\r\n}\r\n.cart_total_p{\r\n\tposition: fixed;\r\n\twidth: 90%;\r\n\theight: 34px;\r\n\tbackground: #fff;\r\n\tborder-top: 1px solid #ddd;\r\n\tbottom: 0;\r\n\tleft: 0;\r\n\tpadding: 10px 5%;\r\n}\r\n.cart_total_p span{\r\n\tpadding-right: .8rem;\r\n\tline-height: 34px;\r\n}\r\n.cart_total_btn:hover,.cart_total_btn:focus{\r\n\tcolor: #fff;\r\n}\r\n.cart-empty{\r\n\ttext-align: center;\r\n\tpadding: 5rem 5%;\r\n}\r\n", ""]);
+
+	// exports
+
+
+/***/ },
+/* 61 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	var Header = __webpack_require__(22);
+	module.exports = {
+		components: {
+			'myHeader': Header
+		},
+		data: function data() {
+			return {
+				"title": "购物车",
+				"apiUrl": "api/cart.php",
+				"buyurl": "",
+				"data": []
+			};
+		},
+		mounted: function mounted() {
+			this.$http.get(this.apiUrl, {}).then(function (response) {
+				var objs = JSON.parse(response.data);
+				this.data = objs;
+			}, function (response) {
+				tips({ txt: "获取失败,请稍候再试！" });
+			});
+		},
+		computed: {
+			totalNum: function totalNum() {
+				var num = 0;
+				for (var i = 0; i < this.data.length; i++) {
+					num += this.data[i]["num"] * 1;
+				}
+				return num;
+			},
+			totalPrice: function totalPrice() {
+				var price = 0;
+				for (var i = 0; i < this.data.length; i++) {
+					price += this.data[i]["price"] * this.data[i]["num"];
+				}
+				if (price > 0) {
+					this.buyurl = "/";
+				}
+				return price;
+			}
+		},
+		methods: {
+			minus: function minus(a) {
+				this.data[a]["num"]--;
+				if (this.data[a]["num"] <= 0) {
+					this.data[a]["num"] = 1;
+				}
+			},
+			add: function add(a) {
+				this.data[a]["num"]++;
+			},
+			del: function del(a) {
+				var aData = this.data;
+				prompt('确认删除该商品？', function () {
+					aData.splice(a, 1);
+				});
+			}
+		}
+	};
+
+/***/ },
+/* 62 */
+/***/ function(module, exports) {
+
+	module.exports = "\n<div>\n\t<div>\n\t\t<my-header :title = \"title\"></my-header>\n\t</div>\n\t<div>\n\t\t<div class=\"cart_lists\" id=\"cart\">\n\t\t\t<ul v-if=\"data.length>0\">\n\t\t\t\t<li v-for=\"(v , index) in data\">\n\t\t\t\t\t<div class=\"cart_hd\">\n\t\t                <img class=\"cart_appmsg_thumb\" :src=\"v.img\">\n\t\t            </div>\n\t\t            <div class=\"cart_bd\">\n\t\t                <h4 class=\"cart_title\">{{v.title}}</h4>\n\t\t                <p class=\"cart_desc\">{{v.sub_title}}</p>\n\t\t                <p class=\"cart_price\">\n\t\t                \t<span>价格：￥<b>{{v.price}}</b>×<b>{{v.num}}</b></span>\n\t\t                \t<span>合计：￥<b>{{v.price*v.num}}</b></span>\n\t\t                </p>\n\t\t                <p class=\"cart_handle\">\n\t\t                \t<span class=\"cart_num\">\n\t\t                \t\t<a @click=\"minus(index)\">-</a>\n\t\t                \t\t<input type=\"text\" :value=\"v.num\" />\n\t\t                \t\t<a @click=\"add(index)\">+</a>\n\t\t                \t</span>\n\t\t                \t<span class=\"cart_del\">\n\t\t                \t\t<a @click=\"del(index)\">删除</a>\n\t\t                \t</span>\n\t\t                </p>\n\t\t            </div>\n\t\t\t\t</li>\n\t\t\t</ul>\n\t\t\t<div v-else class=\"cart-empty\">还没有任何商品，<router-link to=\"/\" class=\"btn btn-default btn-sm\">去购买</router-link></div>\n\t\t</div>\n\t\t<div class=\"cart_total\">\n\t\t\t<div class=\"cart_total_p\">\n\t\t\t\t<span>共<b>{{totalNum}}</b>件商品</span>\n\t\t\t\t<span>合计：{{totalPrice}}元</span>\n\t\t\t\t<router-link to=\"/buyurl\" :class=\"{'btn-disabled':totalPrice<=0,'btn-primary':totalPrice>0}\" class=\"btn btn-sm fr\">立即购买</router-link>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</div>\n";
+
+/***/ },
+/* 63 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_script__, __vue_template__
+	__webpack_require__(64)
+	__vue_script__ = __webpack_require__(66)
+	if (__vue_script__ &&
+	    __vue_script__.__esModule &&
+	    Object.keys(__vue_script__).length > 1) {
+	  console.warn("[vue-loader] shopping\\tpl\\user.vue: named exports in *.vue files are ignored.")}
+	__vue_template__ = __webpack_require__(67)
+	module.exports = __vue_script__ || {}
+	if (module.exports.__esModule) module.exports = module.exports.default
+	if (__vue_template__) {
+	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
+	}
+	if (false) {(function () {  module.hot.accept()
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), false)
+	  if (!hotAPI.compatible) return
+	  var id = "./user.vue"
+	  if (!module.hot.data) {
+	    hotAPI.createRecord(id, module.exports)
+	  } else {
+	    hotAPI.update(id, module.exports, __vue_template__)
+	  }
+	})()}
+
+/***/ },
+/* 64 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(65);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(9)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./user.vue", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./user.vue");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 65 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(8)();
+	// imports
+
+
+	// module
+	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.user-top{\r\n\tbackground: #4ec2dd;\r\n}\r\n.user-wrap{\r\n\tpadding: 20px 0;\r\n}\r\n.user-headerimg{\r\n\twidth: 100px;\r\n\theight: 100px;\r\n\tmargin: 0 auto;\r\n\tborder: 2px solid #fff;\r\n\tborder-radius: 50%;\r\n\toverflow: hidden;\r\n}\r\n.user-headerimg img{\r\n\tborder-radius: 50%;\r\n}\r\n.user-username{\r\n\ttext-align: center;\r\n\tcolor: #fff;\r\n\tpadding-top: 10px;\r\n}\r\n.single-lists{\r\n\tbackground: #fff;\r\n}\r\n.single-lists li{\r\n\tborder-bottom: 1px solid #eee;\r\n\t\r\n}\r\n.single-lists a{\r\n\tdisplay: block;\r\n\tcolor: #333;\r\n\tpadding: 14px 5%;\r\n\tline-height: 20px;\r\n}\r\n.single-lists .fa-chevron-right{\r\n\tfloat: right;\r\n\tcolor: #ccc;\r\n}\r\n.single-lists .fa-chevron-right:before{\r\n\tline-height: 20px;\r\n}\r\n.single-lists .ico{\r\n\tfont-size: 1.3em;\r\n\twidth: 1.2em;\r\n\ttext-align: center;\r\n}\r\n.single-lists-name{\r\n\tpadding-left: 8px;\r\n\tfont-size: .8em;\r\n}\n", ""]);
+
+	// exports
+
+
+/***/ },
+/* 66 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	var Header = __webpack_require__(22);
+	module.exports = {
+		data: function data() {
+			return {
+				"title": "个人中心"
+			};
+		},
+		components: {
+			'myHeader': Header
+		}
+	};
+
+/***/ },
+/* 67 */
+/***/ function(module, exports) {
+
+	module.exports = "\n<div>\n\t<div>\n\t\t<my-header :title=\"title\"></my-header>\n\t</div>\n\t<div class=\"user-top\">\n\t\t<div class=\"user-wrap\">\n\t\t\t<div class=\"user-headerimg\"><img src=\"/static/images/22.jpg\"/></div>\n\t\t\t<p class=\"user-username\">我</p>\n\t\t</div>\n\t</div>\n\t<div class=\"single-lists\">\n\t\t<ul>\n\t\t\t<li><router-link to=\"/info\"><b style=\"color: #4783ce;\" class=\"ico fa fa-user\"></b><span class=\"single-lists-name\">个人资料</span><i class=\"fa fa-chevron-right\"></i></a></li>\n\t\t\t<li><router-link to=\"/cart\"><b style=\"color: #31c9a3;\" class=\"ico fa fa-shopping-cart\"></b><span class=\"single-lists-name\">购物车</span><i class=\"fa fa-chevron-right\"></i></a></li>\n\t\t\t<li><router-link to=\"/order\"><b style=\"color: #eb4e70;\" class=\"ico fa fa-file-text\"></b><span class=\"single-lists-name\">我的订单</span><i class=\"fa fa-chevron-right\"></i></a></li>\n\t\t</ul>\n\t</div>\n</div>\n";
 
 /***/ }
 /******/ ]);
