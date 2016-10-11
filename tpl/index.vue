@@ -24,6 +24,14 @@
 					<div class="i-share-img"><img src="/static/images/12.jpg"/></div>
 					<p class="i-share-text">小轩窗正梳妆</p>
 				</li>
+				<li class="i-share-list">
+					<div class="i-share-img"><img src="/static/images/12.jpg"/></div>
+					<p class="i-share-text">小轩窗正梳妆</p>
+				</li>
+				<li class="i-share-list">
+					<div class="i-share-img"><img src="/static/images/12.jpg"/></div>
+					<p class="i-share-text">小轩窗正梳妆</p>
+				</li>
 			</ul>
 		</div>
 	</div>

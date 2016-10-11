@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<div class="body-main">
 		<div>
 			<my-header :title="title"></my-header>
 		</div>

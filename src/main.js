@@ -14,3 +14,4 @@ var routes = require("./route.js");
 var router = new VueRouter(routes)
 
 new Vue({router}).$mount('#app');
+

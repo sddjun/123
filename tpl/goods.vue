@@ -15,7 +15,7 @@
 		</div>
 		<div class="goods-detail">
 			<div class="goods-detail-t"><span>商品介绍</span></div>
-			<div class="goods-detail-con">{{data.content}}</div>
+			<div class="goods-detail-con" v-html="data.content"></div>
 		</div>
 		<div class="fixed" :class="{hide:!pop,show:pop}">
 			<div class="goods-pop">
@@ -31,11 +31,11 @@
 					<dt>数量：</dt>
 					<dd class="chioce-num">
 						<input type="button" @click="minus" value="-" />
-						<input type="text" :value="sub.num" />
+						<input type="text" :value="sub.num" readonly="readonly" />
 						<input type="button" @click="add" value="+" />
 					</dd>
 				</dl>
-				<div class="goods-buy"><a @click="submit"  class="btn btn-block btn-primary">立即购买</a></div>
+				<div class="goods-buy"><a @click="buysub" class="btn btn-block btn-primary">立即购买</a></div>
 			</div>
 		</div>
 	</div>
@@ -84,18 +84,18 @@
 				this.pop==0?this.pop=1:this.pop=0;
 			},
 			add:function(){
-				this.sub.num++;
+				this.sub.num = this.sub.num *1 + 1;
 			},
 			minus:function(){
 				if(this.sub.num>1){
-					this.sub.num--;
+					this.sub.num = this.sub.num *1 - 1;
 				}
 			},
 			chiocesize:function(i,j){
 				var size = this.size[i]['value'][j];
 				this.sub.size[i]['size'] = size;
 			},
-			submit:function(){
+			buysub:function(){
 				//验证信息
 				for(var i=0;i<this.sub.size.length;i++){
 					if(this.sub.size[i].size==''){

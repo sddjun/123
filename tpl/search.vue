@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<div class="body-main">
 	    <div class="search_bar" id="search_bar">
 	        <form class="search_outer">
 	            <div class="search_inner">
