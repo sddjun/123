@@ -1,13 +1,6 @@
-webpackJsonp([3],[
-/* 0 */,
-/* 1 */,
-/* 2 */,
-/* 3 */,
-/* 4 */,
-/* 5 */,
-/* 6 */,
-/* 7 */,
-/* 8 */
+webpackJsonp([21],{
+
+/***/ 8:
 /***/ function(module, exports) {
 
 	/*
@@ -63,7 +56,8 @@ webpackJsonp([3],[
 
 
 /***/ },
-/* 9 */
+
+/***/ 9:
 /***/ function(module, exports, __webpack_require__) {
 
 	/*
@@ -285,118 +279,8 @@ webpackJsonp([3],[
 
 
 /***/ },
-/* 10 */,
-/* 11 */,
-/* 12 */,
-/* 13 */,
-/* 14 */,
-/* 15 */,
-/* 16 */,
-/* 17 */,
-/* 18 */
-/***/ function(module, exports, __webpack_require__) {
 
-	var __vue_script__, __vue_template__
-	__webpack_require__(19)
-	__vue_script__ = __webpack_require__(21)
-	if (__vue_script__ &&
-	    __vue_script__.__esModule &&
-	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] shopping\\tpl\\list.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(27)
-	module.exports = __vue_script__ || {}
-	if (module.exports.__esModule) module.exports = module.exports.default
-	if (__vue_template__) {
-	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
-	}
-	if (false) {(function () {  module.hot.accept()
-	  var hotAPI = require("vue-hot-reload-api")
-	  hotAPI.install(require("vue"), false)
-	  if (!hotAPI.compatible) return
-	  var id = "./list.vue"
-	  if (!module.hot.data) {
-	    hotAPI.createRecord(id, module.exports)
-	  } else {
-	    hotAPI.update(id, module.exports, __vue_template__)
-	  }
-	})()}
-
-/***/ },
-/* 19 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-
-	// load the styles
-	var content = __webpack_require__(20);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(9)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-279fa8de&scoped=true!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./list.vue", function() {
-				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-279fa8de&scoped=true!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./list.vue");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
-
-/***/ },
-/* 20 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(8)();
-	// imports
-
-
-	// module
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.shoplist[_v-279fa8de]{\n\tbackground: #ebeced;\n}\n.shopitem[_v-279fa8de]{\n\tbackground: #fff;\n\tmargin-bottom: 20px;\n}\n.thumb a[_v-279fa8de]{\n\tdisplay: block;\n\tpadding-bottom: 75%;\n\theight: 0;\n\toverflow: hidden;\n}\n.thumb a img[_v-279fa8de]{\n\tdisplay: inline;\n\twidth:100%;\n\tborder: none;\n}\n.content h4[_v-279fa8de]{\n\tpadding: 1em;\n\tfont-size: 14px;\n}\n.operation[_v-279fa8de]{\n\tpadding:0 1em 1em;\n\ttext-align: right;\n}\n.fa[_v-279fa8de]{\n    display: inline-block;\n    font: normal normal normal 14px/1 FontAwesome;\n    font-size: inherit;\n    text-rendering: auto;\n}\n.fa[_v-279fa8de]:before {\n\tfont-size: 24px;\n    content: \"\\F039\";\n}\n", ""]);
-
-	// exports
-
-
-/***/ },
-/* 21 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-
-	var Header = __webpack_require__(22);
-	module.exports = {
-		data: function data() {
-			return {
-				"title": "商品列表",
-				"onScroll": 1,
-				"page": 1,
-				"items": [{ "id": 2, "title": "春秋季复古英伦风粗跟单鞋女中跟尖头女鞋OL学院风小皮鞋黑通勤鞋", "thumb": "static/images/3.jpeg" }, { "id": 3, "title": "秋冬英伦大头粗跟厚底松糕鞋日系原宿学生女鞋小皮鞋大码系带单鞋", "thumb": "static/images/2.jpeg" }, { "id": 5, "title": "布洛克女鞋平底单鞋复古小皮鞋学院风女英伦风小白鞋女牛津鞋", "thumb": "static/images/1.jpeg" }]
-			};
-		},
-		components: {
-			'myHeader': Header
-		},
-		methods: {
-			mainScroll: function mainScroll() {
-				var mainBox = document.getElementById('mainBox');
-				if (getClassName(mainBox, 'shoplist')[0].clientHeight - mainBox.scrollTop - mainBox.clientHeight < 20 && this.onScroll == 1) {
-					this.onScroll = 0;
-					var loaddata = [{ "id": 2, "title": "春秋季复古英伦风粗跟单鞋女中跟尖头女鞋OL学院风小皮鞋黑通勤鞋", "thumb": "static/images/3.jpeg" }, { "id": 3, "title": "秋冬英伦大头粗跟厚底松糕鞋日系原宿学生女鞋小皮鞋大码系带单鞋", "thumb": "static/images/2.jpeg" }, { "id": 5, "title": "布洛克女鞋平底单鞋复古小皮鞋学院风女英伦风小白鞋女牛津鞋", "thumb": "static/images/1.jpeg" }];
-					for (var i = 0; i < loaddata.length; i++) {
-						this.items.push(loaddata[i]);
-					}
-					this.onScroll = 1;
-				}
-			}
-		}
-	};
-
-/***/ },
-/* 22 */
+/***/ 22:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
@@ -425,7 +309,8 @@ webpackJsonp([3],[
 	})()}
 
 /***/ },
-/* 23 */
+
+/***/ 23:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
@@ -451,7 +336,8 @@ webpackJsonp([3],[
 	}
 
 /***/ },
-/* 24 */
+
+/***/ 24:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(8)();
@@ -465,7 +351,8 @@ webpackJsonp([3],[
 
 
 /***/ },
-/* 25 */
+
+/***/ 25:
 /***/ function(module, exports) {
 
 	'use strict';
@@ -475,16 +362,157 @@ webpackJsonp([3],[
 	};
 
 /***/ },
-/* 26 */
+
+/***/ 26:
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"header-height\">\n\t<div class=\"header\">\n\t\t<a class=\"header-back\" href=\"javascript:;\" onclick=\"window.history.go(-1)\"><span class=\"fa fa-chevron-left\"></span> 返回</a>\n\t\t<p class=\"header-title\">{{title}}</p>\n\t</div>\n</div>\n";
 
 /***/ },
-/* 27 */
+
+/***/ 58:
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_script__, __vue_template__
+	__webpack_require__(59)
+	__vue_script__ = __webpack_require__(61)
+	if (__vue_script__ &&
+	    __vue_script__.__esModule &&
+	    Object.keys(__vue_script__).length > 1) {
+	  console.warn("[vue-loader] shopping\\tpl\\cart.vue: named exports in *.vue files are ignored.")}
+	__vue_template__ = __webpack_require__(62)
+	module.exports = __vue_script__ || {}
+	if (module.exports.__esModule) module.exports = module.exports.default
+	if (__vue_template__) {
+	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
+	}
+	if (false) {(function () {  module.hot.accept()
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), false)
+	  if (!hotAPI.compatible) return
+	  var id = "./cart.vue"
+	  if (!module.hot.data) {
+	    hotAPI.createRecord(id, module.exports)
+	  } else {
+	    hotAPI.update(id, module.exports, __vue_template__)
+	  }
+	})()}
+
+/***/ },
+
+/***/ 59:
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(60);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(9)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./cart.vue", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./cart.vue");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+
+/***/ 60:
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(8)();
+	// imports
+
+
+	// module
+	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\r\n.cart_lists{\r\n\tpadding: 0 2%;\r\n}\r\n.cart_lists li{\r\n\tpadding: 8px 0;\r\n    border-bottom: 1px solid #eee;\r\n    color: #333;\r\n    display: -webkit-box;\r\n    display: -ms-flexbox;\r\n    display: flex;\r\n}\r\n.cart_hd{\r\n\tmargin-right: .8em;\r\n    width: 60px;\r\n    height: 60px;\r\n    line-height: 60px;\r\n    text-align: center;\r\n}\r\n.cart_bd{\r\n\t-webkit-box-flex: 1;\r\n    -ms-flex: 1;\r\n    flex: 1;\r\n    min-width: 0;\r\n}\r\n.cart_desc{\r\n\tcolor: #999;\r\n\tfont-size: .8rem;\r\n}\r\n.cart_price{\r\n\tpadding: 5px 0;\r\n\tcolor: #999;\r\n\tfont-size: .8rem;\r\n}\r\n.cart_price span{\r\n\tpadding-right: 1rem;\r\n}\r\n.cart_price b{\r\n\tfont-weight: normal;\r\n}\r\n.cart_num{\r\n\tfont-size: 0;\r\n}\r\n.cart_num a{\r\n\twidth: 25px;\r\n\theight: 25px;\r\n\tline-height: 25px;\r\n\ttext-align: center;\r\n\tfont-size: .8rem;\r\n\tbackground: #E5E5E5;\r\n\tborder: 1px solid #bdbdbd;\r\n\tdisplay: inline-block;\r\n\tcolor: #000;\r\n}\r\n.cart_num input{\r\n\twidth: 30px;\r\n\theight: 25px;\r\n\tfont-size: .8rem;\r\n\ttext-align: center;\r\n\tborder: none;\r\n\tborder-top: 1px solid #bdbdbd;\r\n\tborder-bottom: 1px solid #bdbdbd;\r\n\tbackground: #fff;\r\n}\r\n.cart_del{\r\n\tfloat: right;\r\n}\r\n.cart_del a{\r\n\tfont-size: .8rem;\r\n\tborder: 1px solid #bdbdbd;\r\n\tbackground: #fff;\r\n\tborder-radius: 5px;\r\n\tpadding: 5px 12px;\r\n\tcolor: #000;\r\n\tdisplay: inline-block;\r\n}\r\n.cart_total{\r\n\theight: 54px;\r\n}\r\n.cart_total b{\r\n\tfont-weight: normal;\r\n}\r\n.cart_total_p{\r\n\tposition: fixed;\r\n\twidth: 90%;\r\n\theight: 34px;\r\n\tbackground: #fff;\r\n\tborder-top: 1px solid #ddd;\r\n\tbottom: 0;\r\n\tleft: 0;\r\n\tpadding: 10px 5%;\r\n\tfont-size: .8rem;\r\n}\r\n.cart_total_p span{\r\n\tpadding-right: .8rem;\r\n\tline-height: 34px;\r\n}\r\n.cart_total_btn:hover,.cart_total_btn:focus{\r\n\tcolor: #fff;\r\n}\r\n.cart-empty{\r\n\ttext-align: center;\r\n\tpadding: 5rem 5%;\r\n}\r\n", ""]);
+
+	// exports
+
+
+/***/ },
+
+/***/ 61:
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	var Header = __webpack_require__(22);
+	module.exports = {
+		components: {
+			'myHeader': Header
+		},
+		data: function data() {
+			return {
+				"title": "购物车",
+				"apiUrl": "api/cart.php",
+				"buyurl": "",
+				"data": []
+			};
+		},
+		mounted: function mounted() {
+			this.$http.get(this.apiUrl, {}).then(function (response) {
+				var objs = JSON.parse(response.data);
+				this.data = objs;
+			}, function (response) {
+				tips({ txt: "获取失败,请稍候再试！" });
+			});
+		},
+		computed: {
+			totalNum: function totalNum() {
+				var num = 0;
+				for (var i = 0; i < this.data.length; i++) {
+					num += this.data[i]["num"] * 1;
+				}
+				return num;
+			},
+			totalPrice: function totalPrice() {
+				var price = 0;
+				for (var i = 0; i < this.data.length; i++) {
+					price += this.data[i]["price"] * this.data[i]["num"];
+				}
+				if (price > 0) {
+					this.buyurl = "/";
+				}
+				return price;
+			}
+		},
+		methods: {
+			minus: function minus(a) {
+				this.data[a]["num"]--;
+				if (this.data[a]["num"] <= 0) {
+					this.data[a]["num"] = 1;
+				}
+			},
+			add: function add(a) {
+				this.data[a]["num"]++;
+			},
+			del: function del(a) {
+				var aData = this.data;
+				prompt('确认删除该商品？', function () {
+					aData.splice(a, 1);
+				});
+			}
+		}
+	};
+
+/***/ },
+
+/***/ 62:
 /***/ function(module, exports) {
 
-	module.exports = "\n<div class=\"body-main\" @scroll=\"mainScroll\" id=\"mainBox\" _v-279fa8de=\"\">\n\t<div _v-279fa8de=\"\">\n\t\t<my-header :title=\"title\" _v-279fa8de=\"\"></my-header>\n\t</div>\n\t<section class=\"shoplist\" _v-279fa8de=\"\">\n\t\t<article class=\"shopitem\" v-for=\"item in items\" _v-279fa8de=\"\">\n\t\t\t<header class=\"thumb\" _v-279fa8de=\"\"><router-link :to=\"{path:'goods',query:{gid:item.id}}\" _v-279fa8de=\"\"><img :src=\"item.thumb\" alt=\"\" _v-279fa8de=\"\"></router-link></header>\n\t\t\t<section class=\"content\" _v-279fa8de=\"\"><h4 _v-279fa8de=\"\"><router-link :to=\"{path:'goods',query:{gid:item.id}}\" _v-279fa8de=\"\">{{item.title}}</router-link></h4></section>\n\t\t\t<footer class=\"operation\" _v-279fa8de=\"\"><router-link :to=\"{path:'goods',query:{gid:item.id}}\" _v-279fa8de=\"\"><i class=\"fa\" _v-279fa8de=\"\"></i></router-link></footer>\n\t\t</article>\n\t</section>\n</div>\n";
+	module.exports = "\n<div class=\"body-main\">\n\t<div>\n\t\t<my-header :title = \"title\"></my-header>\n\t</div>\n\t<div>\n\t\t<div class=\"cart_lists\" id=\"cart\">\n\t\t\t<ul v-if=\"data.length>0\">\n\t\t\t\t<li v-for=\"(v , index) in data\">\n\t\t\t\t\t<div class=\"cart_hd\">\n\t\t                <img class=\"cart_appmsg_thumb\" :src=\"v.img\">\n\t\t            </div>\n\t\t            <div class=\"cart_bd\">\n\t\t                <h4 class=\"cart_title\">{{v.title}}</h4>\n\t\t                <p class=\"cart_desc\">{{v.sub_title}}</p>\n\t\t                <p class=\"cart_price\">\n\t\t                \t<span>价格：￥<b>{{v.price}}</b>×<b>{{v.num}}</b></span>\n\t\t                \t<span>合计：￥<b>{{v.price*v.num}}</b></span>\n\t\t                </p>\n\t\t                <p class=\"cart_handle\">\n\t\t                \t<span class=\"cart_num\">\n\t\t                \t\t<a @click=\"minus(index)\">-</a>\n\t\t                \t\t<input type=\"text\" :value=\"v.num\" />\n\t\t                \t\t<a @click=\"add(index)\">+</a>\n\t\t                \t</span>\n\t\t                \t<span class=\"cart_del\">\n\t\t                \t\t<a @click=\"del(index)\">删除</a>\n\t\t                \t</span>\n\t\t                </p>\n\t\t            </div>\n\t\t\t\t</li>\n\t\t\t</ul>\n\t\t\t<div v-else class=\"cart-empty\">还没有任何商品，<router-link to=\"/\" class=\"btn btn-default btn-sm\">去购买</router-link></div>\n\t\t</div>\n\t\t<div class=\"cart_total\">\n\t\t\t<div class=\"cart_total_p\">\n\t\t\t\t<span>共<b>{{totalNum}}</b>件商品</span>\n\t\t\t\t<span>合计：{{totalPrice}}元</span>\n\t\t\t\t<router-link to=\"/buyurl\" :class=\"{'btn-disabled':totalPrice<=0,'btn-primary':totalPrice>0}\" class=\"btn btn-sm fr\">立即购买</router-link>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</div>\n";
 
 /***/ }
-]);
+
+});

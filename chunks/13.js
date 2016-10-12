@@ -1,4 +1,4 @@
-webpackJsonp([3],[
+webpackJsonp([13],[
 /* 0 */,
 /* 1 */,
 /* 2 */,
@@ -288,22 +288,17 @@ webpackJsonp([3],[
 /* 10 */,
 /* 11 */,
 /* 12 */,
-/* 13 */,
-/* 14 */,
-/* 15 */,
-/* 16 */,
-/* 17 */,
-/* 18 */
+/* 13 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(19)
-	__vue_script__ = __webpack_require__(21)
+	__webpack_require__(14)
+	__vue_script__ = __webpack_require__(16)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] shopping\\tpl\\list.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(27)
+	  console.warn("[vue-loader] shopping\\tpl\\search.vue: named exports in *.vue files are ignored.")}
+	__vue_template__ = __webpack_require__(17)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -313,7 +308,7 @@ webpackJsonp([3],[
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "./list.vue"
+	  var id = "./search.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -322,13 +317,13 @@ webpackJsonp([3],[
 	})()}
 
 /***/ },
-/* 19 */
+/* 14 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(20);
+	var content = __webpack_require__(15);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(9)(content, {});
@@ -337,8 +332,8 @@ webpackJsonp([3],[
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-279fa8de&scoped=true!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./list.vue", function() {
-				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-279fa8de&scoped=true!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./list.vue");
+			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-85998230&scoped=true!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./search.vue", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-85998230&scoped=true!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./search.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -348,7 +343,7 @@ webpackJsonp([3],[
 	}
 
 /***/ },
-/* 20 */
+/* 15 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(8)();
@@ -356,135 +351,55 @@ webpackJsonp([3],[
 
 
 	// module
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.shoplist[_v-279fa8de]{\n\tbackground: #ebeced;\n}\n.shopitem[_v-279fa8de]{\n\tbackground: #fff;\n\tmargin-bottom: 20px;\n}\n.thumb a[_v-279fa8de]{\n\tdisplay: block;\n\tpadding-bottom: 75%;\n\theight: 0;\n\toverflow: hidden;\n}\n.thumb a img[_v-279fa8de]{\n\tdisplay: inline;\n\twidth:100%;\n\tborder: none;\n}\n.content h4[_v-279fa8de]{\n\tpadding: 1em;\n\tfont-size: 14px;\n}\n.operation[_v-279fa8de]{\n\tpadding:0 1em 1em;\n\ttext-align: right;\n}\n.fa[_v-279fa8de]{\n    display: inline-block;\n    font: normal normal normal 14px/1 FontAwesome;\n    font-size: inherit;\n    text-rendering: auto;\n}\n.fa[_v-279fa8de]:before {\n\tfont-size: 24px;\n    content: \"\\F039\";\n}\n", ""]);
+	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.search_show[_v-85998230]{\n\tdisplay: none;\n    margin-top: 0;\n    font-size: 14px;\n}\n.search_bar[_v-85998230] {\n\tposition: relative;\n\tpadding: 8px 10px;\n\tdisplay: -webkit-box;\n\tdisplay: -ms-flexbox;\n\tdisplay: flex;\n\tbox-sizing: border-box;\n\tbackground-color: #efeff4;\n}\n\n.search_bar[_v-85998230]:before {\n\ttop: 0;\n\tborder-top: 1px solid #c7c7c7;\n\t-webkit-transform-origin: 0 0;\n\ttransform-origin: 0 0;\n\t-webkit-transform: scaleY(.5);\n\ttransform: scaleY(.5);\n}\n.search_bar[_v-85998230]:after,\n.search_bar[_v-85998230]:before {\n\tcontent: \" \";\n\tposition: absolute;\n\tleft: 0;\n\twidth: 100%;\n\theight: 1px;\n\tcolor: #c7c7c7;\n}\n.search_bar[_v-85998230]:after {\n\tbottom: 0;\n\tborder-bottom: 1px solid #c7c7c7;\n\t-webkit-transform-origin: 0 100%;\n\ttransform-origin: 0 100%;\n\t-webkit-transform: scaleY(.5);\n\ttransform: scaleY(.5);\n}\n.search_bar.search_focusing .search_cancel[_v-85998230] {\n\tdisplay: block;\n}\n.search_bar.search_focusing .search_text[_v-85998230] {\n\tdisplay: none;\n}\n.search_outer[_v-85998230] {\n\tposition: relative;\n\t-webkit-box-flex: 1;\n\t-ms-flex: auto;\n\t    flex: auto;\n\tbackground-color: #efeff4;\n}\n.search_outer[_v-85998230]:after {\n\tcontent: '';\n\tposition: absolute;\n\tleft: 0;\n\ttop: 0;\n\twidth: 200%;\n\theight: 200%;\n\t-webkit-transform: scale(.5);\n\ttransform: scale(.5);\n\t-webkit-transform-origin: 0 0;\n\ttransform-origin: 0 0;\n\tborder-radius: 10px;\n\tborder: 1px solid #e6e6ea;\n\tbox-sizing: border-box;\n\tbackground: #fff;\n}\n.search_inner[_v-85998230] {\n\tposition: relative;\n\tpadding-left: 30px;\n\tpadding-right: 30px;\n\theight: 100%;\n\twidth: 100%;\n\tbox-sizing: border-box;\n\tz-index: 1;\n}\n.search_inner .search_input[_v-85998230] {\n\tpadding: 4px 0;\n\twidth: 100%;\n\theight: 1.42857143em;\n\tborder: 0;\n\tfont-size: 14px;\n\tline-height: 1.42857143em;\n\tbox-sizing: content-box;\n\tbackground: transparent;\n}\n.search_inner .search_input[_v-85998230]:focus {\n\toutline: none;\n}\n.search_inner .icon_search[_v-85998230] {\n\tposition: absolute;\n\tleft: 10px;\n\ttop: -2px;\n\tline-height: 28px;\n}\n.search_inner .icon_clear[_v-85998230] {\n\tposition: absolute;\n\ttop: -2px;\n\tright: 0;\n\tpadding: 0 10px;\n\tline-height: 28px;\n}\n.search_text[_v-85998230] {\n\tposition: absolute;\n\ttop: 1px;\n\tright: 1px;\n\tbottom: 1px;\n\tleft: 1px;\n\tz-index: 2;\n\tborder-radius: 3px;\n\ttext-align: center;\n\tcolor: #9b9b9b;\n\tbackground: #fff;\n}\n.search_text span[_v-85998230] {\n\tdisplay: inline-block;\n\tfont-size: 14px;\n\tvertical-align: middle;\n}\n.search_text .icon_search[_v-85998230] {\n\tmargin-right: 5px;\n}\n.search_cancel[_v-85998230] {\n\tdisplay: none;\n\tmargin-left: 10px;\n\tline-height: 28px;\n\twhite-space: nowrap;\n\tcolor: #42b8d3;\n}\n.search_input:not(:valid)~.icon_clear[_v-85998230] {\n\tdisplay: none\n}\ninput[type=search][_v-85998230]::-webkit-search-cancel-button,\ninput[type=search][_v-85998230]::-webkit-search-decoration,\ninput[type=search][_v-85998230]::-webkit-search-results-button,\ninput[type=search][_v-85998230]::-webkit-search-results-decoration {\n\tdisplay: none;\n}\n.cell[_v-85998230] {\n\tposition: relative\n}\n.cell[_v-85998230]:before {\n\tcontent: \" \";\n\tposition: absolute;\n\tleft: 0;\n\ttop: 0;\n\twidth: 100%;\n\theight: 1px;\n\tborder-top: 1px solid #d9d9d9;\n\tcolor: #d9d9d9;\n\t-webkit-transform-origin: 0 0;\n\ttransform-origin: 0 0;\n\t-webkit-transform: scaleY(.5);\n\ttransform: scaleY(.5);\n\tleft: 15px\n}\n.cell[_v-85998230]:first-child:before {\n\tdisplay: none\n}\n.cells[_v-85998230] {\n\tbackground-color: #fff;\n\tline-height: 1.41176471;\n\tfont-size: 1rem;\n\toverflow: hidden;\n\tposition: relative\n}\n.cells[_v-85998230]:before {\n\ttop: 0;\n\tborder-top: 1px solid #d9d9d9;\n\t-webkit-transform-origin: 0 0;\n\ttransform-origin: 0 0;\n\t-webkit-transform: scaleY(.5);\n\ttransform: scaleY(.5)\n}\n.cells[_v-85998230]:after,\n.cells[_v-85998230]:before {\n\tcontent: \" \";\n\tposition: absolute;\n\tleft: 0;\n\twidth: 100%;\n\theight: 1px;\n\tcolor: #d9d9d9\n}\n.cells[_v-85998230]:after {\n\tbottom: 0;\n\tborder-bottom: 1px solid #d9d9d9;\n\t-webkit-transform-origin: 0 100%;\n\ttransform-origin: 0 100%;\n\t-webkit-transform: scaleY(.5);\n\ttransform: scaleY(.5)\n}\n.cells_title[_v-85998230] {\n\tmargin-top: .77em;\n\tmargin-bottom: .3em;\n\tpadding-left: 15px;\n\tpadding-right: 15px;\n\tcolor: #888;\n\tfont-size: 14px\n}\n.cells_title+.cells[_v-85998230] {\n\tmargin-top: 0\n}\n.cells_tips[_v-85998230] {\n\tmargin-top: .3em;\n\tcolor: #888;\n\tpadding-left: 15px;\n\tpadding-right: 15px;\n\tfont-size: 14px\n}\n.cell[_v-85998230] {\n\tpadding: 10px 15px;\n\tposition: relative;\n\tdisplay: -webkit-box;\n\tdisplay: -ms-flexbox;\n\tdisplay: flex;\n\t-webkit-box-align: center;\n\t-ms-flex-align: center;\n\t    align-items: center\n}\n.cell_primary[_v-85998230] {\n\t-webkit-box-flex: 1;\n\t-ms-flex: 1;\n\t    flex: 1\n}\n.cells_access .cell[_v-85998230]:not(.no_access) {\n\t-webkit-tap-highlight-color: rgba(0, 0, 0, 0)\n}\n.cells_access .cell[_v-85998230]:not(.no_access):active {\n\tbackground-color: #ececec\n}\n.cells_access a.cell[_v-85998230] {\n\tcolor: inherit\n}\n", ""]);
 
 	// exports
 
 
 /***/ },
-/* 21 */
-/***/ function(module, exports, __webpack_require__) {
+/* 16 */
+/***/ function(module, exports) {
 
 	"use strict";
 
-	var Header = __webpack_require__(22);
 	module.exports = {
-		data: function data() {
-			return {
-				"title": "商品列表",
-				"onScroll": 1,
-				"page": 1,
-				"items": [{ "id": 2, "title": "春秋季复古英伦风粗跟单鞋女中跟尖头女鞋OL学院风小皮鞋黑通勤鞋", "thumb": "static/images/3.jpeg" }, { "id": 3, "title": "秋冬英伦大头粗跟厚底松糕鞋日系原宿学生女鞋小皮鞋大码系带单鞋", "thumb": "static/images/2.jpeg" }, { "id": 5, "title": "布洛克女鞋平底单鞋复古小皮鞋学院风女英伦风小白鞋女牛津鞋", "thumb": "static/images/1.jpeg" }]
-			};
-		},
-		components: {
-			'myHeader': Header
-		},
 		methods: {
-			mainScroll: function mainScroll() {
-				var mainBox = document.getElementById('mainBox');
-				if (getClassName(mainBox, 'shoplist')[0].clientHeight - mainBox.scrollTop - mainBox.clientHeight < 20 && this.onScroll == 1) {
-					this.onScroll = 0;
-					var loaddata = [{ "id": 2, "title": "春秋季复古英伦风粗跟单鞋女中跟尖头女鞋OL学院风小皮鞋黑通勤鞋", "thumb": "static/images/3.jpeg" }, { "id": 3, "title": "秋冬英伦大头粗跟厚底松糕鞋日系原宿学生女鞋小皮鞋大码系带单鞋", "thumb": "static/images/2.jpeg" }, { "id": 5, "title": "布洛克女鞋平底单鞋复古小皮鞋学院风女英伦风小白鞋女牛津鞋", "thumb": "static/images/1.jpeg" }];
-					for (var i = 0; i < loaddata.length; i++) {
-						this.items.push(loaddata[i]);
-					}
-					this.onScroll = 1;
+			searchClear: function searchClear() {
+				$("#search_input").val('');
+				$("#search_show").css("display", "none");
+				$("#search_text").css("display", "");
+			},
+			searchBarFocus: function searchBarFocus() {
+				$("#search_bar").addClass("search_focusing");
+			},
+			searchBarBlur: function searchBarBlur() {
+				if ($("#search_input").val() == '') {
+					$("#search_text").css("display", "");
+					$("#search_bar").removeClass("search_focusing");
 				}
+			},
+			searchBarKeyup: function searchBarKeyup() {
+				if ($("#search_input").val() == '') {
+					$("#search_show").css("display", "none");
+				} else {
+					$("#search_show").css("display", "block");
+					$("#search_text").css("display", "none");
+				}
+			},
+			searchCancel: function searchCancel() {
+				$("#search_text").css("display", "");
+				$("#search_bar").removeClass("search_focusing");
+				$("#search_show").css("display", "none");
+				$("#search_input").val('');
 			}
 		}
 	};
 
 /***/ },
-/* 22 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var __vue_script__, __vue_template__
-	__webpack_require__(23)
-	__vue_script__ = __webpack_require__(25)
-	if (__vue_script__ &&
-	    __vue_script__.__esModule &&
-	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] shopping\\tpl\\header.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(26)
-	module.exports = __vue_script__ || {}
-	if (module.exports.__esModule) module.exports = module.exports.default
-	if (__vue_template__) {
-	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
-	}
-	if (false) {(function () {  module.hot.accept()
-	  var hotAPI = require("vue-hot-reload-api")
-	  hotAPI.install(require("vue"), false)
-	  if (!hotAPI.compatible) return
-	  var id = "./header.vue"
-	  if (!module.hot.data) {
-	    hotAPI.createRecord(id, module.exports)
-	  } else {
-	    hotAPI.update(id, module.exports, __vue_template__)
-	  }
-	})()}
-
-/***/ },
-/* 23 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-
-	// load the styles
-	var content = __webpack_require__(24);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(9)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./header.vue", function() {
-				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./header.vue");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
-
-/***/ },
-/* 24 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(8)();
-	// imports
-
-
-	// module
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\r\n.header{\r\n\tposition: fixed;\r\n\twidth: 90%;\r\n\tbackground: #42b8d3;\r\n\tline-height: 1rem;\r\n\theight: 1rem;\r\n\tfont-size: 1rem;\r\n\tpadding: 1rem 5%;\r\n\tcolor: #fff;\r\n}\r\n.header-height{\r\n\theight: 3rem;\r\n}\r\n.header-title{\r\n\ttext-align: center;\r\n\tpadding: 0 3rem;\r\n    white-space: nowrap;\r\n    text-overflow: ellipsis;\r\n    overflow: hidden;\r\n}\r\n.header-back{\r\n\tposition: absolute;\r\n\tleft: 0;\r\n\ttop: 0;\r\n\theight: 1rem;\r\n\tpadding: 1rem .5em;\r\n\tdisplay: block;\r\n\tcolor: #fff;\r\n}\r\n.header-back:hover,.header-back:focus{\r\n\tcolor: #fff;\r\n}\r\n", ""]);
-
-	// exports
-
-
-/***/ },
-/* 25 */
+/* 17 */
 /***/ function(module, exports) {
 
-	'use strict';
-
-	module.exports = {
-		props: ['title']
-	};
-
-/***/ },
-/* 26 */
-/***/ function(module, exports) {
-
-	module.exports = "\n<div class=\"header-height\">\n\t<div class=\"header\">\n\t\t<a class=\"header-back\" href=\"javascript:;\" onclick=\"window.history.go(-1)\"><span class=\"fa fa-chevron-left\"></span> 返回</a>\n\t\t<p class=\"header-title\">{{title}}</p>\n\t</div>\n</div>\n";
-
-/***/ },
-/* 27 */
-/***/ function(module, exports) {
-
-	module.exports = "\n<div class=\"body-main\" @scroll=\"mainScroll\" id=\"mainBox\" _v-279fa8de=\"\">\n\t<div _v-279fa8de=\"\">\n\t\t<my-header :title=\"title\" _v-279fa8de=\"\"></my-header>\n\t</div>\n\t<section class=\"shoplist\" _v-279fa8de=\"\">\n\t\t<article class=\"shopitem\" v-for=\"item in items\" _v-279fa8de=\"\">\n\t\t\t<header class=\"thumb\" _v-279fa8de=\"\"><router-link :to=\"{path:'goods',query:{gid:item.id}}\" _v-279fa8de=\"\"><img :src=\"item.thumb\" alt=\"\" _v-279fa8de=\"\"></router-link></header>\n\t\t\t<section class=\"content\" _v-279fa8de=\"\"><h4 _v-279fa8de=\"\"><router-link :to=\"{path:'goods',query:{gid:item.id}}\" _v-279fa8de=\"\">{{item.title}}</router-link></h4></section>\n\t\t\t<footer class=\"operation\" _v-279fa8de=\"\"><router-link :to=\"{path:'goods',query:{gid:item.id}}\" _v-279fa8de=\"\"><i class=\"fa\" _v-279fa8de=\"\"></i></router-link></footer>\n\t\t</article>\n\t</section>\n</div>\n";
+	module.exports = "\n<div class=\"body-main\" _v-85998230=\"\">\n    <div class=\"search_bar\" id=\"search_bar\" _v-85998230=\"\">\n        <form class=\"search_outer\" _v-85998230=\"\">\n            <div class=\"search_inner\" _v-85998230=\"\">\n                <i class=\"icon_search\" _v-85998230=\"\"></i>\n                <input type=\"search\" class=\"search_input\" id=\"search_input\" placeholder=\"搜索\" required=\"\" @focus=\"searchBarFocus\" @blur=\"searchBarBlur\" @keyup=\"searchBarKeyup\" _v-85998230=\"\">\n                <a href=\"javascript:\" class=\"icon_clear\" id=\"search_clear\" @click=\"searchClear()\" _v-85998230=\"\"></a>\n            </div>\n            <label for=\"search_input\" class=\"search_text\" id=\"search_text\" _v-85998230=\"\">\n                <i class=\"icon_search\" _v-85998230=\"\"></i>\n                <span _v-85998230=\"\">搜索</span>\n            </label>\n        </form>\n        <a href=\"javascript:\" class=\"search_cancel\" id=\"search_cancel\" @click=\"searchCancel()\" _v-85998230=\"\">取消</a>\n    </div>\n    <div class=\"cells cells_access search_show\" id=\"search_show\" _v-85998230=\"\">\n        <div class=\"cell\" _v-85998230=\"\">\n            <div class=\"cell_bd cell_primary\" _v-85998230=\"\">\n                <p _v-85998230=\"\">实时搜索文本</p>\n            </div>\n        </div>\n        <div class=\"cell\" _v-85998230=\"\">\n            <div class=\"cell_bd cell_primary\" _v-85998230=\"\">\n                <p _v-85998230=\"\">实时搜索文本</p>\n            </div>\n        </div>\n        <div class=\"cell\" _v-85998230=\"\">\n            <div class=\"cell_bd cell_primary\" _v-85998230=\"\">\n                <p _v-85998230=\"\">实时搜索文本</p>\n            </div>\n        </div>\n    </div>\n</div>\n";
 
 /***/ }
 ]);

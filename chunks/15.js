@@ -1,4 +1,4 @@
-webpackJsonp([3],[
+webpackJsonp([15],[
 /* 0 */,
 /* 1 */,
 /* 2 */,
@@ -293,109 +293,10 @@ webpackJsonp([3],[
 /* 15 */,
 /* 16 */,
 /* 17 */,
-/* 18 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var __vue_script__, __vue_template__
-	__webpack_require__(19)
-	__vue_script__ = __webpack_require__(21)
-	if (__vue_script__ &&
-	    __vue_script__.__esModule &&
-	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] shopping\\tpl\\list.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(27)
-	module.exports = __vue_script__ || {}
-	if (module.exports.__esModule) module.exports = module.exports.default
-	if (__vue_template__) {
-	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
-	}
-	if (false) {(function () {  module.hot.accept()
-	  var hotAPI = require("vue-hot-reload-api")
-	  hotAPI.install(require("vue"), false)
-	  if (!hotAPI.compatible) return
-	  var id = "./list.vue"
-	  if (!module.hot.data) {
-	    hotAPI.createRecord(id, module.exports)
-	  } else {
-	    hotAPI.update(id, module.exports, __vue_template__)
-	  }
-	})()}
-
-/***/ },
-/* 19 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-
-	// load the styles
-	var content = __webpack_require__(20);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(9)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-279fa8de&scoped=true!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./list.vue", function() {
-				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-279fa8de&scoped=true!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./list.vue");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
-
-/***/ },
-/* 20 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(8)();
-	// imports
-
-
-	// module
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.shoplist[_v-279fa8de]{\n\tbackground: #ebeced;\n}\n.shopitem[_v-279fa8de]{\n\tbackground: #fff;\n\tmargin-bottom: 20px;\n}\n.thumb a[_v-279fa8de]{\n\tdisplay: block;\n\tpadding-bottom: 75%;\n\theight: 0;\n\toverflow: hidden;\n}\n.thumb a img[_v-279fa8de]{\n\tdisplay: inline;\n\twidth:100%;\n\tborder: none;\n}\n.content h4[_v-279fa8de]{\n\tpadding: 1em;\n\tfont-size: 14px;\n}\n.operation[_v-279fa8de]{\n\tpadding:0 1em 1em;\n\ttext-align: right;\n}\n.fa[_v-279fa8de]{\n    display: inline-block;\n    font: normal normal normal 14px/1 FontAwesome;\n    font-size: inherit;\n    text-rendering: auto;\n}\n.fa[_v-279fa8de]:before {\n\tfont-size: 24px;\n    content: \"\\F039\";\n}\n", ""]);
-
-	// exports
-
-
-/***/ },
-/* 21 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-
-	var Header = __webpack_require__(22);
-	module.exports = {
-		data: function data() {
-			return {
-				"title": "商品列表",
-				"onScroll": 1,
-				"page": 1,
-				"items": [{ "id": 2, "title": "春秋季复古英伦风粗跟单鞋女中跟尖头女鞋OL学院风小皮鞋黑通勤鞋", "thumb": "static/images/3.jpeg" }, { "id": 3, "title": "秋冬英伦大头粗跟厚底松糕鞋日系原宿学生女鞋小皮鞋大码系带单鞋", "thumb": "static/images/2.jpeg" }, { "id": 5, "title": "布洛克女鞋平底单鞋复古小皮鞋学院风女英伦风小白鞋女牛津鞋", "thumb": "static/images/1.jpeg" }]
-			};
-		},
-		components: {
-			'myHeader': Header
-		},
-		methods: {
-			mainScroll: function mainScroll() {
-				var mainBox = document.getElementById('mainBox');
-				if (getClassName(mainBox, 'shoplist')[0].clientHeight - mainBox.scrollTop - mainBox.clientHeight < 20 && this.onScroll == 1) {
-					this.onScroll = 0;
-					var loaddata = [{ "id": 2, "title": "春秋季复古英伦风粗跟单鞋女中跟尖头女鞋OL学院风小皮鞋黑通勤鞋", "thumb": "static/images/3.jpeg" }, { "id": 3, "title": "秋冬英伦大头粗跟厚底松糕鞋日系原宿学生女鞋小皮鞋大码系带单鞋", "thumb": "static/images/2.jpeg" }, { "id": 5, "title": "布洛克女鞋平底单鞋复古小皮鞋学院风女英伦风小白鞋女牛津鞋", "thumb": "static/images/1.jpeg" }];
-					for (var i = 0; i < loaddata.length; i++) {
-						this.items.push(loaddata[i]);
-					}
-					this.onScroll = 1;
-				}
-			}
-		}
-	};
-
-/***/ },
+/* 18 */,
+/* 19 */,
+/* 20 */,
+/* 21 */,
 /* 22 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -481,10 +382,156 @@ webpackJsonp([3],[
 	module.exports = "\n<div class=\"header-height\">\n\t<div class=\"header\">\n\t\t<a class=\"header-back\" href=\"javascript:;\" onclick=\"window.history.go(-1)\"><span class=\"fa fa-chevron-left\"></span> 返回</a>\n\t\t<p class=\"header-title\">{{title}}</p>\n\t</div>\n</div>\n";
 
 /***/ },
-/* 27 */
+/* 27 */,
+/* 28 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_script__, __vue_template__
+	__webpack_require__(29)
+	__vue_script__ = __webpack_require__(31)
+	if (__vue_script__ &&
+	    __vue_script__.__esModule &&
+	    Object.keys(__vue_script__).length > 1) {
+	  console.warn("[vue-loader] shopping\\tpl\\goods.vue: named exports in *.vue files are ignored.")}
+	__vue_template__ = __webpack_require__(32)
+	module.exports = __vue_script__ || {}
+	if (module.exports.__esModule) module.exports = module.exports.default
+	if (__vue_template__) {
+	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
+	}
+	if (false) {(function () {  module.hot.accept()
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), false)
+	  if (!hotAPI.compatible) return
+	  var id = "./goods.vue"
+	  if (!module.hot.data) {
+	    hotAPI.createRecord(id, module.exports)
+	  } else {
+	    hotAPI.update(id, module.exports, __vue_template__)
+	  }
+	})()}
+
+/***/ },
+/* 29 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(30);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(9)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./goods.vue", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./goods.vue");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 30 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(8)();
+	// imports
+
+
+	// module
+	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\r\n.goods-img,.goods-img img{\r\n\twidth: 100%;\r\n}\r\n.goods-info{\r\n\tbackground: #fff;\r\n\tborder-bottom: 1px solid #eee;\r\n\tpadding: 5px 4%;\r\n\tmargin-bottom: 8px;\r\n}\r\n.goods-info-title{\r\n\tline-height: 1.5em;\r\n\tfont-size: 1.1rem;\r\n\tmargin-bottom: 8px;\r\n}\r\n.goods-info-desc{\r\n\tcolor: #999;\r\n\tfont-size: .8rem;\r\n\tmargin-bottom: 8px;\r\n}\r\n.goods-price{\r\n\tfont-size: .8rem;\r\n\tmargin-bottom: 10px;\r\n}\r\n.goods-price-now{\r\n\tmargin-right: 10px;\r\n}\r\n.goods-price-now b{\r\n\tfont-size: 1.2em;\r\n\tcolor: orangered;\r\n}\r\n.goods-price-original{\r\n\ttext-decoration: line-through;\r\n}\r\n.goods-buy{\r\n\tborder-top: 1px solid #eee;\r\n\tpadding-top: 10px;\r\n}\r\n.goods-detail{\r\n\tbackground: #fff;\r\n\tpadding: 5px 4%;\r\n}\r\n.goods-detail-t{\r\n\tborder-bottom: 1px solid #eee;\r\n\tpadding: 0 5px 5px;\r\n}\r\n.goods-detail-t span{\r\n\tborder-left: 3px solid #2BACC9;\r\n\tpadding-left: 8px;\r\n}\r\n.goods-detail-con{\r\n\tpadding: 5px 0;\r\n}\r\n.fixed{\r\n\tposition: fixed;\r\n\twidth: 100%; height: 100%;\r\n\tbackground: rgba(0,0,0,.5);\r\n\tleft: 0;\r\n\ttop: 0;\r\n}\r\n.goods-pop{\r\n\tposition: absolute;\r\n\tbackground: #fff;\r\n\twidth: 100%;\r\n\tleft: 0;\r\n\tbottom: 0;\r\n\tpadding: 50px 5% 10px;\r\n\tbox-sizing: border-box;\r\n}\r\n.goods-pop-img{\r\n\tposition: absolute;\r\n\twidth: 60px;\r\n\theight: 60px;\r\n\tpadding: 5px;\r\n\tleft: 5%;\r\n\ttop: -30px;\r\n\tbackground: #fff;\r\n}\r\n.goods-pop-img img{\r\n\twidth: 100%;\r\n\theight: 100%;\r\n}\r\n.goods-pop-chioce{\r\n\tfont-size: .8rem;\r\n}\r\n.goods-pop-chioce dt{\r\n\tfloat: left;\r\n\twidth: 3em;\r\n\ttext-align: right;\r\n}\r\n.goods-pop-chioce dd{\r\n\tmargin-left:3em;\r\n\tmargin-bottom: 10px;\r\n}\r\n.size{}\r\n.size span{\r\n\tborder: 1px solid #ccc;\r\n\tpadding: 5px 12px;\r\n\tdisplay: inline-block;\r\n\tmargin-bottom: 5px;\r\n\tmargin-right: 5px;\r\n}\r\n.size span.active{\r\n\tborder: 1px solid #42b8d3;\r\n\tcolor: #42b8d3;\r\n}\r\n.chioce-num{ font-size: 0;}\r\n.chioce-num input[type=button]{\r\n\twidth: 2em;\r\n\theight: 2em;\r\n\tfont-size: .8rem;\r\n\tborder: 1px solid #ccc;\r\n\tbackground: #e5e5e5;\r\n}\r\n.chioce-num input[type=text]{\r\n\twidth: 3em;\r\n\theight: 2em;\r\n\tfont-size: .8rem;\r\n\tborder: none;\r\n\tborder-top: 1px solid #ccc;\r\n\tborder-bottom: 1px solid #ccc;\r\n\tbackground: #fff;\r\n\ttext-align: center;\r\n\tbox-sizing: border-box;\r\n}\r\n\r\n", ""]);
+
+	// exports
+
+
+/***/ },
+/* 31 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	var Header = __webpack_require__(22);
+	module.exports = {
+		components: {
+			"myHeader": Header
+		},
+		data: function data() {
+			return {
+				"title": "",
+				"data": {},
+				"size": {},
+				"apiUrl": "api/goods.php",
+				"apiSubmit": "api/order.php",
+				"pop": 0,
+				"sub": {
+					"num": 1,
+					"size": []
+				}
+			};
+		},
+		mounted: function mounted() {
+			var goodid = this.$route.query.gid;
+			this.sub.id = goodid;
+			this.$http.get(this.apiUrl, { "params": { "id": goodid } }).then(function (response) {
+				var objs = JSON.parse(response.data);
+				if (!objs.error) {
+					this.data = objs.datas;
+					this.size = objs.datas.size;
+					for (var i = 0; i < this.size.length; i++) {
+						var size = { "name": this.size[i]["name"], "size": "" };
+						this.sub.size.push(size);
+					}
+				} else {
+					tips({ txt: "找不到该信息！" });
+				}
+			}, function (response) {
+				tips({ txt: "获取失败,请稍候再试！" });
+			});
+		},
+		methods: {
+			buy: function buy() {
+				this.pop == 0 ? this.pop = 1 : this.pop = 0;
+			},
+			add: function add() {
+				this.sub.num = this.sub.num * 1 + 1;
+			},
+			minus: function minus() {
+				if (this.sub.num > 1) {
+					this.sub.num = this.sub.num * 1 - 1;
+				}
+			},
+			chiocesize: function chiocesize(i, j) {
+				var size = this.size[i]['value'][j];
+				this.sub.size[i]['size'] = size;
+			},
+			buysub: function buysub() {
+				for (var i = 0; i < this.sub.size.length; i++) {
+					if (this.sub.size[i].size == '') {
+						tips({ txt: '请选择' + this.sub.size[i].name });
+						return false;
+					}
+				}
+				this.$http.post(this.apiSubmit, this.sub).then(function (response) {
+					location.href = '/order';
+				}, function (response) {
+					tips({ txt: '网络繁忙，请稍候再试！' });
+				});
+			}
+		}
+	};
+
+/***/ },
+/* 32 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<div class=\"body-main\" @scroll=\"mainScroll\" id=\"mainBox\" _v-279fa8de=\"\">\n\t<div _v-279fa8de=\"\">\n\t\t<my-header :title=\"title\" _v-279fa8de=\"\"></my-header>\n\t</div>\n\t<section class=\"shoplist\" _v-279fa8de=\"\">\n\t\t<article class=\"shopitem\" v-for=\"item in items\" _v-279fa8de=\"\">\n\t\t\t<header class=\"thumb\" _v-279fa8de=\"\"><router-link :to=\"{path:'goods',query:{gid:item.id}}\" _v-279fa8de=\"\"><img :src=\"item.thumb\" alt=\"\" _v-279fa8de=\"\"></router-link></header>\n\t\t\t<section class=\"content\" _v-279fa8de=\"\"><h4 _v-279fa8de=\"\"><router-link :to=\"{path:'goods',query:{gid:item.id}}\" _v-279fa8de=\"\">{{item.title}}</router-link></h4></section>\n\t\t\t<footer class=\"operation\" _v-279fa8de=\"\"><router-link :to=\"{path:'goods',query:{gid:item.id}}\" _v-279fa8de=\"\"><i class=\"fa\" _v-279fa8de=\"\"></i></router-link></footer>\n\t\t</article>\n\t</section>\n</div>\n";
+	module.exports = "\n<div class=\"body-main bg-grey\">\n\t<div>\n\t\t<my-header :title = \"title\"></my-header>\n\t</div>\n\t<div class=\"goods-img\"><img :src=\"data.thumb\" alt=\"\" /></div>\n\t<div class=\"goods-info\">\n\t\t<h2 class=\"goods-info-title\">{{data.title}}</h2>\n\t\t<p class=\"goods-info-desc\">{{data.sub_title}}</p>\n\t\t<div class=\"goods-price\">\n\t\t\t<span class=\"goods-price-now\">优惠价：<b>{{data.price}}</b></span>\n\t\t\t<span class=\"goods-price-original\">原价：{{data.originalprice}}</span>\n\t\t</div>\n\t\t<div class=\"goods-buy\"><a @click=\"buy\" class=\"btn btn-block btn-primary\">立即购买</a></div>\n\t</div>\n\t<div class=\"goods-detail\">\n\t\t<div class=\"goods-detail-t\"><span>商品介绍</span></div>\n\t\t<div class=\"goods-detail-con\" v-html=\"data.content\"></div>\n\t</div>\n\t<div class=\"fixed\" :class=\"{hide:!pop,show:pop}\">\n\t\t<div class=\"goods-pop\">\n\t\t\t<div class=\"goods-pop-img\"><img :src=\"data.thumb\"/></div>\n\t\t\t<a href=\"javascript:;\" class=\"close\" @click=\"buy\" style=\" position: absolute; right: 8px; top: 8px;\"></a>\n\t\t\t<dl class=\"goods-pop-chioce\" v-for=\"(v, i) in size\">\n\t\t\t\t<dt>{{v.name}}：</dt>\n\t\t\t\t<dd class=\"size\">\n\t\t\t\t\t<span v-for=\"(s, j) in v.value\" @click=\"chiocesize(i,j)\" :class=\"{active:s==sub.size[i].size}\">{{s}}</span>\n\t\t\t\t</dd>\n\t\t\t</dl>\n\t\t\t<dl class=\"goods-pop-chioce\">\n\t\t\t\t<dt>数量：</dt>\n\t\t\t\t<dd class=\"chioce-num\">\n\t\t\t\t\t<input type=\"button\" @click=\"minus\" value=\"-\" />\n\t\t\t\t\t<input type=\"text\" :value=\"sub.num\" readonly=\"readonly\" />\n\t\t\t\t\t<input type=\"button\" @click=\"add\" value=\"+\" />\n\t\t\t\t</dd>\n\t\t\t</dl>\n\t\t\t<div class=\"goods-buy\"><a @click=\"buysub\" class=\"btn btn-block btn-primary\">立即购买</a></div>\n\t\t</div>\n\t</div>\n</div>\n";
 
 /***/ }
 ]);

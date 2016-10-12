@@ -1,4 +1,4 @@
-webpackJsonp([3],[
+webpackJsonp([16],[
 /* 0 */,
 /* 1 */,
 /* 2 */,
@@ -293,109 +293,10 @@ webpackJsonp([3],[
 /* 15 */,
 /* 16 */,
 /* 17 */,
-/* 18 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var __vue_script__, __vue_template__
-	__webpack_require__(19)
-	__vue_script__ = __webpack_require__(21)
-	if (__vue_script__ &&
-	    __vue_script__.__esModule &&
-	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] shopping\\tpl\\list.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(27)
-	module.exports = __vue_script__ || {}
-	if (module.exports.__esModule) module.exports = module.exports.default
-	if (__vue_template__) {
-	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
-	}
-	if (false) {(function () {  module.hot.accept()
-	  var hotAPI = require("vue-hot-reload-api")
-	  hotAPI.install(require("vue"), false)
-	  if (!hotAPI.compatible) return
-	  var id = "./list.vue"
-	  if (!module.hot.data) {
-	    hotAPI.createRecord(id, module.exports)
-	  } else {
-	    hotAPI.update(id, module.exports, __vue_template__)
-	  }
-	})()}
-
-/***/ },
-/* 19 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-
-	// load the styles
-	var content = __webpack_require__(20);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(9)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-279fa8de&scoped=true!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./list.vue", function() {
-				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-279fa8de&scoped=true!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./list.vue");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
-
-/***/ },
-/* 20 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(8)();
-	// imports
-
-
-	// module
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.shoplist[_v-279fa8de]{\n\tbackground: #ebeced;\n}\n.shopitem[_v-279fa8de]{\n\tbackground: #fff;\n\tmargin-bottom: 20px;\n}\n.thumb a[_v-279fa8de]{\n\tdisplay: block;\n\tpadding-bottom: 75%;\n\theight: 0;\n\toverflow: hidden;\n}\n.thumb a img[_v-279fa8de]{\n\tdisplay: inline;\n\twidth:100%;\n\tborder: none;\n}\n.content h4[_v-279fa8de]{\n\tpadding: 1em;\n\tfont-size: 14px;\n}\n.operation[_v-279fa8de]{\n\tpadding:0 1em 1em;\n\ttext-align: right;\n}\n.fa[_v-279fa8de]{\n    display: inline-block;\n    font: normal normal normal 14px/1 FontAwesome;\n    font-size: inherit;\n    text-rendering: auto;\n}\n.fa[_v-279fa8de]:before {\n\tfont-size: 24px;\n    content: \"\\F039\";\n}\n", ""]);
-
-	// exports
-
-
-/***/ },
-/* 21 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-
-	var Header = __webpack_require__(22);
-	module.exports = {
-		data: function data() {
-			return {
-				"title": "商品列表",
-				"onScroll": 1,
-				"page": 1,
-				"items": [{ "id": 2, "title": "春秋季复古英伦风粗跟单鞋女中跟尖头女鞋OL学院风小皮鞋黑通勤鞋", "thumb": "static/images/3.jpeg" }, { "id": 3, "title": "秋冬英伦大头粗跟厚底松糕鞋日系原宿学生女鞋小皮鞋大码系带单鞋", "thumb": "static/images/2.jpeg" }, { "id": 5, "title": "布洛克女鞋平底单鞋复古小皮鞋学院风女英伦风小白鞋女牛津鞋", "thumb": "static/images/1.jpeg" }]
-			};
-		},
-		components: {
-			'myHeader': Header
-		},
-		methods: {
-			mainScroll: function mainScroll() {
-				var mainBox = document.getElementById('mainBox');
-				if (getClassName(mainBox, 'shoplist')[0].clientHeight - mainBox.scrollTop - mainBox.clientHeight < 20 && this.onScroll == 1) {
-					this.onScroll = 0;
-					var loaddata = [{ "id": 2, "title": "春秋季复古英伦风粗跟单鞋女中跟尖头女鞋OL学院风小皮鞋黑通勤鞋", "thumb": "static/images/3.jpeg" }, { "id": 3, "title": "秋冬英伦大头粗跟厚底松糕鞋日系原宿学生女鞋小皮鞋大码系带单鞋", "thumb": "static/images/2.jpeg" }, { "id": 5, "title": "布洛克女鞋平底单鞋复古小皮鞋学院风女英伦风小白鞋女牛津鞋", "thumb": "static/images/1.jpeg" }];
-					for (var i = 0; i < loaddata.length; i++) {
-						this.items.push(loaddata[i]);
-					}
-					this.onScroll = 1;
-				}
-			}
-		}
-	};
-
-/***/ },
+/* 18 */,
+/* 19 */,
+/* 20 */,
+/* 21 */,
 /* 22 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -481,10 +382,126 @@ webpackJsonp([3],[
 	module.exports = "\n<div class=\"header-height\">\n\t<div class=\"header\">\n\t\t<a class=\"header-back\" href=\"javascript:;\" onclick=\"window.history.go(-1)\"><span class=\"fa fa-chevron-left\"></span> 返回</a>\n\t\t<p class=\"header-title\">{{title}}</p>\n\t</div>\n</div>\n";
 
 /***/ },
-/* 27 */
+/* 27 */,
+/* 28 */,
+/* 29 */,
+/* 30 */,
+/* 31 */,
+/* 32 */,
+/* 33 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_script__, __vue_template__
+	__webpack_require__(34)
+	__vue_script__ = __webpack_require__(36)
+	if (__vue_script__ &&
+	    __vue_script__.__esModule &&
+	    Object.keys(__vue_script__).length > 1) {
+	  console.warn("[vue-loader] shopping\\tpl\\login.vue: named exports in *.vue files are ignored.")}
+	__vue_template__ = __webpack_require__(37)
+	module.exports = __vue_script__ || {}
+	if (module.exports.__esModule) module.exports = module.exports.default
+	if (__vue_template__) {
+	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
+	}
+	if (false) {(function () {  module.hot.accept()
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), false)
+	  if (!hotAPI.compatible) return
+	  var id = "./login.vue"
+	  if (!module.hot.data) {
+	    hotAPI.createRecord(id, module.exports)
+	  } else {
+	    hotAPI.update(id, module.exports, __vue_template__)
+	  }
+	})()}
+
+/***/ },
+/* 34 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(35);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(9)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-9d1cd44e&scoped=true!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./login.vue", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-9d1cd44e&scoped=true!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./login.vue");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 35 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(8)();
+	// imports
+
+
+	// module
+	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.form[_v-9d1cd44e]{\n\twidth: 90%; margin: 0 auto; padding: 20px 0; font-size: .9rem;\n}\n.form-group[_v-9d1cd44e],.form-line[_v-9d1cd44e]{\n\tpadding-bottom: 20px;\n}\n.form-group label[_v-9d1cd44e]{\n\tdisplay: block; padding-bottom: 10px;\n}\n.form-group input[type=text][_v-9d1cd44e],.form-group input[type=password][_v-9d1cd44e]{\n\twidth: 100%; height: 40px;  box-sizing: border-box; border: 1px solid #ccc; padding: 9px 10px;\n}\n.form-group .input-tips[_v-9d1cd44e]{\n\tbackground: #ffe5e5;\n\tdisplay: block;\n\tmargin-top: 5px;\n\tpadding: 0 8px;\n\tline-height: 30px;\n}\n.form-btn[_v-9d1cd44e]{\n\ttext-align: center;\n\tpadding-top: 10px;\n\tborder-top: 1px solid #eee;\n}\n.form-btn input[type=submit][_v-9d1cd44e],.form-btn a[_v-9d1cd44e]{\n\twidth: 45%;\n\tbox-sizing: border-box;\n}\n.form-btn input[type=submit][_v-9d1cd44e]{\n\tbackground: #999;\n\tborder: 1px solid #999;\n}\n", ""]);
+
+	// exports
+
+
+/***/ },
+/* 36 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	var Header = __webpack_require__(22);
+	module.exports = {
+		data: function data() {
+			return {
+				"title": "登录",
+				"apiUrl": 'api/login.php',
+				"form": {
+					"username": "",
+					"password": "",
+					"remember": false,
+					"usernametips": "",
+					"passwordtips": ""
+				}
+			};
+		},
+		components: {
+			'myHeader': Header
+		},
+		methods: {
+			onSubmit: function onSubmit() {
+				this.$http.post(this.apiUrl, this.form).then(function (response) {
+
+					tips({
+						txt: '登录成功',
+						Callback: function Callback() {
+							location.href = '/';
+						}
+					});
+				}, function (response) {
+					tips({ txt: '网络繁忙，请稍候再试！' });
+				});
+			}
+		}
+	};
+
+/***/ },
+/* 37 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<div class=\"body-main\" @scroll=\"mainScroll\" id=\"mainBox\" _v-279fa8de=\"\">\n\t<div _v-279fa8de=\"\">\n\t\t<my-header :title=\"title\" _v-279fa8de=\"\"></my-header>\n\t</div>\n\t<section class=\"shoplist\" _v-279fa8de=\"\">\n\t\t<article class=\"shopitem\" v-for=\"item in items\" _v-279fa8de=\"\">\n\t\t\t<header class=\"thumb\" _v-279fa8de=\"\"><router-link :to=\"{path:'goods',query:{gid:item.id}}\" _v-279fa8de=\"\"><img :src=\"item.thumb\" alt=\"\" _v-279fa8de=\"\"></router-link></header>\n\t\t\t<section class=\"content\" _v-279fa8de=\"\"><h4 _v-279fa8de=\"\"><router-link :to=\"{path:'goods',query:{gid:item.id}}\" _v-279fa8de=\"\">{{item.title}}</router-link></h4></section>\n\t\t\t<footer class=\"operation\" _v-279fa8de=\"\"><router-link :to=\"{path:'goods',query:{gid:item.id}}\" _v-279fa8de=\"\"><i class=\"fa\" _v-279fa8de=\"\"></i></router-link></footer>\n\t\t</article>\n\t</section>\n</div>\n";
+	module.exports = "\n<div class=\"body-main\" _v-9d1cd44e=\"\">\n\t<div _v-9d1cd44e=\"\">\n\t\t<my-header v-once=\"\" :title=\"title\" _v-9d1cd44e=\"\"></my-header>\n\t</div>\n\t<div class=\"form\" _v-9d1cd44e=\"\">\n\t\t<form @submit.prevent=\"onSubmit\" _v-9d1cd44e=\"\">\n\t\t\t<div class=\"form-group\" _v-9d1cd44e=\"\">\n\t\t\t\t<label for=\"username\" _v-9d1cd44e=\"\">用户名/邮箱：</label>\n\t\t\t\t<input type=\"text\" v-model=\"form.username\" debounce=\"500\" name=\"username\" id=\"username\" value=\"\" required=\"required\" _v-9d1cd44e=\"\">\n\t\t\t\t<span class=\"input-tips\" v-show=\"form.usernametips!=''\" _v-9d1cd44e=\"\"><font color=\"red\" _v-9d1cd44e=\"\">*{{form.usernametips}}</font></span>\n\t\t\t</div>\n\t\t\t<div class=\"form-group\" _v-9d1cd44e=\"\">\n\t\t\t\t<label for=\"password\" _v-9d1cd44e=\"\">密码：</label>\n\t\t\t\t<input type=\"password\" v-model=\"form.password\" debounce=\"500\" name=\"password\" id=\"password\" value=\"\" required=\"required\" _v-9d1cd44e=\"\">\n\t\t\t\t<span class=\"input-tips\" v-show=\"form.passwordtips!=''\" _v-9d1cd44e=\"\"><font color=\"red\" _v-9d1cd44e=\"\">*{{form.passwordtips}}</font></span>\n\t\t\t</div>\n\t\t\t<div class=\"form-line\" _v-9d1cd44e=\"\">\n\t\t\t\t<label for=\"remember\" _v-9d1cd44e=\"\"><input type=\"checkbox\" v-model=\"form.remember\" name=\"remember\" id=\"remember\" _v-9d1cd44e=\"\"> 记住密码</label>\n\t\t\t\t<router-link to=\"/forget\" class=\"fr\" _v-9d1cd44e=\"\">忘记密码？</router-link>\n\t\t\t</div>\n\t\t\t<div class=\"form-btn\" _v-9d1cd44e=\"\">\n\t\t\t\t<input type=\"submit\" value=\"登录\" class=\"btn btn-primary\" @keyup.enter=\"onSubmit\" _v-9d1cd44e=\"\">\n\t\t\t\t<router-link to=\"/register\" class=\"btn btn-primary\" _v-9d1cd44e=\"\">注册</router-link>\n\t\t\t</div>\n\t\t</form>\n\t</div>\n</div>\n";
 
 /***/ }
 ]);

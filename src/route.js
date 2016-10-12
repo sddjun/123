@@ -10,6 +10,7 @@ var Forgettips = resolve => require(["../tpl/forgettips.vue"],resolve);
 var Password = resolve => require(["../tpl/password.vue"],resolve);
 var Cart = resolve => require(["../tpl/cart.vue"],resolve);
 var User = resolve => require(["../tpl/user.vue"],resolve);
+var Order = resolve => require(["../tpl/order.vue"],resolve);
 
 // 路由routes
 module.exports = {
@@ -27,6 +28,7 @@ module.exports = {
 	    { path: '/password', component: Password },
 	    { path: '/cart', component: Cart },
 	    { path: '/user', component: User },
+	    { path: '/order', component: Order },
 	    { path: '*', component: Index }
 	]
 }

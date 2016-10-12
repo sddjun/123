@@ -1,13 +1,6 @@
-webpackJsonp([3],[
-/* 0 */,
-/* 1 */,
-/* 2 */,
-/* 3 */,
-/* 4 */,
-/* 5 */,
-/* 6 */,
-/* 7 */,
-/* 8 */
+webpackJsonp([22],{
+
+/***/ 8:
 /***/ function(module, exports) {
 
 	/*
@@ -63,7 +56,8 @@ webpackJsonp([3],[
 
 
 /***/ },
-/* 9 */
+
+/***/ 9:
 /***/ function(module, exports, __webpack_require__) {
 
 	/*
@@ -285,118 +279,8 @@ webpackJsonp([3],[
 
 
 /***/ },
-/* 10 */,
-/* 11 */,
-/* 12 */,
-/* 13 */,
-/* 14 */,
-/* 15 */,
-/* 16 */,
-/* 17 */,
-/* 18 */
-/***/ function(module, exports, __webpack_require__) {
 
-	var __vue_script__, __vue_template__
-	__webpack_require__(19)
-	__vue_script__ = __webpack_require__(21)
-	if (__vue_script__ &&
-	    __vue_script__.__esModule &&
-	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] shopping\\tpl\\list.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(27)
-	module.exports = __vue_script__ || {}
-	if (module.exports.__esModule) module.exports = module.exports.default
-	if (__vue_template__) {
-	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
-	}
-	if (false) {(function () {  module.hot.accept()
-	  var hotAPI = require("vue-hot-reload-api")
-	  hotAPI.install(require("vue"), false)
-	  if (!hotAPI.compatible) return
-	  var id = "./list.vue"
-	  if (!module.hot.data) {
-	    hotAPI.createRecord(id, module.exports)
-	  } else {
-	    hotAPI.update(id, module.exports, __vue_template__)
-	  }
-	})()}
-
-/***/ },
-/* 19 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-
-	// load the styles
-	var content = __webpack_require__(20);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(9)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-279fa8de&scoped=true!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./list.vue", function() {
-				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-279fa8de&scoped=true!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./list.vue");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
-
-/***/ },
-/* 20 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(8)();
-	// imports
-
-
-	// module
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.shoplist[_v-279fa8de]{\n\tbackground: #ebeced;\n}\n.shopitem[_v-279fa8de]{\n\tbackground: #fff;\n\tmargin-bottom: 20px;\n}\n.thumb a[_v-279fa8de]{\n\tdisplay: block;\n\tpadding-bottom: 75%;\n\theight: 0;\n\toverflow: hidden;\n}\n.thumb a img[_v-279fa8de]{\n\tdisplay: inline;\n\twidth:100%;\n\tborder: none;\n}\n.content h4[_v-279fa8de]{\n\tpadding: 1em;\n\tfont-size: 14px;\n}\n.operation[_v-279fa8de]{\n\tpadding:0 1em 1em;\n\ttext-align: right;\n}\n.fa[_v-279fa8de]{\n    display: inline-block;\n    font: normal normal normal 14px/1 FontAwesome;\n    font-size: inherit;\n    text-rendering: auto;\n}\n.fa[_v-279fa8de]:before {\n\tfont-size: 24px;\n    content: \"\\F039\";\n}\n", ""]);
-
-	// exports
-
-
-/***/ },
-/* 21 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-
-	var Header = __webpack_require__(22);
-	module.exports = {
-		data: function data() {
-			return {
-				"title": "商品列表",
-				"onScroll": 1,
-				"page": 1,
-				"items": [{ "id": 2, "title": "春秋季复古英伦风粗跟单鞋女中跟尖头女鞋OL学院风小皮鞋黑通勤鞋", "thumb": "static/images/3.jpeg" }, { "id": 3, "title": "秋冬英伦大头粗跟厚底松糕鞋日系原宿学生女鞋小皮鞋大码系带单鞋", "thumb": "static/images/2.jpeg" }, { "id": 5, "title": "布洛克女鞋平底单鞋复古小皮鞋学院风女英伦风小白鞋女牛津鞋", "thumb": "static/images/1.jpeg" }]
-			};
-		},
-		components: {
-			'myHeader': Header
-		},
-		methods: {
-			mainScroll: function mainScroll() {
-				var mainBox = document.getElementById('mainBox');
-				if (getClassName(mainBox, 'shoplist')[0].clientHeight - mainBox.scrollTop - mainBox.clientHeight < 20 && this.onScroll == 1) {
-					this.onScroll = 0;
-					var loaddata = [{ "id": 2, "title": "春秋季复古英伦风粗跟单鞋女中跟尖头女鞋OL学院风小皮鞋黑通勤鞋", "thumb": "static/images/3.jpeg" }, { "id": 3, "title": "秋冬英伦大头粗跟厚底松糕鞋日系原宿学生女鞋小皮鞋大码系带单鞋", "thumb": "static/images/2.jpeg" }, { "id": 5, "title": "布洛克女鞋平底单鞋复古小皮鞋学院风女英伦风小白鞋女牛津鞋", "thumb": "static/images/1.jpeg" }];
-					for (var i = 0; i < loaddata.length; i++) {
-						this.items.push(loaddata[i]);
-					}
-					this.onScroll = 1;
-				}
-			}
-		}
-	};
-
-/***/ },
-/* 22 */
+/***/ 22:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
@@ -425,7 +309,8 @@ webpackJsonp([3],[
 	})()}
 
 /***/ },
-/* 23 */
+
+/***/ 23:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
@@ -451,7 +336,8 @@ webpackJsonp([3],[
 	}
 
 /***/ },
-/* 24 */
+
+/***/ 24:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(8)();
@@ -465,7 +351,8 @@ webpackJsonp([3],[
 
 
 /***/ },
-/* 25 */
+
+/***/ 25:
 /***/ function(module, exports) {
 
 	'use strict';
@@ -475,16 +362,110 @@ webpackJsonp([3],[
 	};
 
 /***/ },
-/* 26 */
+
+/***/ 26:
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"header-height\">\n\t<div class=\"header\">\n\t\t<a class=\"header-back\" href=\"javascript:;\" onclick=\"window.history.go(-1)\"><span class=\"fa fa-chevron-left\"></span> 返回</a>\n\t\t<p class=\"header-title\">{{title}}</p>\n\t</div>\n</div>\n";
 
 /***/ },
-/* 27 */
+
+/***/ 63:
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_script__, __vue_template__
+	__webpack_require__(64)
+	__vue_script__ = __webpack_require__(66)
+	if (__vue_script__ &&
+	    __vue_script__.__esModule &&
+	    Object.keys(__vue_script__).length > 1) {
+	  console.warn("[vue-loader] shopping\\tpl\\user.vue: named exports in *.vue files are ignored.")}
+	__vue_template__ = __webpack_require__(67)
+	module.exports = __vue_script__ || {}
+	if (module.exports.__esModule) module.exports = module.exports.default
+	if (__vue_template__) {
+	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
+	}
+	if (false) {(function () {  module.hot.accept()
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), false)
+	  if (!hotAPI.compatible) return
+	  var id = "./user.vue"
+	  if (!module.hot.data) {
+	    hotAPI.createRecord(id, module.exports)
+	  } else {
+	    hotAPI.update(id, module.exports, __vue_template__)
+	  }
+	})()}
+
+/***/ },
+
+/***/ 64:
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(65);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(9)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./user.vue", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./user.vue");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+
+/***/ 65:
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(8)();
+	// imports
+
+
+	// module
+	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.user-top{\r\n\tbackground: #4ec2dd;\r\n}\r\n.user-wrap{\r\n\tpadding: 20px 0;\r\n}\r\n.user-headerimg{\r\n\twidth: 100px;\r\n\theight: 100px;\r\n\tmargin: 0 auto;\r\n\tborder: 2px solid #fff;\r\n\tborder-radius: 50%;\r\n\toverflow: hidden;\r\n}\r\n.user-headerimg img{\r\n\tborder-radius: 50%;\r\n}\r\n.user-username{\r\n\ttext-align: center;\r\n\tcolor: #fff;\r\n\tpadding-top: 10px;\r\n}\r\n.single-lists{\r\n\tbackground: #fff;\r\n}\r\n.single-lists li{\r\n\tborder-bottom: 1px solid #eee;\r\n\t\r\n}\r\n.single-lists a{\r\n\tdisplay: block;\r\n\tcolor: #333;\r\n\tpadding: 14px 5%;\r\n\tline-height: 20px;\r\n}\r\n.single-lists .fa-chevron-right{\r\n\tfloat: right;\r\n\tcolor: #ccc;\r\n}\r\n.single-lists .fa-chevron-right:before{\r\n\tline-height: 20px;\r\n}\r\n.single-lists .ico{\r\n\tfont-size: 1.3em;\r\n\twidth: 1.2em;\r\n\ttext-align: center;\r\n}\r\n.single-lists-name{\r\n\tpadding-left: 8px;\r\n\tfont-size: .8em;\r\n}\n", ""]);
+
+	// exports
+
+
+/***/ },
+
+/***/ 66:
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	var Header = __webpack_require__(22);
+	module.exports = {
+		data: function data() {
+			return {
+				"title": "个人中心"
+			};
+		},
+		components: {
+			'myHeader': Header
+		}
+	};
+
+/***/ },
+
+/***/ 67:
 /***/ function(module, exports) {
 
-	module.exports = "\n<div class=\"body-main\" @scroll=\"mainScroll\" id=\"mainBox\" _v-279fa8de=\"\">\n\t<div _v-279fa8de=\"\">\n\t\t<my-header :title=\"title\" _v-279fa8de=\"\"></my-header>\n\t</div>\n\t<section class=\"shoplist\" _v-279fa8de=\"\">\n\t\t<article class=\"shopitem\" v-for=\"item in items\" _v-279fa8de=\"\">\n\t\t\t<header class=\"thumb\" _v-279fa8de=\"\"><router-link :to=\"{path:'goods',query:{gid:item.id}}\" _v-279fa8de=\"\"><img :src=\"item.thumb\" alt=\"\" _v-279fa8de=\"\"></router-link></header>\n\t\t\t<section class=\"content\" _v-279fa8de=\"\"><h4 _v-279fa8de=\"\"><router-link :to=\"{path:'goods',query:{gid:item.id}}\" _v-279fa8de=\"\">{{item.title}}</router-link></h4></section>\n\t\t\t<footer class=\"operation\" _v-279fa8de=\"\"><router-link :to=\"{path:'goods',query:{gid:item.id}}\" _v-279fa8de=\"\"><i class=\"fa\" _v-279fa8de=\"\"></i></router-link></footer>\n\t\t</article>\n\t</section>\n</div>\n";
+	module.exports = "\n<div class=\"body-main\">\n\t<div>\n\t\t<my-header :title=\"title\"></my-header>\n\t</div>\n\t<div class=\"user-top\">\n\t\t<div class=\"user-wrap\">\n\t\t\t<div class=\"user-headerimg\"><img src=\"/static/images/22.jpg\"/></div>\n\t\t\t<p class=\"user-username\">我</p>\n\t\t</div>\n\t</div>\n\t<div class=\"single-lists\">\n\t\t<ul>\n\t\t\t<li><router-link to=\"/info\"><b style=\"color: #4783ce;\" class=\"ico fa fa-user\"></b><span class=\"single-lists-name\">个人资料</span><i class=\"fa fa-chevron-right\"></i></a></li>\n\t\t\t<li><router-link to=\"/cart\"><b style=\"color: #31c9a3;\" class=\"ico fa fa-shopping-cart\"></b><span class=\"single-lists-name\">购物车</span><i class=\"fa fa-chevron-right\"></i></a></li>\n\t\t\t<li><router-link to=\"/order\"><b style=\"color: #eb4e70;\" class=\"ico fa fa-file-text\"></b><span class=\"single-lists-name\">我的订单</span><i class=\"fa fa-chevron-right\"></i></a></li>\n\t\t</ul>\n\t</div>\n</div>\n";
 
 /***/ }
-]);
+
+});
