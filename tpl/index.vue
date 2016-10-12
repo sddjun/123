@@ -43,7 +43,7 @@
 			return {
 				"banner":[
 					{"img":"/static/images/11.jpg","url":"/"},
-					{"img":"/static/images/12.jpg","url":"/"},
+					{"img":"/static/images/12.jpg","url":"/"}
 				]
 			}
 		},

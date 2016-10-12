@@ -1,5 +1,5 @@
 <template>
-	<div class="body-main" @scroll="mainScroll">
+	<div class="body-main" @scroll="mainScroll" id="mainBox">
 		<div>
 			<my-header :title = "title"></my-header>
 		</div>
@@ -18,6 +18,7 @@
 		data:function(){
 			return {
 				"title":"商品列表",
+				"onScroll": 1,
 				"items":[
 					{"id":2,"title":"春秋季复古英伦风粗跟单鞋女中跟尖头女鞋OL学院风小皮鞋黑通勤鞋","thumb":"static/images/3.jpeg"},
 					{"id":3,"title":"秋冬英伦大头粗跟厚底松糕鞋日系原宿学生女鞋小皮鞋大码系带单鞋","thumb":"static/images/2.jpeg"},
@@ -30,10 +31,19 @@
 		},
 		methods:{
 			mainScroll:function(){
-				console.log(1)
-//				if($("#mainBoxSroll").height() - $("#mainBox").scrollTop() - 20<=$("#mainBox").height()&&this.onScroll==1){
-//					
-//				}
+				var mainBox = document.getElementById('mainBox');
+				if(getClassName(mainBox,'shoplist')[0].clientHeight-mainBox.scrollTop-mainBox.clientHeight<20&&this.onScroll==1){
+					this.onScroll = 0;
+					var loaddata = [
+						{"id":2,"title":"春秋季复古英伦风粗跟单鞋女中跟尖头女鞋OL学院风小皮鞋黑通勤鞋","thumb":"static/images/3.jpeg"},
+						{"id":3,"title":"秋冬英伦大头粗跟厚底松糕鞋日系原宿学生女鞋小皮鞋大码系带单鞋","thumb":"static/images/2.jpeg"},
+						{"id":5,"title":"布洛克女鞋平底单鞋复古小皮鞋学院风女英伦风小白鞋女牛津鞋","thumb":"static/images/1.jpeg"}
+					];
+					for(var i=0;i<loaddata.length;i++){
+						this.items.push(loaddata[i]);
+					}
+					this.onScroll = 1;
+				}
 			}
 		}
 	}

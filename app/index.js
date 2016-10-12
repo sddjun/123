@@ -110,6 +110,7 @@
 	// 开启路由，设置路由
 	var router = new VueRouter(routes)
 
+	// 开启vue
 	new Vue({router}).$mount('#app');
 
 
@@ -9381,18 +9382,6 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	// 模版组件
-	//var Index = require("../tpl/index.vue");
-	//var Search = require("../tpl/search.vue");
-	//var List = require("../tpl/list.vue");
-	//var Goods = require("../tpl/goods.vue");
-	//var Login = require("../tpl/login.vue");
-	//var Register = require("../tpl/register.vue");
-	//var Forget = require("../tpl/forget.vue");
-	//var Forgettips = require("../tpl/forgettips.vue");
-	//var Password = require("../tpl/password.vue");
-	//var Cart = require("../tpl/cart.vue");
-	//var User = require("../tpl/user.vue");
-
 	var Index = resolve => __webpack_require__.e/* require */(1, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(5)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this));
 	var Search = resolve => __webpack_require__.e/* require */(2, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(13)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this));
 	var List = resolve => __webpack_require__.e/* require */(3, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(18)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this));

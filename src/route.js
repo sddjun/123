@@ -1,16 +1,4 @@
 // 模版组件
-//var Index = require("../tpl/index.vue");
-//var Search = require("../tpl/search.vue");
-//var List = require("../tpl/list.vue");
-//var Goods = require("../tpl/goods.vue");
-//var Login = require("../tpl/login.vue");
-//var Register = require("../tpl/register.vue");
-//var Forget = require("../tpl/forget.vue");
-//var Forgettips = require("../tpl/forgettips.vue");
-//var Password = require("../tpl/password.vue");
-//var Cart = require("../tpl/cart.vue");
-//var User = require("../tpl/user.vue");
-
 var Index = resolve => require(["../tpl/index.vue"],resolve);
 var Search = resolve => require(["../tpl/search.vue"],resolve);
 var List = resolve => require(["../tpl/list.vue"],resolve);

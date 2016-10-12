@@ -36,7 +36,7 @@ function goTopEx() {
     function getScrollTop() {  
         return document.documentElement.scrollTop + document.body.scrollTop;  
     }  
-    function setScrollTop(value) {  
+    function setScrollTop(value) {
         if (document.documentElement.scrollTop) {  
             document.documentElement.scrollTop = value;  
         } else {  

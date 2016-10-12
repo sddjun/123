@@ -13,5 +13,6 @@ var routes = require("./route.js");
 // 开启路由，设置路由
 var router = new VueRouter(routes)
 
+// 开启vue
 new Vue({router}).$mount('#app');
 
