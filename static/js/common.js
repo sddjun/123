@@ -10,7 +10,7 @@ function tips(t){
 	document.body.appendChild(obj);
 	timer = setTimeout(function(){
 		clearTimeout(timer);
-		document.body.removeChild(document.getElementById("tips"));
+		obj.remove();
 		Callback && Callback();
 	},800)
 }

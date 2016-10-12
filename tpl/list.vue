@@ -1,5 +1,5 @@
 <template>
-	<div class="body-main">
+	<div class="body-main" @scroll="mainScroll">
 		<div>
 			<my-header :title = "title"></my-header>
 		</div>
@@ -27,6 +27,14 @@
 		},
 		components:{
 			'myHeader': Header
+		},
+		methods:{
+			mainScroll:function(){
+				console.log(1)
+//				if($("#mainBoxSroll").height() - $("#mainBox").scrollTop() - 20<=$("#mainBox").height()&&this.onScroll==1){
+//					
+//				}
+			}
 		}
 	}
 </script>
