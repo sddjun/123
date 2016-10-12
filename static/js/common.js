@@ -3,22 +3,29 @@ function tips(t){
 	var txt = t.txt;
 	var Callback = t.Callback;
 	var timer = null;
-	document.body.innerHTML += '<div id="tips"><span>'+ txt +'</span></div>'
+	var obj = document.createElement('div');
+	obj.id = "tips";
+	obj.className = "tips";
+	obj.innerHTML = '<span>'+ txt +'</span>';
+	document.body.appendChild(obj);
 	timer = setTimeout(function(){
 		clearTimeout(timer);
-		document.getElementById("tips").remove();
+		document.body.removeChild(document.getElementById("tips"));
 		Callback && Callback();
 	},800)
 }
 
 //提示带按钮
 function prompt(txt,Callback){
-	document.body.innerHTML+='<div class="pop-mask" id="popMask"><div class="pop-wrap"><div class="pop-text">'+ txt +'</div><div class="pop-btn"><a href="javascript:;" class="sure">确认</a><a href="javascript:;" class="cancel">取消</a></div></div></div>';
-	var obj = document.getElementById('popMask');
-	getClassName(obj,'cancel').onclick = function(){
+	var obj = document.createElement('div');
+	obj.id = "popMask";
+	obj.className = "pop-mask";
+	obj.innerHTML = '<div class="pop-wrap"><div class="pop-text">'+ txt +'</div><div class="pop-btn"><a href="javascript:;" class="sure">确认</a><a href="javascript:;" class="cancel">取消</a></div></div>';
+	document.body.appendChild(obj);
+	getClassName(obj,'cancel')[0].onclick = function(){
 		obj.remove();
 	};
-	getClassName(obj,'sure').onclick = function(){
+	getClassName(obj,'sure')[0].onclick = function(){
 		Callback && Callback();
 		obj.remove();
 	};
@@ -50,7 +57,7 @@ function goTopEx() {
 //获取class
 function getClassName(obj,sName){
     if(document.getElementsByClassName){
-        return obj.getElementsByClassName('sName');
+        return obj.getElementsByClassName(sName);
     }else{      
         var aTmp = obj.getElementsByTagName('*');
         var aRes=[];

@@ -195,6 +195,7 @@
 	bottom: 0;
 	left: 0;
 	padding: 10px 5%;
+	font-size: .8rem;
 }
 .cart_total_p span{
 	padding-right: .8rem;
