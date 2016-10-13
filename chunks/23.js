@@ -435,7 +435,7 @@ webpackJsonp([23],{
 
 
 	// module
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\r\n.tab-t{\r\n\tbackground: #fff;\r\n}\r\n.tab-t li{\r\n\twidth: 25%;\r\n\tfloat: left;\r\n\tborder-bottom: 1px solid #eee;\r\n\ttext-align: center;\r\n\tpadding: 8px 0;\r\n}\r\n.tab-t li.active{\r\n\tborder-bottom: 1px solid #2BACC9;\r\n}\r\n.tab-c{\r\n\tbackground: #fff;\r\n\tpadding: 5px;\r\n}\r\n.tab-con{\r\n\tdisplay: none;\r\n}\r\n", ""]);
+	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\r\n.tab-t{\r\n\tbackground: #fff;\r\n}\r\n.tab-t li{\r\n\twidth: 25%;\r\n\tfloat: left;\r\n\tborder-bottom: 1px solid #eee;\r\n\ttext-align: center;\r\n\tpadding: 8px 0;\r\n}\r\n.tab-t li.active{\r\n\tborder-bottom: 1px solid #2BACC9;\r\n}\r\n.tab-c{\r\n\tposition: relative;\r\n\tbackground: #fff;\r\n}\r\n.tab-con{\r\n\tbackground: #fff;\r\n\twidth: 100%;\r\n\tpadding: 5px;\r\n}\r\n.tab-con-w img{\r\n\twidth: 100%;\r\n}\r\n.animated {\r\n\tposition: absolute;\r\n\ttop: 0;\r\n\t-webkit-animation-duration: 1s;\r\n\tanimation-duration: 1s;\r\n\t-webkit-animation-fill-mode: both;\r\n\tanimation-fill-mode: both\r\n}\r\n@-webkit-keyframes fadeInLeft {\r\n\t0% {\r\n\t\topacity: 0;\r\n\t\t-webkit-transform: translateX(-100%);\r\n\t\ttransform: translateX(-100%)\r\n\t}\r\n\t100% {\r\n\t\topacity: 1;\r\n\t\t-webkit-transform: translateX(0);\r\n\t\ttransform: translateX(0)\r\n\t}\r\n}\r\n\r\n@keyframes fadeInLeft {\r\n\t0% {\r\n\t\topacity: 0;\r\n\t\t-webkit-transform: translateX(-100%);\r\n\t\ttransform: translateX(-100%)\r\n\t}\r\n\t100% {\r\n\t\topacity: 1;\r\n\t\t-webkit-transform: translateX(0);\r\n\t\ttransform: translateX(0)\r\n\t}\r\n}\r\n\r\n.fadeInLeft {\r\n\t-webkit-animation-name: fadeInLeft;\r\n\tanimation-name: fadeInLeft\r\n}\r\n@-webkit-keyframes fadeOutRight {\r\n\t0% {\r\n\t\topacity: 1;\r\n\t\t-webkit-transform: translateX(0);\r\n\t\ttransform: translateX(0)\r\n\t}\r\n\t100% {\r\n\t\topacity: 0;\r\n\t\t-webkit-transform: translateX(100%);\r\n\t\ttransform: translateX(100%)\r\n\t}\r\n}\r\n\r\n@keyframes fadeOutRight {\r\n\t0% {\r\n\t\topacity: 1;\r\n\t\t-webkit-transform: translateX(0);\r\n\t\ttransform: translateX(0)\r\n\t}\r\n\t100% {\r\n\t\topacity: 0;\r\n\t\t-webkit-transform: translateX(100%);\r\n\t\ttransform: translateX(100%)\r\n\t}\r\n}\r\n\r\n.fadeOutRight {\r\n\t-webkit-animation-name: fadeOutRight;\r\n\tanimation-name: fadeOutRight\r\n}\r\n\r\n", ""]);
 
 	// exports
 
@@ -455,13 +455,16 @@ webpackJsonp([23],{
 		data: function data() {
 			return {
 				"title": "我的订单",
-				"tabnum": 0
+				"tabnum": 0,
+				"show": true
 			};
 		},
 		methods: {
 			tab: function tab(i) {
 				this.tabnum = i;
-			}
+			},
+			enter: function enter(el, done) {},
+			leave: function leave(el, done) {}
 		}
 	};
 
@@ -470,7 +473,7 @@ webpackJsonp([23],{
 /***/ 72:
 /***/ function(module, exports) {
 
-	module.exports = "\n<div class=\"body-main bg-grey\">\n\t<div>\n\t\t<my-header :title = \"title\"></my-header>\n\t</div>\n\t<ul class=\"tab-t clearfix\">\n\t\t<li :class=\"{active:tabnum==0}\" @click=\"tab(0)\">全部</li>\n\t\t<li :class=\"{active:tabnum==1}\" @click=\"tab(1)\">未付款</li>\n\t\t<li :class=\"{active:tabnum==2}\" @click=\"tab(2)\">待收货</li>\n\t\t<li :class=\"{active:tabnum==3}\" @click=\"tab(3)\">已完成</li>\n\t</ul>\n\t<div class=\"tab-c\">\n\t\t<div class=\"tab-con\" :class=\"{show:tabnum==0}\">111</div>\n\t\t<div class=\"tab-con\" :class=\"{show:tabnum==1}\">222</div>\n\t\t<div class=\"tab-con\" :class=\"{show:tabnum==2}\">333</div>\n\t\t<div class=\"tab-con\" :class=\"{show:tabnum==3}\">444</div>\n\t</div>\n</div>\n";
+	module.exports = "\n<div class=\"body-main bg-grey\">\n\t<div>\n\t\t<my-header :title = \"title\"></my-header>\n\t</div>\n\t<ul class=\"tab-t clearfix\">\n\t\t<li :class=\"{active:tabnum==0}\" @click=\"tab(0)\">全部</li>\n\t\t<li :class=\"{active:tabnum==1}\" @click=\"tab(1)\">未付款</li>\n\t\t<li :class=\"{active:tabnum==2}\" @click=\"tab(2)\">待收货</li>\n\t\t<li :class=\"{active:tabnum==3}\" @click=\"tab(3)\">已完成</li>\n\t</ul>\n\t<div class=\"tab-c\">\n\t\t<transition v-on:enter=\"enter\"  v-on:leave=\"leave\">\n\t\t\t<div class=\"tab-con\" v-if=\"tabnum==0\">\n\t\t\t\t<div class=\"tab-con-w\"><img src=\"/static/images/1.jpeg\" alt=\"\" /></div>\n\t\t\t</div>\n\t\t</transition>\n\t\t<transition v-on:enter=\"enter\"  v-on:leave=\"leave\">\n\t\t\t<div class=\"tab-con\" v-if=\"tabnum==1\">\n\t\t\t\t<div class=\"tab-con-w\"><img src=\"/static/images/2.jpeg\" alt=\"\" /></div>\n\t\t\t</div>\n\t\t</transition>\n\t\t<transition v-on:enter=\"enter\"  v-on:leave=\"leave\">\n\t\t\t<div class=\"tab-con\" v-if=\"tabnum==2\">\n\t\t\t\t<div class=\"tab-con-w\"><img src=\"/static/images/3.jpeg\" alt=\"\" /></div>\n\t\t\t</div>\n\t\t</transition>\n\t\t<transition v-on:enter=\"enter\"  v-on:leave=\"leave\">\n\t\t\t<div class=\"tab-con\" v-if=\"tabnum==3\">\n\t\t\t\t<div class=\"tab-con-w\"><img src=\"/static/images/1.jpeg\" alt=\"\" /></div>\n\t\t\t</div>\n\t\t</transition>\n\t\t<!--<transition enter-active-class=\"{{enter}}\"  leave-active-class=\"{{leave}}\">\n\t\t\t<div class=\"tab-con\" v-if=\"tabnum==3\">\n\t\t\t\t<div class=\"tab-con-w\"><img src=\"/static/images/1.jpeg\" alt=\"\" /></div>\n\t\t\t</div>\n\t\t</transition>-->\n\t</div>\n</div>\n";
 
 /***/ }
 
