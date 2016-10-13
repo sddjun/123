@@ -1,16 +1,17 @@
 // 模版组件
-var Index = resolve => require(["../tpl/index.vue"],resolve);
-var Search = resolve => require(["../tpl/search.vue"],resolve);
-var List = resolve => require(["../tpl/list.vue"],resolve);
-var Goods = resolve => require(["../tpl/goods.vue"],resolve);
-var Login = resolve => require(["../tpl/login.vue"],resolve);
-var Register = resolve => require(["../tpl/register.vue"],resolve);
-var Forget = resolve => require(["../tpl/forget.vue"],resolve);
-var Forgettips = resolve => require(["../tpl/forgettips.vue"],resolve);
-var Password = resolve => require(["../tpl/password.vue"],resolve);
-var Cart = resolve => require(["../tpl/cart.vue"],resolve);
-var User = resolve => require(["../tpl/user.vue"],resolve);
-var Order = resolve => require(["../tpl/order.vue"],resolve);
+var Index = function(resolve){require(["../tpl/index.vue"],resolve)};
+var Search = function(resolve){require(["../tpl/search.vue"],resolve)};
+var List = function(resolve){require(["../tpl/list.vue"],resolve)};
+var Goods = function(resolve){require(["../tpl/goods.vue"],resolve)};
+var Login = function(resolve){require(["../tpl/login.vue"],resolve)};
+var Register = function(resolve){require(["../tpl/register.vue"],resolve)};
+var Forget = function(resolve){require(["../tpl/forget.vue"],resolve)};
+var Forgettips = function(resolve){require(["../tpl/forgettips.vue"],resolve)};
+var Password = function(resolve){require(["../tpl/password.vue"],resolve)};
+var Cart = function(resolve){require(["../tpl/cart.vue"],resolve)};
+var User = function(resolve){require(["../tpl/user.vue"],resolve)};
+var Order = function(resolve){require(["../tpl/order.vue"],resolve)};
+var Drag = function(resolve){require(["../tpl/drag.vue"],resolve)};
 
 // 路由routes
 module.exports = {
@@ -29,6 +30,7 @@ module.exports = {
 	    { path: '/cart', component: Cart },
 	    { path: '/user', component: User },
 	    { path: '/order', component: Order },
+	    { path: '/drag', component: Drag },
 	    { path: '*', component: Index }
 	]
 }
